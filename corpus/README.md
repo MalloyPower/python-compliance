@@ -36,7 +36,9 @@ For those downloaded from GitHub, details are in [linchen.csv](./linchen.csv)
 ## The applications studied by Destefanis et al
 
 5 were done already: Biopython Calibre Matplotlib Py-Pandas Sage<br/>
-Just needed five more, all from GitHub, and details in [destefanis.csv](./destefanis.csv)
+
+Just needed five more, all from GitHub, and details in
+[destefanis.csv](./destefanis.csv)
 
 
 ## The list of "Notable Ports" from getpython3.com
