@@ -1,4 +1,4 @@
-### A corpus of Python programs
+# A corpus of Python programs
 
 For this paper we analysed several sets of Python programs.  The whole
 set is rather large, so we don't hold the actual programs here, but we
@@ -9,7 +9,7 @@ do supply information on how to replicate the corpus.
 
 We used the same applications as the original, but the most up-to-date
 versions in each case.  Since these all came from github, look in
-qualitas.csv for the URL and the SHA of the commit we were using.
+(/qualitas.csv) for the URL and the SHA of the commit we were using.
 
 
 ## The programs studied by Chen et al.
