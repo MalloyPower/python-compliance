@@ -2,8 +2,7 @@
 
 This is the public repo for the project:
 
-##  Quantifying the Transition from Python 2 to 3:
-    An Empirical Study of Python Applications
+##  Quantifying the Transition from Python 2 to 3: An Empirical Study of Python Applications
 
 
 ### Authors are:
