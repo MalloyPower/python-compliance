@@ -9,23 +9,23 @@ do supply information on how to replicate the corpus.
 
 We used the same applications as the original, but the most up-to-date
 versions in each case.  Since these all came from github, look in
-[qualitas.csv](/qualitas.csv/) for the URL and the SHA of the commit we were using.
+[qualitas.csv](./qualitas.csv) for the URL and the SHA of the commit we were using.
 
 
 ## The programs studied by Chen et al.
 
+For those downloaded from GitHub, details in ./linchen.csv
+
 * SEKE 2015:<br/>
   5 in Qualitas: Django Matplotlib Numpy Scipy Tornado<br/>
   Need to get 2 more: Boto and Bzr<br/>
-  Bzr was not on git, so we:<br/>
-  wget https://launchpad.net/bzr/2.7/2.7.0/+download/bzr-2.7.0.tar.gz<br/>
-  tar -zxf bzr-2.7.0.tar.gz
+  Bzr was not on git, so we used:
+  wget https://launchpad.net/bzr/2.7/2.7.0/+download/bzr-2.7.0.tar.gz
 * SATE 2016: django ipython matplotlib scipy numpy<br/>
   all part of anaconda or Qualitas.<br/>
 * ICSME 2016 (10 applications)<br/>
   5 in Qualitas: Django Tornado Numpy Scipy Sympy<br/>
   Need to get 5 more: Pylearn2 Nltk Beets Mopidy<br/>
-  All from GitHub, details in linchen.csv<br/>
 * ICSE 2017: Scipy<br/>
   downloaded anaconda3, Anaconda3-4.3.1-Linux-x86_64<br/>
   analysed /pkgs folder, URL and SHA listed in anaconda.txt
