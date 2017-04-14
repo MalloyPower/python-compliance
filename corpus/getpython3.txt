@@ -1,0 +1,8 @@
+celery-4.0.2.tar.gz
+kennethreitz-requests-v2.13.0-90-g993cbf5.tar.gz
+lxml-2.2.8.tar.gz
+Mako-1.0.6.tar.gz
+pip-9.0.1.tar.gz
+SQLAlchemy-1.1.6.tar.gz
+virtualenv-15.1.0.tar.gz
+WebOb-1.7.2.tar.gz

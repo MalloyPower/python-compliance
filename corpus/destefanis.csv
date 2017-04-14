@@ -1,0 +1,6 @@
+#Application,URL,SHA
+edx-platform,https://github.com/edx/edx-platform,b6ba57ee2ecd88ef64bc8b97a7d3050eedb65a94
+openerp-client-lib,https://github.com/OpenERP/openerp-client-lib,d8ddf09a0f0c98e3ed8bfd96602511996f23a78f
+scons,https://github.com/azatoth/scons,73f996e59902d03ec432cc662252aac5fb72f1f8
+tribler,https://github.com/Tribler/tribler,82ad3239d1a2c2c83910653c482bc07e7f693794
+unknown-horizons,https://github.com/unknown-horizons/unknown-horizons,49514e80c46db2483f99da00d45667f3fb8ad0c6

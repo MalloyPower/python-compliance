@@ -1,0 +1,7 @@
+#Application,URL,SHA
+beets,https://github.com/beetbox/beets,462ed4c3fff365f38df1bab0bbcadea526b1a268
+boto3,https://github.com/boto/boto3,671873391535d8a3b490f5ae6ee2b7b28adbc52a
+mopidy,https://github.com/mopidy/mopidy,621938f0fa36d2729945c4bf6c12df645a4199b0
+nltk,https://github.com/nltk/nltk,8b5870ec6af0e75b0df734e3ddd08e0bd4dfbc8c
+pandas,https://github.com/pandas-dev/pandas.git,614a48e3e6640b5694fd1ed6cbe56a760e89dd50
+pylearn2,https://github.com/lisa-lab/pylearn2,517dc87340bf18137521e28f6a50293ab39d60ca

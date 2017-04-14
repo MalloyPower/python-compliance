@@ -1,0 +1,52 @@
+### A corpus of Python programs
+
+For this paper we analysed several sets of Python programs.  The whole
+set is rather large, so we don't hold the actual programs here, but we
+do supply information on how to replicate the corpus.
+
+
+## Qualitas:
+
+We used the same applications as the original, but the most up-to-date
+versions in each case.  Since these all came from github, look in
+qualitas.csv for the URL and the SHA of the commit we were using.
+
+
+## The programs studied by Chen et al.
+
+* SEKE 2015:
+  5 in Qualitas: Django Matplotlib Numpy Scipy Tornado
+  Need to get 2 more: Boto and Bzr
+  Bzr was not on git, so we:
+  wget https://launchpad.net/bzr/2.7/2.7.0/+download/bzr-2.7.0.tar.gz
+  tar -zxf bzr-2.7.0.tar.gz
+* SATE 2016: django ipython matplotlib scipy numpy
+  all part of anaconda or Qualitas.
+* ICSME 2016 (10 applications)
+  5 in Qualitas: Django Tornado Numpy Scipy Sympy
+  Need to get 5 more: Pylearn2 Nltk Beets Mopidy
+  All from GitHub, details in linchen.csv
+* ICSE 2017: Scipy
+  downloaded anaconda3, Anaconda3-4.3.1-Linux-x86_64
+  analysed /pkgs folder, URL and SHA listed in anaconda.txt
+  (this file is 'urls' from the anaconda distribution).
+
+
+## The applications studied by Destefanis et al
+
+5 were done already: Biopython Calibre Matplotlib Py-Pandas Sage
+Just needed five more, all from GitHub, and details in destefanis.csv
+
+
+## The list of "Notable Ports" from getpython3.com
+
+Three already in Qualitas: Django, Pyramid, NumPy, SciPy
+One in Chen et al: Pandas
+Downloaded the others, list in getpython3.txt
+
+
+## The top 20 "most starred" and top 20 "most forked" on GitHub
+
+All from GitHub, details in top20-github.csv
+
+

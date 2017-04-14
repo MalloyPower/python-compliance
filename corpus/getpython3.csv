@@ -1,0 +1,10 @@
+#Application,URL,SHA
+celery-4.0.2,,
+kennethreitz-requests-993cbf5,,
+lxml-2.2.8,,
+Mako-1.0.6,,
+Monocle,https://github.com/Noctem/Monocle,f9c72bcba580fcca46cc925e8f3d53d752ab1611
+pip-9.0.1,,
+SQLAlchemy-1.1.6,,
+virtualenv-15.1.0,,
+WebOb-1.7.2,,
