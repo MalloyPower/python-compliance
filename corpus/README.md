@@ -9,39 +9,39 @@ do supply information on how to replicate the corpus.
 
 We used the same applications as the original, but the most up-to-date
 versions in each case.  Since these all came from github, look in
-(/qualitas.csv/) for the URL and the SHA of the commit we were using.
+[qualitas.csv](/qualitas.csv/) for the URL and the SHA of the commit we were using.
 
 
 ## The programs studied by Chen et al.
 
 * SEKE 2015:<br/>
-  5 in Qualitas: Django Matplotlib Numpy Scipy Tornado
-  Need to get 2 more: Boto and Bzr
-  Bzr was not on git, so we:
-  wget https://launchpad.net/bzr/2.7/2.7.0/+download/bzr-2.7.0.tar.gz
+  5 in Qualitas: Django Matplotlib Numpy Scipy Tornado<br/>
+  Need to get 2 more: Boto and Bzr<br/>
+  Bzr was not on git, so we:<br/>
+  wget https://launchpad.net/bzr/2.7/2.7.0/+download/bzr-2.7.0.tar.gz<br/>
   tar -zxf bzr-2.7.0.tar.gz
-* SATE 2016: django ipython matplotlib scipy numpy
-  all part of anaconda or Qualitas.
-* ICSME 2016 (10 applications)
-  5 in Qualitas: Django Tornado Numpy Scipy Sympy
-  Need to get 5 more: Pylearn2 Nltk Beets Mopidy
-  All from GitHub, details in linchen.csv
-* ICSE 2017: Scipy
-  downloaded anaconda3, Anaconda3-4.3.1-Linux-x86_64
+* SATE 2016: django ipython matplotlib scipy numpy<br/>
+  all part of anaconda or Qualitas.<br/>
+* ICSME 2016 (10 applications)<br/>
+  5 in Qualitas: Django Tornado Numpy Scipy Sympy<br/>
+  Need to get 5 more: Pylearn2 Nltk Beets Mopidy<br/>
+  All from GitHub, details in linchen.csv<br/>
+* ICSE 2017: Scipy<br/>
+  downloaded anaconda3, Anaconda3-4.3.1-Linux-x86_64<br/>
   analysed /pkgs folder, URL and SHA listed in anaconda.txt
   (this file is 'urls' from the anaconda distribution).
 
 
 ## The applications studied by Destefanis et al
 
-5 were done already: Biopython Calibre Matplotlib Py-Pandas Sage
+5 were done already: Biopython Calibre Matplotlib Py-Pandas Sage<br/>
 Just needed five more, all from GitHub, and details in destefanis.csv
 
 
 ## The list of "Notable Ports" from getpython3.com
 
-Three already in Qualitas: Django, Pyramid, NumPy, SciPy
-One in Chen et al: Pandas
+Three already in Qualitas: Django, Pyramid, NumPy, SciPy<br/>
+One in Chen et al: Pandas<br/>
 Downloaded the others, list in getpython3.txt
 
 
