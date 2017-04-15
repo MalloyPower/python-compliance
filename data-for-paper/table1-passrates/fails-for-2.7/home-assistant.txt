@@ -1,0 +1,1432 @@
+Running front-end for v2.7 on 1 apps: home-assistant,
+* top20-github/home-assistant/homeassistant/__main__.py failed.
+65.23-65.23: syntax error with [-]
+64:
+65:def validate_python() -> None:
+66:    """Validate we're running the right Python version."""
+
+* top20-github/home-assistant/homeassistant/config.py failed.
+126.30-126.30: syntax error with [-]
+125:
+126:def get_default_config_dir() -> str:
+127:    """Put together the default configuration directory based on OS."""
+
+* top20-github/home-assistant/homeassistant/remote.py failed.
+48.23-48.23: syntax error with [-]
+47:
+48:    def __str__(self) -> str:
+49:        """Return the state."""
+
+* top20-github/home-assistant/homeassistant/bootstrap.py failed.
+33.28-33.28: syntax error with [:]
+32:
+33:def from_config_dict(config: Dict[str, Any],
+34:                     hass: Optional[core.HomeAssistant]=None,
+
+* top20-github/home-assistant/homeassistant/setup.py failed.
+29.25-29.25: syntax error with [:]
+28:
+29:def setup_component(hass: core.HomeAssistant, domain: str,
+30:                    config: Optional[Dict]=None) -> bool:
+
+* top20-github/home-assistant/homeassistant/core.py failed.
+61.30-61.30: syntax error with [:]
+60:
+61:def split_entity_id(entity_id: str) -> List[str]:
+62:    """Split a state entity_id into domain, object_id."""
+
+* top20-github/home-assistant/homeassistant/loader.py failed.
+44.17-44.17: syntax error with [:]
+43:
+44:def prepare(hass: 'HomeAssistant'):
+45:    """Prepare the loading of components.
+
+* top20-github/home-assistant/homeassistant/scripts/__init__.py failed.
+14.13-14.13: syntax error with [:]
+13:
+14:def run(args: List) -> int:
+15:    """Run a script."""
+
+* top20-github/home-assistant/homeassistant/scripts/check_config.py failed.
+49.29-49.33: syntax error with [reset]
+48:
+49:def color(the_color, *args, reset=None):
+50:    """Color helper."""
+
+* top20-github/home-assistant/homeassistant/scripts/db_migrator.py failed.
+17.23-17.23: syntax error with [:]
+16:
+17:def ts_to_dt(timestamp: Optional[float]) -> Optional[datetime]:
+18:    """Turn a datetime into an integer for in the DB."""
+
+* top20-github/home-assistant/homeassistant/scripts/influxdb_migrator.py failed.
+11.29-11.29: syntax error with [:]
+10:# http://stackoverflow.com/questions/3173320/text-progress-bar-in-the-console
+11:def print_progress(iteration: int, total: int, prefix: str='', suffix: str='',
+12:                   decimals: int=2, bar_length: int=68) -> None:
+
+* top20-github/home-assistant/homeassistant/util/logging.py failed.
+58.15-58.18: syntax error with [from]
+57:        """
+58:        yield from self._queue.put(None)
+59:
+
+* top20-github/home-assistant/homeassistant/util/temperature.py failed.
+10.37-10.37: syntax error with [:]
+9:
+10:def fahrenheit_to_celsius(fahrenheit: float) -> float:
+11:    """Convert a Fahrenheit temperature to Celsius."""
+
+* top20-github/home-assistant/homeassistant/util/unit_system.py failed.
+48.23-48.23: syntax error with [:]
+47:
+48:def is_valid_unit(unit: str, unit_type: str) -> bool:
+49:    """Check if the unit is valid for it's type."""
+
+* top20-github/home-assistant/homeassistant/util/dt.py failed.
+25.36-25.36: syntax error with [:]
+24:
+25:def set_default_time_zone(time_zone: dt.tzinfo) -> None:
+26:    """Set a default time zone to be used when none is specified.
+
+* top20-github/home-assistant/homeassistant/util/location.py failed.
+87.20-87.20: syntax error with [:]
+86:# pylint: disable=invalid-name, unused-variable
+87:def vincenty(point1: Tuple[float, float], point2: Tuple[float, float],
+88:             miles: bool=False) -> Optional[float]:
+
+* top20-github/home-assistant/homeassistant/util/__init__.py failed.
+27.31-27.31: syntax error with [:]
+26:
+27:def sanitize_filename(filename: str) -> str:
+28:    r"""Sanitize a filename by removing .. / and \\."""
+
+* top20-github/home-assistant/homeassistant/util/distance.py failed.
+25.18-25.18: syntax error with [:]
+24:
+25:def convert(value: float, unit_1: str, unit_2: str) -> float:
+26:    """Convert one unit of measurement to another."""
+
+* top20-github/home-assistant/homeassistant/util/package.py failed.
+17.28-17.28: syntax error with [:]
+16:
+17:def install_package(package: str, upgrade: bool=True,
+18:                    target: Optional[str]=None,
+
+* top20-github/home-assistant/homeassistant/util/color.py failed.
+187.23-187.23: syntax error with [:]
+186:# pylint: disable=invalid-name
+187:def color_RGB_to_xy(iR: int, iG: int, iB: int) -> Tuple[float, float, int]:
+188:    """Convert from RGB color to XY color."""
+
+* top20-github/home-assistant/homeassistant/util/yaml.py failed.
+48.34-48.34: syntax error with [:]
+47:
+48:    def compose_node(self, parent: yaml.nodes.Node, index) -> yaml.nodes.Node:
+49:        """Annotate a node with the first line it was seen."""
+
+* top20-github/home-assistant/homeassistant/components/api.py failed.
+105.19-105.22: syntax error with [from]
+104:
+105:            yield from to_write.put(data)
+106:
+
+* top20-github/home-assistant/homeassistant/components/telegram_webhooks.py failed.
+108.26-108.29: syntax error with [from]
+107:        try:
+108:            data = yield from request.json()
+109:        except ValueError:
+
+* top20-github/home-assistant/homeassistant/components/demo.py failed.
+104.21-104.24: syntax error with [from]
+103:
+104:    results = yield from asyncio.gather(*tasks, loop=hass.loop)
+105:
+
+* top20-github/home-assistant/homeassistant/components/microsoft_face.py failed.
+125.15-125.18: syntax error with [from]
+124:        # read exists group/person from cloud and create entities
+125:        yield from face.update_store()
+126:    except HomeAssistantError as err:
+
+* top20-github/home-assistant/homeassistant/components/zone.py failed.
+127.11-127.14: syntax error with [from]
+126:
+127:    yield from asyncio.wait(tasks, loop=hass.loop)
+128:    return True
+
+* top20-github/home-assistant/homeassistant/components/alexa.py failed.
+136.22-136.25: syntax error with [from]
+135:        """Handle Alexa."""
+136:        data = yield from request.json()
+137:
+
+* top20-github/home-assistant/homeassistant/components/script.py failed.
+88.11-88.14: syntax error with [from]
+87:
+88:    yield from _async_process_config(hass, config, component)
+89:
+
+* top20-github/home-assistant/homeassistant/components/alert.py failed.
+115.23-115.26: syntax error with [from]
+114:            if service_call.service == SERVICE_TURN_ON:
+115:                yield from alert.async_turn_on()
+116:            elif service_call.service == SERVICE_TOGGLE:
+
+* top20-github/home-assistant/homeassistant/components/group.py failed.
+105.11-105.14: syntax error with [from]
+104:    """Reload the automation from config."""
+105:    yield from hass.services.async_call(DOMAIN, SERVICE_RELOAD)
+106:
+
+* top20-github/home-assistant/homeassistant/components/websocket_api.py failed.
+227.15-227.18: syntax error with [from]
+226:        wsock = self.wsock = web.WebSocketResponse()
+227:        yield from wsock.prepare(self.request)
+228:
+
+* top20-github/home-assistant/homeassistant/components/foursquare.py failed.
+98.26-98.29: syntax error with [from]
+97:        try:
+98:            data = yield from request.json()
+99:        except ValueError:
+
+* top20-github/home-assistant/homeassistant/components/mqtt_eventstream.py failed.
+111.15-111.18: syntax error with [from]
+110:    if sub_topic:
+111:        yield from mqtt.async_subscribe(hass, sub_topic, _event_receiver)
+112:
+
+* top20-github/home-assistant/homeassistant/components/input_boolean.py failed.
+100.19-100.22: syntax error with [from]
+99:        if tasks:
+100:            yield from asyncio.wait(tasks, loop=hass.loop)
+101:
+
+* top20-github/home-assistant/homeassistant/components/qwikswitch.py failed.
+143.18-143.22: syntax error with [qsusb]
+142:        """Stop the listener queue and clean up."""
+143:        nonlocal qsusb
+144:        qsusb.stop()
+
+* top20-github/home-assistant/homeassistant/components/__init__.py failed.
+142.15-142.18: syntax error with [from]
+141:
+142:        yield from asyncio.wait(tasks, loop=hass.loop)
+143:
+
+* top20-github/home-assistant/homeassistant/components/logger.py failed.
+126.26-126.29: syntax error with [from]
+125:
+126:    descriptions = yield from hass.loop.run_in_executor(
+127:        None, load_yaml_config_file, os.path.join(
+
+* top20-github/home-assistant/homeassistant/components/ffmpeg.py failed.
+91.26-91.29: syntax error with [from]
+90:
+91:    descriptions = yield from hass.loop.run_in_executor(
+92:        None, load_yaml_config_file,
+
+* top20-github/home-assistant/homeassistant/components/persistent_notification.py failed.
+93.26-93.29: syntax error with [from]
+92:
+93:    descriptions = yield from hass.loop.run_in_executor(
+94:        None, load_yaml_config_file, os.path.join(
+
+* top20-github/home-assistant/homeassistant/components/input_slider.py failed.
+110.19-110.22: syntax error with [from]
+109:        if tasks:
+110:            yield from asyncio.wait(tasks, loop=hass.loop)
+111:
+
+* top20-github/home-assistant/homeassistant/components/pilight.py failed.
+135.43-135.43: syntax error with [:]
+134:
+135:    def __init__(self, hass, delay_seconds: float):
+136:        """Initialize the delay handler."""
+
+* top20-github/home-assistant/homeassistant/components/android_ip_webcam.py failed.
+196.19-196.22: syntax error with [from]
+195:            """Update data from ipcam in SCAN_INTERVAL."""
+196:            yield from cam.update()
+197:            async_dispatcher_send(hass, SIGNAL_UPDATE_DATA, host)
+
+* top20-github/home-assistant/homeassistant/components/history.py failed.
+236.24-236.27: syntax error with [from]
+235:
+236:        result = yield from request.app['hass'].loop.run_in_executor(
+237:            None, get_significant_states, request.app['hass'], start_time,
+
+* top20-github/home-assistant/homeassistant/components/isy994.py failed.
+67.23-67.23: syntax error with [:]
+66:
+67:def filter_nodes(nodes: list, units: list=None, states: list=None) -> list:
+68:    """Filter a list of ISY nodes based on the units and states provided."""
+
+* top20-github/home-assistant/homeassistant/components/apiai.py failed.
+78.22-78.25: syntax error with [from]
+77:        """Handle API.AI."""
+78:        data = yield from request.json()
+79:
+
+* top20-github/home-assistant/homeassistant/components/rflink.py failed.
+171.45-171.48: syntax error with [from]
+170:                                       loop=hass.loop):
+171:                transport, protocol = yield from connection
+172:
+
+* top20-github/home-assistant/homeassistant/components/ios.py failed.
+286.30-286.33: syntax error with [from]
+285:        try:
+286:            req_data = yield from request.json()
+287:        except ValueError:
+
+* top20-github/home-assistant/homeassistant/components/envisalink.py failed.
+164.20-164.23: syntax error with [from]
+163:
+164:    result = yield from sync_connect
+165:    if not result:
+
+* top20-github/home-assistant/homeassistant/components/rest_command.py failed.
+87.37-87.40: syntax error with [from]
+86:                with async_timeout.timeout(timeout, loop=hass.loop):
+87:                    request = yield from getattr(websession, method)(
+88:                        template_url.async_render(variables=service.data),
+
+* top20-github/home-assistant/homeassistant/components/insteon_plm.py failed.
+76.17-76.20: syntax error with [from]
+75:    _LOGGER.info('Looking for PLM on %s', port)
+76:    plm = yield from insteonplm.Connection.create(device=port, loop=hass.loop)
+77:
+
+* top20-github/home-assistant/homeassistant/components/twilio.py failed.
+52.22-52.25: syntax error with [from]
+51:        hass = request.app['hass']
+52:        data = yield from request.post()
+53:        hass.bus.async_fire(RECEIVED_DATA, dict(data))
+
+* top20-github/home-assistant/homeassistant/components/volvooncall.py failed.
+79.31-79.31: syntax error with [*]
+78:        state.entities[vehicle.vin] = []
+79:        for attr, (component, *_) in RESOURCES.items():
+80:            if (getattr(vehicle, attr + '_supported', True) and
+
+* top20-github/home-assistant/homeassistant/components/hdmi_cec.py failed.
+152.23-152.26: syntax error with [from]
+151:            if isinstance(val, dict):
+152:                yield from parse_mapping(val, cur)
+153:            elif isinstance(val, str):
+
+* top20-github/home-assistant/homeassistant/components/discovery.py failed.
+102.19-102.22: syntax error with [from]
+101:        if platform is None:
+102:            yield from async_discover(hass, service, info, component, config)
+103:        else:
+
+* top20-github/home-assistant/homeassistant/components/input_select.py failed.
+135.19-135.22: syntax error with [from]
+134:        if tasks:
+135:            yield from asyncio.wait(tasks, loop=hass.loop)
+136:
+
+* top20-github/home-assistant/homeassistant/components/logbook.py failed.
+137.24-137.27: syntax error with [from]
+136:
+137:        events = yield from hass.loop.run_in_executor(
+138:            None, _get_events, hass, start_day, end_day)
+
+* top20-github/home-assistant/homeassistant/components/http/__init__.py failed.
+146.15-146.18: syntax error with [from]
+145:        """Callback to stop the server."""
+146:        yield from server.stop()
+147:
+
+* top20-github/home-assistant/homeassistant/components/http/static.py failed.
+30.19-30.22: syntax error with [from]
+29:
+30:            yield from orig_sendfile(request, resp, fobj, count)
+31:
+
+* top20-github/home-assistant/homeassistant/components/http/ban.py failed.
+43.37-43.40: syntax error with [from]
+42:        hass = app['hass']
+43:        app[KEY_BANNED_IPS] = yield from hass.loop.run_in_executor(
+44:            None, load_ip_bans_config, hass.config.path(IP_BANS_FILE))
+
+* top20-github/home-assistant/homeassistant/components/fan/demo.py failed.
+31.34-31.34: syntax error with [:]
+30:
+31:    def __init__(self, hass, name: str, initial_state: str) -> None:
+32:        """Initialize the entity."""
+
+* top20-github/home-assistant/homeassistant/components/fan/wink.py failed.
+37.27-37.27: syntax error with [:]
+36:
+37:    def set_direction(self: ToggleEntity, direction: str) -> None:
+38:        """Set the direction of the fan."""
+
+* top20-github/home-assistant/homeassistant/components/fan/mqtt.py failed.
+166.19-166.22: syntax error with [from]
+165:        if self._topic[CONF_STATE_TOPIC] is not None:
+166:            yield from mqtt.async_subscribe(
+167:                self.hass, self._topic[CONF_STATE_TOPIC], state_received,
+
+* top20-github/home-assistant/homeassistant/components/fan/__init__.py failed.
+121.26-121.26: syntax error with [:]
+120:
+121:def is_on(hass, entity_id: str=None) -> bool:
+122:    """Return if the fans are on based on the statemachine."""
+
+* top20-github/home-assistant/homeassistant/components/fan/isy994.py failed.
+36.32-36.32: syntax error with [:]
+35:# pylint: disable=unused-argument
+36:def setup_platform(hass, config: ConfigType,
+37:                   add_devices: Callable[[list], None], discovery_info=None):
+
+* top20-github/home-assistant/homeassistant/components/switch/rest.py failed.
+63.25-63.28: syntax error with [from]
+62:        with async_timeout.timeout(timeout, loop=hass.loop):
+63:            req = yield from websession.get(resource)
+64:    except (TypeError, ValueError):
+
+* top20-github/home-assistant/homeassistant/components/switch/mqtt.py failed.
+99.19-99.22: syntax error with [from]
+98:        else:
+99:            yield from mqtt.async_subscribe(
+100:                self.hass, self._state_topic, message_received, self._qos)
+
+* top20-github/home-assistant/homeassistant/components/switch/tellstick.py failed.
+57.28-57.28: syntax error with [-]
+56:    @property
+57:    def force_update(self) -> bool:
+58:        """Will trigger anytime the state property is updated."""
+
+* top20-github/home-assistant/homeassistant/components/switch/__init__.py failed.
+95.11-95.14: syntax error with [from]
+94:        _LOGGER, DOMAIN, hass, SCAN_INTERVAL, GROUP_NAME_ALL_SWITCHES)
+95:    yield from component.async_setup(config)
+96:
+
+* top20-github/home-assistant/homeassistant/components/switch/android_ip_webcam.py failed.
+67.19-67.22: syntax error with [from]
+66:        if self._setting == 'torch':
+67:            yield from self._ipcam.torch(activate=True)
+68:        elif self._setting == 'focus':
+
+* top20-github/home-assistant/homeassistant/components/switch/isy994.py failed.
+27.32-27.32: syntax error with [:]
+26:# pylint: disable=unused-argument
+27:def setup_platform(hass, config: ConfigType,
+28:                   add_devices: Callable[[list], None], discovery_info=None):
+
+* top20-github/home-assistant/homeassistant/components/switch/template.py failed.
+97.23-97.26: syntax error with [from]
+96:        """Register callbacks."""
+97:        state = yield from async_get_last_state(self.hass, self.entity_id)
+98:        if state:
+
+* top20-github/home-assistant/homeassistant/components/switch/hook.py failed.
+40.30-40.33: syntax error with [from]
+39:        with async_timeout.timeout(TIMEOUT, loop=hass.loop):
+40:            response = yield from websession.post(
+41:                '{}{}'.format(HOOK_ENDPOINT, 'user/login'),
+
+* top20-github/home-assistant/homeassistant/components/switch/hdmi_cec.py failed.
+33.28-33.28: syntax error with [:]
+32:
+33:    def __init__(self, hass: HomeAssistant, device, logical):
+34:        """Initialize the HDMI device."""
+
+* top20-github/home-assistant/homeassistant/components/switch/broadlink.py failed.
+75.26-75.29: syntax error with [from]
+74:        try:
+75:            auth = yield from hass.loop.run_in_executor(None,
+76:                                                        broadlink_device.auth)
+
+* top20-github/home-assistant/homeassistant/components/cover/mqtt.py failed.
+130.19-130.22: syntax error with [from]
+129:        else:
+130:            yield from mqtt.async_subscribe(
+131:                self.hass, self._state_topic, message_received, self._qos)
+
+* top20-github/home-assistant/homeassistant/components/cover/__init__.py failed.
+149.11-149.14: syntax error with [from]
+148:
+149:    yield from component.async_setup(config)
+150:
+
+* top20-github/home-assistant/homeassistant/components/cover/isy994.py failed.
+28.32-28.32: syntax error with [:]
+27:# pylint: disable=unused-argument
+28:def setup_platform(hass, config: ConfigType,
+29:                   add_devices: Callable[[list], None], discovery_info=None):
+
+* top20-github/home-assistant/homeassistant/components/image_processing/microsoft_face_identify.py failed.
+188.31-188.34: syntax error with [from]
+187:        try:
+188:            face_data = yield from self._api.call_api(
+189:                'post', 'detect', image, binary=True)
+
+* top20-github/home-assistant/homeassistant/components/image_processing/__init__.py failed.
+73.11-73.14: syntax error with [from]
+72:
+73:    yield from component.async_setup(config)
+74:
+
+* top20-github/home-assistant/homeassistant/components/image_processing/openalpr_cloud.py failed.
+119.33-119.36: syntax error with [from]
+118:            with async_timeout.timeout(self.timeout, loop=self.hass.loop):
+119:                request = yield from websession.post(
+120:                    OPENALPR_API_URL, params=params
+
+* top20-github/home-assistant/homeassistant/components/image_processing/openalpr_local.py failed.
+187.22-187.25: syntax error with [from]
+186:
+187:        alpr = yield from asyncio.create_subprocess_exec(
+188:            *self._cmd,
+
+* top20-github/home-assistant/homeassistant/components/image_processing/microsoft_face_detect.py failed.
+101.31-101.34: syntax error with [from]
+100:        try:
+101:            face_data = yield from self._api.call_api(
+102:                'post', 'detect', image, binary=True,
+
+* top20-github/home-assistant/homeassistant/components/light/mqtt_json.py failed.
+236.19-236.22: syntax error with [from]
+235:        if self._topic[CONF_STATE_TOPIC] is not None:
+236:            yield from mqtt.async_subscribe(
+237:                self.hass, self._topic[CONF_STATE_TOPIC], state_received,
+
+* top20-github/home-assistant/homeassistant/components/light/demo.py failed.
+59.27-59.27: syntax error with [-]
+58:    @property
+59:    def should_poll(self) -> bool:
+60:        """No polling needed for a demo light."""
+
+* top20-github/home-assistant/homeassistant/components/light/mqtt_template.py failed.
+225.19-225.22: syntax error with [from]
+224:        if self._topics[CONF_STATE_TOPIC] is not None:
+225:            yield from mqtt.async_subscribe(
+226:                self.hass, self._topics[CONF_STATE_TOPIC], state_received,
+
+* top20-github/home-assistant/homeassistant/components/light/hue.py failed.
+179.18-179.28: syntax error with [skip_groups]
+178:        """Update the Hue light objects with latest info from the bridge."""
+179:        nonlocal skip_groups
+180:
+
+* top20-github/home-assistant/homeassistant/components/light/mqtt.py failed.
+223.19-223.22: syntax error with [from]
+222:        if self._topic[CONF_STATE_TOPIC] is not None:
+223:            yield from mqtt.async_subscribe(
+224:                self.hass, self._topic[CONF_STATE_TOPIC], state_received,
+
+* top20-github/home-assistant/homeassistant/components/light/__init__.py failed.
+213.11-213.14: syntax error with [from]
+212:        _LOGGER, DOMAIN, hass, SCAN_INTERVAL, GROUP_NAME_ALL_LIGHTS)
+213:    yield from component.async_setup(config)
+214:
+
+* top20-github/home-assistant/homeassistant/components/light/isy994.py failed.
+23.32-23.32: syntax error with [:]
+22:# pylint: disable=unused-argument
+23:def setup_platform(hass, config: ConfigType,
+24:                   add_devices: Callable[[list], None], discovery_info=None):
+
+* top20-github/home-assistant/homeassistant/components/light/rflink.py failed.
+166.15-166.18: syntax error with [from]
+165:        # turn on light at the requested dim level
+166:        yield from self._async_handle_command('dim', self._brightness)
+167:
+
+* top20-github/home-assistant/homeassistant/components/light/lifx.py failed.
+288.19-288.22: syntax error with [from]
+287:            self.device.get_color(self.got_color)
+288:            yield from self.updated_event.wait()
+289:
+
+* top20-github/home-assistant/homeassistant/components/light/yeelight.py failed.
+109.25-109.25: syntax error with [-]
+108:    @property
+109:    def available(self) -> bool:
+110:        """Return if bulb is available."""
+
+* top20-github/home-assistant/homeassistant/components/sensor/arwn.py failed.
+97.11-97.14: syntax error with [from]
+96:
+97:    yield from mqtt.async_subscribe(
+98:        hass, TOPIC, async_sensor_event_received, 0)
+
+* top20-github/home-assistant/homeassistant/components/sensor/__init__.py failed.
+26.11-26.14: syntax error with [from]
+25:
+26:    yield from component.async_setup(config)
+27:    return True
+
+* top20-github/home-assistant/homeassistant/components/sensor/fastdotcom.py failed.
+91.23-91.26: syntax error with [from]
+90:        """Called when entity is about to be added to hass."""
+91:        state = yield from async_get_last_state(self.hass, self.entity_id)
+92:        if not state:
+
+* top20-github/home-assistant/homeassistant/components/sensor/yr.py failed.
+88.11-88.14: syntax error with [from]
+87:                                second=randrange(0, 59))
+88:    yield from weather.async_update()
+89:
+
+* top20-github/home-assistant/homeassistant/components/sensor/dsmr.py failed.
+138.45-138.48: syntax error with [from]
+137:            try:
+138:                transport, protocol = yield from hass.loop.create_task(
+139:                    reader_factory())
+
+* top20-github/home-assistant/homeassistant/components/sensor/isy994.py failed.
+239.32-239.32: syntax error with [:]
+238:# pylint: disable=unused-argument
+239:def setup_platform(hass, config: ConfigType,
+240:                   add_devices: Callable[[list], None], discovery_info=None):
+
+* top20-github/home-assistant/homeassistant/components/sensor/template.py failed.
+97.23-97.26: syntax error with [from]
+96:        """Register callbacks."""
+97:        state = yield from async_get_last_state(self.hass, self.entity_id)
+98:        if state:
+
+* top20-github/home-assistant/homeassistant/components/sensor/kwb.py failed.
+100.25-100.25: syntax error with [-]
+99:    @property
+100:    def available(self) -> bool:
+101:        """Return if sensor is available."""
+
+* top20-github/home-assistant/homeassistant/components/sensor/dnsip.py failed.
+82.26-82.29: syntax error with [from]
+81:        """Get the current DNS IP address for hostname."""
+82:        response = yield from self.resolver.query(self._name, self.querytype)
+83:        if response:
+
+* top20-github/home-assistant/homeassistant/components/sensor/sma.py failed.
+106.15-106.18: syntax error with [from]
+105:        """Close the session."""
+106:        yield from sma.close_session()
+107:
+
+* top20-github/home-assistant/homeassistant/components/sensor/speedtest.py failed.
+129.23-129.26: syntax error with [from]
+128:        """Called when entity is about to be added to hass."""
+129:        state = yield from async_get_last_state(self.hass, self.entity_id)
+130:        if not state:
+
+* top20-github/home-assistant/homeassistant/components/device_tracker/icloud.py failed.
+74.31-74.31: syntax error with [:]
+73:
+74:def setup_scanner(hass, config: dict, see, discovery_info=None):
+75:    """Set up the iCloud Scanner."""
+
+* top20-github/home-assistant/homeassistant/components/device_tracker/upc_connect.py failed.
+41.26-41.29: syntax error with [from]
+40:    scanner = UPCDeviceScanner(hass, config[DOMAIN])
+41:    success_init = yield from scanner.async_login()
+42:
+
+* top20-github/home-assistant/homeassistant/components/device_tracker/mqtt.py failed.
+44.15-44.18: syntax error with [from]
+43:        dev_id_lookup[topic] = dev_id
+44:        yield from mqtt.async_subscribe(
+45:            hass, topic, async_tracker_message_received, qos)
+
+* top20-github/home-assistant/homeassistant/components/device_tracker/tado.py failed.
+83.19-83.22: syntax error with [from]
+82:        if info is not None:
+83:            yield from info
+84:
+
+* top20-github/home-assistant/homeassistant/components/device_tracker/__init__.py failed.
+92.15-92.15: syntax error with [:]
+91:
+92:def is_on(hass: HomeAssistantType, entity_id: str=None):
+93:    """Return the state if any or a specified device is home."""
+
+* top20-github/home-assistant/homeassistant/components/device_tracker/gpslogger.py failed.
+42.21-42.24: syntax error with [from]
+41:        """A GPSLogger message received as GET."""
+42:        res = yield from self._handle(request.app['hass'], request.GET)
+43:        return res
+
+* top20-github/home-assistant/homeassistant/components/device_tracker/locative.py failed.
+43.21-43.24: syntax error with [from]
+42:        """Locative message received as GET."""
+43:        res = yield from self._handle(request.app['hass'], request.GET)
+44:        return res
+
+* top20-github/home-assistant/homeassistant/components/device_tracker/trackr.py failed.
+27.31-27.31: syntax error with [:]
+26:
+27:def setup_scanner(hass, config: dict, see, discovery_info=None):
+28:    """Validate the configuration and return a TrackR scanner."""
+
+* top20-github/home-assistant/homeassistant/components/device_tracker/owntracks.py failed.
+315.11-315.14: syntax error with [from]
+314:
+315:    yield from mqtt.async_subscribe(
+316:        hass, LOCATION_TOPIC, async_owntracks_location_update, 1)
+
+* top20-github/home-assistant/homeassistant/components/device_tracker/automatic.py failed.
+52.31-52.31: syntax error with [:]
+51:
+52:def setup_scanner(hass, config: dict, see, discovery_info=None):
+53:    """Validate the configuration and return an Automatic scanner."""
+
+* top20-github/home-assistant/homeassistant/components/lock/mqtt.py failed.
+103.19-103.22: syntax error with [from]
+102:        else:
+103:            yield from mqtt.async_subscribe(
+104:                self.hass, self._state_topic, message_received, self._qos)
+
+* top20-github/home-assistant/homeassistant/components/lock/__init__.py failed.
+78.11-78.14: syntax error with [from]
+77:
+78:    yield from component.async_setup(config)
+79:
+
+* top20-github/home-assistant/homeassistant/components/lock/zwave.py failed.
+126.11-126.14: syntax error with [from]
+125:    """Generic Z-Wave platform setup."""
+126:    yield from zwave.async_setup_platform(
+127:        hass, config, async_add_devices, discovery_info)
+
+* top20-github/home-assistant/homeassistant/components/lock/isy994.py failed.
+27.32-27.32: syntax error with [:]
+26:# pylint: disable=unused-argument
+27:def setup_platform(hass, config: ConfigType,
+28:                   add_devices: Callable[[list], None], discovery_info=None):
+
+* top20-github/home-assistant/homeassistant/components/recorder/util.py failed.
+15.20-15.20: syntax error with [,]
+14:@contextmanager
+15:def session_scope(*, hass=None, session=None):
+16:    """Provide a transactional scope around a series of operations."""
+
+* top20-github/home-assistant/homeassistant/components/recorder/__init__.py failed.
+81.40-81.40: syntax error with [:]
+80:
+81:def run_information(hass, point_in_time: Optional[datetime]=None):
+82:    """Return information about current run.
+
+* top20-github/home-assistant/homeassistant/components/automation/mqtt.py failed.
+54.20-54.23: syntax error with [from]
+53:
+54:    remove = yield from mqtt.async_subscribe(
+55:        hass, topic, mqtt_automation_listener)
+
+* top20-github/home-assistant/homeassistant/components/automation/state.py failed.
+51.18-51.46: syntax error with [async_remove_state_for_cancel]
+50:        """Clear all unsub listener."""
+51:        nonlocal async_remove_state_for_cancel, async_remove_state_for_listener
+52:
+
+* top20-github/home-assistant/homeassistant/components/automation/__init__.py failed.
+150.21-150.24: syntax error with [from]
+149:
+150:    success = yield from _async_process_config(hass, config, component)
+151:
+
+* top20-github/home-assistant/homeassistant/components/automation/litejet.py failed.
+69.18-69.41: syntax error with [cancel_pressed_more_than]
+68:        """Handle the press of the LiteJet switch's button."""
+69:        nonlocal cancel_pressed_more_than, pressed_time
+70:        nonlocal held_less_than, held_more_than
+
+* top20-github/home-assistant/homeassistant/components/frontend/__init__.py failed.
+268.26-268.29: syntax error with [from]
+267:        icons_url = '/static/mdi-{}.html'.format(FINGERPRINTS['mdi.html'])
+268:        template = yield from hass.loop.run_in_executor(
+269:            None, self.templates.get_template, 'index.html')
+
+* top20-github/home-assistant/homeassistant/components/calendar/__init__.py failed.
+36.11-36.14: syntax error with [from]
+35:
+36:    yield from component.async_setup(config)
+37:    return True
+
+* top20-github/home-assistant/homeassistant/components/media_player/universal.py failed.
+194.19-194.22: syntax error with [from]
+193:        if allow_override and service_name in self._cmds:
+194:            yield from async_call_from_config(
+195:                self.hass, self._cmds[service_name],
+
+* top20-github/home-assistant/homeassistant/components/media_player/squeezebox.py failed.
+87.21-87.24: syntax error with [from]
+86:
+87:    players = yield from lms.create_players()
+88:    async_add_devices(players)
+
+* top20-github/home-assistant/homeassistant/components/media_player/apple_tv.py failed.
+216.15-216.18: syntax error with [from]
+215:        """Send the play_media command to the media player."""
+216:        yield from self._atv.remote_control.play_url(media_id, 0)
+217:
+
+* top20-github/home-assistant/homeassistant/components/media_player/__init__.py failed.
+333.11-333.14: syntax error with [from]
+332:
+333:    yield from component.async_setup(config)
+334:
+
+* top20-github/home-assistant/homeassistant/components/media_player/anthemav.py failed.
+55.17-55.20: syntax error with [from]
+54:
+55:    avr = yield from anthemav.Connection.create(
+56:        host=host, port=port, loop=hass.loop,
+
+* top20-github/home-assistant/homeassistant/components/media_player/emby.py failed.
+118.15-118.18: syntax error with [from]
+117:        """Stop emby connection."""
+118:        yield from emby.stop()
+119:
+
+* top20-github/home-assistant/homeassistant/components/media_player/hdmi_cec.py failed.
+37.28-37.28: syntax error with [:]
+36:
+37:    def __init__(self, hass: HomeAssistant, device, logical):
+38:        """Initialize the HDMI device."""
+
+* top20-github/home-assistant/homeassistant/components/media_player/kodi.py failed.
+115.19-115.22: syntax error with [from]
+114:        try:
+115:            yield from func(obj, *args, **kwargs)
+116:        except jsonrpc_base.jsonrpc.TransportError as exc:
+
+* top20-github/home-assistant/homeassistant/components/media_player/volumio.py failed.
+95.30-95.33: syntax error with [from]
+94:            websession = async_get_clientsession(self.hass)
+95:            response = yield from websession.get(url, params=params)
+96:            if response.status == 200:
+
+* top20-github/home-assistant/homeassistant/components/zwave/__init__.py failed.
+744.19-744.22: syntax error with [from]
+743:            self._hass.data[DATA_ZWAVE_DICT][dict_id] = device
+744:            yield from discovery.async_load_platform(
+745:                self._hass, component, DOMAIN,
+
+* top20-github/home-assistant/homeassistant/components/tts/__init__.py failed.
+91.15-91.18: syntax error with [from]
+90:
+91:        yield from tts.async_init_cache(use_cache, cache_dir, time_memory)
+92:    except (HomeAssistantError, KeyError) as err:
+
+* top20-github/home-assistant/homeassistant/components/tts/yandextts.py failed.
+117.33-117.36: syntax error with [from]
+116:
+117:                request = yield from websession.get(YANDEX_API_URL,
+118:                                                    params=url_param)
+
+* top20-github/home-assistant/homeassistant/components/tts/google.py failed.
+84.32-84.35: syntax error with [from]
+83:        for idx, part in enumerate(message_parts):
+84:            part_token = yield from self.hass.loop.run_in_executor(
+85:                None, token.calculate_token, part)
+
+* top20-github/home-assistant/homeassistant/components/tts/voicerss.py failed.
+129.33-129.36: syntax error with [from]
+128:            with async_timeout.timeout(10, loop=self.hass.loop):
+129:                request = yield from websession.post(
+130:                    VOICERSS_API_URL, data=form_data
+
+* top20-github/home-assistant/homeassistant/components/climate/generic_thermostat.py failed.
+154.15-154.18: syntax error with [from]
+153:        self._async_control_heating()
+154:        yield from self.async_update_ha_state()
+155:
+
+* top20-github/home-assistant/homeassistant/components/climate/tado.py failed.
+Exception 'utf-8' codec can't decode byte 0xef in position 29: invalid continuation byte
+
+* top20-github/home-assistant/homeassistant/components/climate/__init__.py failed.
+213.11-213.14: syntax error with [from]
+212:    component = EntityComponent(_LOGGER, DOMAIN, hass, SCAN_INTERVAL)
+213:    yield from component.async_setup(config)
+214:
+
+* top20-github/home-assistant/homeassistant/components/climate/honeywell.py failed.
+162.31-162.31: syntax error with [:]
+161:    @property
+162:    def current_operation(self: ClimateDevice) -> str:
+163:        """Get the current operation of the system."""
+
+* top20-github/home-assistant/homeassistant/components/climate/eq3btsmart.py failed.
+77.25-77.25: syntax error with [-]
+76:    @property
+77:    def available(self) -> bool:
+78:        """Return if thermostat is available."""
+
+* top20-github/home-assistant/homeassistant/components/config/__init__.py failed.
+29.23-29.26: syntax error with [from]
+28:        """Setup a panel."""
+29:        panel = yield from async_prepare_setup_platform(hass, config, DOMAIN,
+30:                                                        panel_name)
+
+* top20-github/home-assistant/homeassistant/components/config/hassbian.py failed.
+72.21-72.24: syntax error with [from]
+71:        """Request suite status."""
+72:        inp = yield from hassbian_status(request.app['hass'], self._test_mode)
+73:
+
+* top20-github/home-assistant/homeassistant/components/config/core.py failed.
+24.24-24.27: syntax error with [from]
+23:        """Validate config and return results."""
+24:        errors = yield from async_check_ha_config_file(request.app['hass'])
+25:
+
+* top20-github/home-assistant/homeassistant/components/scene/homeassistant.py failed.
+90.15-90.18: syntax error with [from]
+89:        """Activate scene. Try to get entities into requested state."""
+90:        yield from async_reproduce_state(
+91:            self.hass, self.scene_config.states.values(), True)
+
+* top20-github/home-assistant/homeassistant/components/scene/__init__.py failed.
+63.11-63.14: syntax error with [from]
+62:
+63:    yield from component.async_setup(config)
+64:
+
+* top20-github/home-assistant/homeassistant/components/binary_sensor/ffmpeg_motion.py failed.
+120.15-120.18: syntax error with [from]
+119:        # run
+120:        yield from self.ffmpeg.open_sensor(
+121:            input_source=self._config.get(CONF_INPUT),
+
+* top20-github/home-assistant/homeassistant/components/binary_sensor/__init__.py failed.
+50.11-50.14: syntax error with [from]
+49:
+50:    yield from component.async_setup(config)
+51:    return True
+
+* top20-github/home-assistant/homeassistant/components/binary_sensor/isy994.py failed.
+28.32-28.32: syntax error with [:]
+27:# pylint: disable=unused-argument
+28:def setup_platform(hass, config: ConfigType,
+29:                   add_devices: Callable[[list], None], discovery_info=None):
+
+* top20-github/home-assistant/homeassistant/components/binary_sensor/template.py failed.
+93.23-93.26: syntax error with [from]
+92:        """Register callbacks."""
+93:        state = yield from async_get_last_state(self.hass, self.entity_id)
+94:        if state:
+
+* top20-github/home-assistant/homeassistant/components/binary_sensor/ffmpeg_noise.py failed.
+88.15-88.18: syntax error with [from]
+87:        # run
+88:        yield from self.ffmpeg.open_sensor(
+89:            input_source=self._config.get(CONF_INPUT),
+
+* top20-github/home-assistant/homeassistant/components/remote/__init__.py failed.
+90.11-90.14: syntax error with [from]
+89:        _LOGGER, DOMAIN, hass, SCAN_INTERVAL, GROUP_NAME_ALL_REMOTES)
+90:    yield from component.async_setup(config)
+91:
+
+* top20-github/home-assistant/homeassistant/components/notify/group.py failed.
+73.19-73.22: syntax error with [from]
+72:        if tasks:
+73:            yield from asyncio.wait(tasks, loop=self.hass.loop)
+74:
+* top20-github/home-assistant/homeassistant/components/notify/__init__.py failed.
+72.26-72.29: syntax error with [from]
+71:    """Setup the notify services."""
+72:    descriptions = yield from hass.loop.run_in_executor(
+73:        None, load_yaml_config_file,
+
+* top20-github/home-assistant/homeassistant/components/notify/discord.py failed.
+51.23-51.26: syntax error with [from]
+50:                channel = discord.Object(id=channelid)
+51:                yield from discord_bot.send_message(channel, message)
+52:            yield from discord_bot.logout()
+
+* top20-github/home-assistant/homeassistant/components/notify/html5.py failed.
+180.26-180.29: syntax error with [from]
+179:        try:
+180:            data = yield from request.json()
+181:        except ValueError:
+
+* top20-github/home-assistant/homeassistant/components/notify/kodi.py failed.
+99.19-99.22: syntax error with [from]
+98:            title = kwargs.get(ATTR_TITLE, ATTR_TITLE_DEFAULT)
+99:            yield from self._server.GUI.ShowNotification(
+100:                title, message, icon, displaytime)
+
+* top20-github/home-assistant/homeassistant/components/alarm_control_panel/__init__.py failed.
+97.11-97.14: syntax error with [from]
+96:
+97:    yield from component.async_setup(config)
+98:
+
+* top20-github/home-assistant/homeassistant/components/alarm_control_panel/envisalink.py failed.
+73.26-73.29: syntax error with [from]
+72:    # Register Envisalink specific services
+73:    descriptions = yield from hass.loop.run_in_executor(
+74:        None, load_yaml_config_file, os.path.join(
+
+* top20-github/home-assistant/homeassistant/components/mqtt/__init__.py failed.
+217.11-217.14: syntax error with [from]
+216:
+217:    yield from hass.data[DATA_MQTT].async_subscribe(topic, qos)
+218:    return async_remove
+
+* top20-github/home-assistant/homeassistant/components/mqtt/server.py failed.
+48.15-48.18: syntax error with [from]
+47:        broker = Broker(server_config, hass.loop)
+48:        yield from broker.start()
+49:    except BrokerException:
+
+* top20-github/home-assistant/homeassistant/components/mqtt/discovery.py failed.
+67.15-67.18: syntax error with [from]
+66:
+67:        yield from async_load_platform(
+68:            hass, component, platform, payload, hass_config)
+
+* top20-github/home-assistant/homeassistant/components/camera/amcrest.py failed.
+117.19-117.22: syntax error with [from]
+116:        if self._stream_source == STREAM_SOURCE_LIST['snapshot']:
+117:            yield from super().handle_async_mjpeg_stream(request)
+118:            return
+
+* top20-github/home-assistant/homeassistant/components/camera/__init__.py failed.
+64.30-64.33: syntax error with [from]
+63:        with async_timeout.timeout(timeout, loop=hass.loop):
+64:            response = yield from websession.get(url)
+65:
+
+* top20-github/home-assistant/homeassistant/components/camera/ffmpeg.py failed.
+58.23-58.26: syntax error with [from]
+57:
+58:        image = yield from ffmpeg.get_image(
+59:            self._input, output_format=IMAGE_JPEG,
+
+* top20-github/home-assistant/homeassistant/components/camera/synology.py failed.
+80.31-80.34: syntax error with [from]
+79:        with async_timeout.timeout(timeout, loop=hass.loop):
+80:            query_req = yield from websession_init.get(
+81:                syno_api_url,
+
+* top20-github/home-assistant/homeassistant/components/camera/generic.py failed.
+106.38-106.41: syntax error with [from]
+105:
+106:            self._last_image = yield from self.hass.loop.run_in_executor(
+107:                None, fetch)
+
+* top20-github/home-assistant/homeassistant/components/camera/mjpeg.py failed.
+91.27-91.30: syntax error with [from]
+90:           self._still_image_url is None:
+91:            image = yield from self.hass.loop.run_in_executor(
+92:                None, self.camera_image)
+
+* top20-github/home-assistant/homeassistant/components/emulated_hue/__init__.py failed.
+107.15-107.18: syntax error with [from]
+106:        upnp_listener.stop()
+107:        yield from server.stop()
+108:
+
+* top20-github/home-assistant/homeassistant/components/emulated_hue/hue_api.py failed.
+46.26-46.29: syntax error with [from]
+45:        try:
+46:            data = yield from request.json()
+47:        except ValueError:
+
+* top20-github/home-assistant/homeassistant/components/weather/__init__.py failed.
+42.11-42.14: syntax error with [from]
+41:
+42:    yield from component.async_setup(config)
+43:    return True
+
+* top20-github/home-assistant/homeassistant/helpers/entity.py failed.
+25.40-25.40: syntax error with [:]
+24:
+25:def generate_entity_id(entity_id_format: str, name: Optional[str],
+26:                       current_ids: Optional[List[str]]=None,
+
+* top20-github/home-assistant/homeassistant/helpers/script.py failed.
+32.26-32.26: syntax error with [:]
+31:
+32:def call_from_config(hass: HomeAssistant, config: ConfigType,
+33:                     variables: Optional[Sequence]=None) -> None:
+
+* top20-github/home-assistant/homeassistant/helpers/location.py failed.
+10.23-10.23: syntax error with [:]
+9:
+10:def has_location(state: State) -> bool:
+11:    """Test if state contains a valid location.
+
+* top20-github/home-assistant/homeassistant/helpers/condition.py failed.
+50.29-50.29: syntax error with [:]
+49:
+50:def async_from_config(config: ConfigType, config_validation: bool=True):
+51:    """Turn a condition configuration into a method.
+
+* top20-github/home-assistant/homeassistant/helpers/state.py failed.
+191.19-191.22: syntax error with [from]
+190:        for coro in coro_list:
+191:            yield from coro
+192:
+
+* top20-github/home-assistant/homeassistant/helpers/__init__.py failed.
+17.31-17.31: syntax error with [:]
+16:
+17:def config_per_platform(config: ConfigType,
+18:                        domain: str) -> Iterable[Tuple[Any, Any]]:
+
+* top20-github/home-assistant/homeassistant/helpers/service.py failed.
+79.11-79.14: syntax error with [from]
+78:
+79:    yield from hass.services.async_call(
+80:        domain, service_name, service_data, blocking)
+
+* top20-github/home-assistant/homeassistant/helpers/entity_component.py failed.
+73.19-73.22: syntax error with [from]
+72:        if tasks:
+73:            yield from asyncio.wait(tasks, loop=self.hass.loop)
+74:
+
+* top20-github/home-assistant/homeassistant/helpers/config_validation.py failed.
+46.31-46.31: syntax error with [:]
+45:# https://github.com/alecthomas/voluptuous/issues/115#issuecomment-144464666
+46:def has_at_least_one_key(*keys: str) -> Callable:
+47:    """Validator that at least one key exists."""
+
+* top20-github/home-assistant/homeassistant/helpers/restore_state.py failed.
+21.29-21.29: syntax error with [:]
+20:
+21:def _load_restore_cache(hass: HomeAssistant):
+22:    """Load the restore cache to be used by other components."""
+
+* top20-github/home-assistant/homeassistant/helpers/discovery.py failed.
+66.15-66.18: syntax error with [from]
+65:    if component is not None and component not in hass.config.components:
+66:        yield from setup.async_setup_component(
+67:            hass, component, hass_config)
+
+* top20-github/home-assistant/homeassistant/helpers/event.py failed.
+99.18-99.34: syntax error with [already_triggered]
+98:        """Check if condition is correct and run action."""
+99:        nonlocal already_triggered
+100:        template_result = condition.async_template(hass, template, variables)
+
+* top20-github/home-assistant/homeassistant/helpers/aiohttp_client.py failed.
+82.28-82.31: syntax error with [from]
+81:        with async_timeout.timeout(timeout, loop=hass.loop):
+82:            stream = yield from stream_coro
+83:
+
+* top20-github/home-assistant/tests/test_config.py failed.
+556.11-556.14: syntax error with [from]
+555:    }
+556:    yield from config_util.async_process_ha_core_config(hass, core_config)
+557:
+
+* top20-github/home-assistant/tests/common.py failed.
+116.15-116.18: syntax error with [from]
+115:    if 'custom_components.test' not in loader.AVAILABLE_COMPONENTS:
+116:        yield from loop.run_in_executor(None, loader.prepare, hass)
+117:
+
+* top20-github/home-assistant/tests/test_setup.py failed.
+407.20-407.23: syntax error with [from]
+406:    """Test config is not allowed to be a dependency."""
+407:    result = yield from setup._async_process_dependencies(
+408:        hass, None, 'test', ['config'])
+
+* top20-github/home-assistant/tests/test_bootstrap.py failed.
+38.15-38.18: syntax error with [from]
+37:    with patch_yaml_files(files, True):
+38:        yield from bootstrap.async_from_config_file('config.yaml')
+39:
+
+* top20-github/home-assistant/tests/test_core.py failed.
+161.19-161.22: syntax error with [from]
+160:            """Wait until all stuff is scheduled."""
+161:            yield from asyncio.sleep(0, loop=self.hass.loop)
+162:            yield from asyncio.sleep(0, loop=self.hass.loop)
+
+* top20-github/home-assistant/tests/util/test_async.py failed.
+97.15-97.18: syntax error with [from]
+96:        """Wait 0.05 second and return a + b."""
+97:        yield from asyncio.sleep(0.05, loop=self.loop)
+98:        if fail:
+
+* top20-github/home-assistant/tests/components/test_input_boolean.py failed.
+123.11-123.14: syntax error with [from]
+122:
+123:    yield from async_setup_component(hass, DOMAIN, {
+124:        DOMAIN: {
+
+* top20-github/home-assistant/tests/components/test_ffmpeg.py failed.
+73.15-73.18: syntax error with [from]
+72:    with assert_setup_component(2):
+73:        yield from async_setup_component(
+74:            hass, ffmpeg.DOMAIN, {ffmpeg.DOMAIN: {}})
+
+* top20-github/home-assistant/tests/components/test_init.py failed.
+89.15-89.18: syntax error with [from]
+88:        service = self.hass.services._services['homeassistant']['turn_on']
+89:        yield from service.func(service_call)
+90:
+
+* top20-github/home-assistant/tests/components/test_input_select.py failed.
+235.11-235.14: syntax error with [from]
+234:
+235:    yield from async_setup_component(hass, DOMAIN, {
+236:        DOMAIN: {
+
+* top20-github/home-assistant/tests/components/test_input_slider.py failed.
+86.11-86.14: syntax error with [from]
+85:
+86:    yield from async_setup_component(hass, DOMAIN, {
+87:        DOMAIN: {
+
+* top20-github/home-assistant/tests/components/test_rflink.py failed.
+49.15-49.18: syntax error with [from]
+48:    with assert_setup_component(1, domain):
+49:        yield from async_setup_component(hass, domain, config)
+50:
+
+* top20-github/home-assistant/tests/components/test_discovery.py failed.
+39.20-39.23: syntax error with [from]
+38:    """Test that unknown service is ignored."""
+39:    result = yield from async_setup_component(hass, 'discovery', {
+40:        'discovery': {},
+
+* top20-github/home-assistant/tests/components/test_websocket_api.py failed.
+61.17-61.20: syntax error with [from]
+60:
+61:    msg = yield from no_auth_websocket_client.receive_json()
+62:
+
+* top20-github/home-assistant/tests/components/http/test_init.py failed.
+134.11-134.14: syntax error with [from]
+133:    """Test that we can register a view while the server is running."""
+134:    yield from setup.async_setup_component(
+135:        hass, http.DOMAIN, {
+
+* top20-github/home-assistant/tests/components/switch/test_template.py failed.
+387.11-387.14: syntax error with [from]
+386:
+387:    yield from setup.async_setup_component(hass, 'switch', {
+388:        'switch': {
+
+* top20-github/home-assistant/tests/components/switch/test_rflink.py failed.
+38.49-38.52: syntax error with [from]
+37:    # setup mocking rflink module
+38:    event_callback, create, protocol, _ = yield from mock_rflink(
+39:        hass, CONFIG, DOMAIN, monkeypatch)
+
+* top20-github/home-assistant/tests/components/light/test_demo.py failed.
+84.11-84.14: syntax error with [from]
+83:
+84:    yield from async_setup_component(hass, 'light', {
+85:        'light': {
+
+* top20-github/home-assistant/tests/components/light/test_rflink.py failed.
+49.49-49.52: syntax error with [from]
+48:    # setup mocking rflink module
+49:    event_callback, create, protocol, _ = yield from mock_rflink(
+50:        hass, CONFIG, DOMAIN, monkeypatch)
+
+* top20-github/home-assistant/tests/components/sensor/test_template.py failed.
+204.11-204.14: syntax error with [from]
+203:
+204:    yield from async_setup_component(hass, 'sensor', {
+205:        'sensor': {
+
+* top20-github/home-assistant/tests/components/sensor/test_dsmr.py failed.
+67.15-67.18: syntax error with [from]
+66:    with assert_setup_component(1):
+67:        yield from async_setup_component(hass, 'sensor',
+68:                                         {'sensor': config})
+
+* top20-github/home-assistant/tests/components/sensor/test_yr.py failed.
+25.15-25.18: syntax error with [from]
+24:               return_value=NOW), assert_setup_component(1):
+25:        yield from async_setup_component(hass, 'sensor', {'sensor': config})
+26:
+
+* top20-github/home-assistant/tests/components/sensor/test_api_streams.py failed.
+15.15-15.18: syntax error with [from]
+14:    with assert_setup_component(1):
+15:        yield from async_setup_component(hass, 'sensor', {
+16:            'sensor': {
+
+* top20-github/home-assistant/tests/components/sensor/test_rflink.py failed.
+35.42-35.45: syntax error with [from]
+34:    # setup mocking rflink module
+35:    event_callback, create, _, _ = yield from mock_rflink(
+36:        hass, CONFIG, DOMAIN, monkeypatch)
+
+* top20-github/home-assistant/tests/components/device_tracker/test_init.py failed.
+682.15-682.18: syntax error with [from]
+681:    with patch_yaml_files(files):
+682:        yield from device_tracker.async_setup(hass, {})
+683:
+
+* top20-github/home-assistant/tests/components/lock/test_zwave.py failed.
+177.11-177.14: syntax error with [from]
+176:    value1 = MockValue(data=None, node=node, index=1)
+177:    yield from zwave.async_setup_platform(
+178:        hass, {}, MagicMock())
+
+* top20-github/home-assistant/tests/components/recorder/test_migrate.py failed.
+32.15-32.18: syntax error with [from]
+31:            update:
+32:        yield from async_setup_component(hass, 'recorder', {
+33:            'recorder': {
+
+* top20-github/home-assistant/tests/components/automation/test_init.py failed.
+598.19-598.22: syntax error with [from]
+597:
+598:    assert (yield from async_setup_component(hass, automation.DOMAIN, config))
+599:
+
+* top20-github/home-assistant/tests/components/media_player/test_async_helpers.py failed.
+111.15-111.18: syntax error with [from]
+110:        """
+111:        yield from super().async_media_play_pause()
+112:
+
+* top20-github/home-assistant/tests/components/zwave/test_init.py failed.
+15.20-15.23: syntax error with [from]
+14:    }
+15:    result = yield from async_setup_component(hass, 'zwave', {
+16:        'zwave': {
+
+* top20-github/home-assistant/tests/components/climate/test_generic_thermostat.py failed.
+713.20-713.23: syntax error with [from]
+712:    """Test the setup with custom parameters."""
+713:    result = yield from async_setup_component(
+714:        hass, climate.DOMAIN, {'climate': {
+
+* top20-github/home-assistant/tests/components/climate/test_honeywell.py failed.
+321.37-321.37: syntax error with [:]
+320:
+321:    def test_set_operation_mode(self: unittest.TestCase) -> None:
+322:        """Test setting the system operation."""
+
+* top20-github/home-assistant/tests/components/config/test_zwave.py failed.
+20.15-20.18: syntax error with [from]
+19:    with patch.object(config, 'SECTIONS', ['zwave']):
+20:        yield from async_setup_component(hass, 'config', {})
+21:
+
+* top20-github/home-assistant/tests/components/config/test_init.py failed.
+23.11-23.14: syntax error with [from]
+22:    """Test it sets up hassbian."""
+23:    yield from async_setup_component(hass, 'config', {})
+24:    assert 'config' in hass.config.components
+
+* top20-github/home-assistant/tests/components/config/test_hassbian.py failed.
+43.15-43.18: syntax error with [from]
+42:            patch.object(config, 'SECTIONS', ['hassbian']):
+43:        yield from async_setup_component(hass, 'config', {})
+44:
+
+* top20-github/home-assistant/tests/components/config/test_group.py failed.
+20.15-20.18: syntax error with [from]
+19:    with patch.object(config, 'SECTIONS', ['group']):
+20:        yield from async_setup_component(hass, 'config', {})
+21:
+
+* top20-github/home-assistant/tests/components/config/test_core.py failed.
+16.15-16.18: syntax error with [from]
+15:    with patch.object(config, 'SECTIONS', ['core']):
+16:        yield from async_setup_component(hass, 'config', {})
+17:
+
+* top20-github/home-assistant/tests/components/binary_sensor/test_template.py failed.
+190.11-190.14: syntax error with [from]
+189:    }
+190:    yield from setup.async_setup_component(hass, 'binary_sensor', config)
+191:
+
+* top20-github/home-assistant/tests/components/binary_sensor/test_zwave.py failed.
+86.11-86.14: syntax error with [from]
+85:    value.data = True
+86:    yield from hass.loop.run_in_executor(None, value_changed, value)
+87:    yield from hass.async_block_till_done()
+
+* top20-github/home-assistant/tests/components/notify/test_html5.py failed.
+127.28-127.31: syntax error with [from]
+126:            view.register(app.router)
+127:            client = yield from test_client(app)
+128:            hass.http.is_banned_ip.return_value = False
+
+* top20-github/home-assistant/tests/components/mqtt/test_init.py failed.
+32.24-32.27: syntax error with [from]
+31:        mock_client().connect = lambda *args: 0
+32:        result = yield from async_setup_component(hass, mqtt.DOMAIN, {
+33:            mqtt.DOMAIN: config
+
+* top20-github/home-assistant/tests/components/mqtt/test_discovery.py failed.
+15.11-15.14: syntax error with [from]
+14:    discovery_topic = 'homeassistant'
+15:    yield from async_start(hass, discovery_topic, hass_config)
+16:
+
+* top20-github/home-assistant/tests/components/camera/test_generic.py failed.
+24.11-24.14: syntax error with [from]
+23:
+24:    yield from hass.loop.run_in_executor(None, setup_platform)
+25:
+
+* top20-github/home-assistant/tests/components/camera/test_local_file.py failed.
+29.11-29.14: syntax error with [from]
+28:
+29:    yield from hass.loop.run_in_executor(None, setup_platform)
+30:
+
+* top20-github/home-assistant/tests/components/emulated_hue/test_hue_api.py failed.
+131.20-131.23: syntax error with [from]
+130:    """Test the discovery of lights."""
+131:    result = yield from hue_client.get('/api/username/lights')
+132:
+
+* top20-github/home-assistant/tests/mock/zwave.py failed.
+42.25-42.25: syntax error with [,]
+41:
+42:    def __init__(self, *,
+43:                 node_id='567',
+
+* top20-github/home-assistant/tests/test_util/aiohttp.py failed.
+20.37-20.37: syntax error with [,]
+19:
+20:    def request(self, method, url, *,
+21:                auth=None,
+
+* top20-github/home-assistant/tests/helpers/test_restore_state.py failed.
+38.23-38.26: syntax error with [from]
+37:                  return_value=mock_coro(True)):
+38:        state = yield from async_get_last_state(hass, 'input_boolean.b1')
+39:
+
+* top20-github/home-assistant/tests/helpers/test_aiohttp_client.py failed.
+137.11-137.14: syntax error with [from]
+136:
+137:    yield from hass.loop.run_in_executor(None, setup_platform)
+138:
+
+* top20-github/home-assistant/tests/helpers/test_discovery.py failed.
+205.15-205.18: syntax error with [from]
+204:    with pytest.raises(HomeAssistantError):
+205:        yield from discovery.async_load_platform(None, 'config', 'zwave')
+206:
+
+* top20-github/home-assistant/tests/helpers/test_entity_component.py failed.
+463.15-463.18: syntax error with [from]
+462:            as mock_call:
+463:        yield from component.async_setup({
+464:            DOMAIN: {
+
+* top20-github/home-assistant/tests/helpers/test_entity.py failed.
+51.15-51.18: syntax error with [from]
+50:    def test():
+51:        yield from ent.async_update_ha_state(True)
+52:
+ done.
+

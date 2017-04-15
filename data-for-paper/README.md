@@ -16,6 +16,10 @@ quirks: for example, 2.7.2 is slightly different from 2.7, and 2.4.3
 is slightly different from 2.4.  Also, later Pythons like 3.5 are
 actually 3.5.0 etc.
 
+For the four applications that had actually migrated to 3.x, we record
+their 2.7 fails (i.e. their 3.x features) in the
+table1-passrates/fails-for-2.7 directory.
+
 
 ## fig3-commits.csv
 

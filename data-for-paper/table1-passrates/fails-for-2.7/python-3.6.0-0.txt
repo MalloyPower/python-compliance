@@ -1,0 +1,1012 @@
+Running front-end for v2.7 on 1 apps: python-3.6.0-0,
+* anaconda3/pkgs/python-3.6.0-0/lib/python3.6/pickletools.py failed.
+2400.36-2400.36: syntax error with [=]
+2399:        if pos is not None:
+2400:            print("%5d:" % pos, end=' ', file=out)
+2401:
+
+* anaconda3/pkgs/python-3.6.0-0/lib/python3.6/trace.py failed.
+195.66-195.66: syntax error with [=]
+194:                print(("Skipping counts file %r: %s"
+195:                                      % (self.infile, err)), file=sys.stderr)
+196:
+
+* anaconda3/pkgs/python-3.6.0-0/lib/python3.6/gettext.py failed.
+130.35-130.38: syntax error with [from]
+129:        except ValueError:
+130:            raise _error(nexttok) from None
+131:        result = '%s%d' % (result, value)
+
+* anaconda3/pkgs/python-3.6.0-0/lib/python3.6/sre_parse.py failed.
+121.44-121.44: syntax error with [=]
+120:        for op, av in self.data:
+121:            print(level*"  " + str(op), end='')
+122:            if op is IN:
+
+* anaconda3/pkgs/python-3.6.0-0/lib/python3.6/socketserver.py failed.
+377.27-377.27: syntax error with [=]
+376:        """
+377:        print('-'*40, file=sys.stderr)
+378:        print('Exception happened during processing of request from',
+
+* anaconda3/pkgs/python-3.6.0-0/lib/python3.6/glob.py failed.
+9.21-9.21: syntax error with [,]
+8:
+9:def glob(pathname, *, recursive=False):
+10:    """Return a list of paths matching a pathname pattern.
+
+* anaconda3/pkgs/python-3.6.0-0/lib/python3.6/numbers.py failed.
+12.23-12.23: syntax error with [=]
+11:
+12:class Number(metaclass=ABCMeta):
+13:    """All numbers inherit from this class.
+
+* anaconda3/pkgs/python-3.6.0-0/lib/python3.6/imghdr.py failed.
+151.39-151.39: syntax error with [=]
+150:        if os.path.isdir(filename):
+151:            print(filename + '/:', end=' ')
+152:            if recursive or toplevel:
+
+* anaconda3/pkgs/python-3.6.0-0/lib/python3.6/pickle.py failed.
+347.46-347.46: syntax error with [,]
+346:
+347:    def __init__(self, file, protocol=None, *, fix_imports=True):
+348:        """This takes a binary file for writing a pickle data stream.
+
+* anaconda3/pkgs/python-3.6.0-0/lib/python3.6/_strptime.py failed.
+354.62-354.65: syntax error with [from]
+353:                raise ValueError("'%s' is a bad directive in format '%s'" %
+354:                                    (bad_directive, format)) from None
+355:            # IndexError only occurs when the format string is "%"
+
+* anaconda3/pkgs/python-3.6.0-0/lib/python3.6/runpy.py failed.
+134.66-134.69: syntax error with [from]
+133:        msg = "Error while finding module specification for {!r} ({}: {})"
+134:        raise error(msg.format(mod_name, type(ex).__name__, ex)) from ex
+135:    if spec is None:
+
+* anaconda3/pkgs/python-3.6.0-0/lib/python3.6/warnings.py failed.
+159.24-159.29: syntax error with [append]
+158:
+159:def _add_filter(*item, append):
+160:    # Remove possible duplicate filters, so new one will be placed
+
+* anaconda3/pkgs/python-3.6.0-0/lib/python3.6/plistlib.py failed.
+886.48-886.51: syntax error with [from]
+885:                except struct.error:
+886:                    raise OverflowError(value) from None
+887:            elif value < 1 << 8:
+
+* anaconda3/pkgs/python-3.6.0-0/lib/python3.6/genericpath.py failed.
+149.63-149.66: syntax error with [from]
+148:            raise TypeError('%s() argument must be str or bytes, not %r' %
+149:                            (funcname, s.__class__.__name__)) from None
+150:    if hasstr and hasbytes:
+
+* anaconda3/pkgs/python-3.6.0-0/lib/python3.6/types.py failed.
+22.7-22.9: syntax error with [def]
+21:
+22:async def _c(): pass
+23:_c = _c()
+
+* anaconda3/pkgs/python-3.6.0-0/lib/python3.6/weakref.py failed.
+49.50-49.53: syntax error with [from]
+48:            raise TypeError("argument should be a bound method, not {}"
+49:                            .format(type(meth))) from None
+50:        def _cb(arg):
+
+* anaconda3/pkgs/python-3.6.0-0/lib/python3.6/base64.py failed.
+46.66-46.69: syntax error with [from]
+45:        raise TypeError("argument should be a bytes-like object or ASCII "
+46:                        "string, not %r" % s.__class__.__name__) from None
+47:
+
+* anaconda3/pkgs/python-3.6.0-0/lib/python3.6/os.py failed.
+409.23-409.26: syntax error with [from]
+408:            if followlinks or not islink(new_path):
+409:                yield from walk(new_path, topdown, onerror, followlinks)
+410:    else:
+
+* anaconda3/pkgs/python-3.6.0-0/lib/python3.6/datetime.py failed.
+1048.79-1048.79: syntax error with [,]
+1047:
+1048:    def __new__(cls, hour=0, minute=0, second=0, microsecond=0, tzinfo=None, *, fold=0):
+1049:        """Constructor.
+
+* anaconda3/pkgs/python-3.6.0-0/lib/python3.6/argparse.py failed.
+615.19-615.22: syntax error with [from]
+614:            self._indent()
+615:            yield from get_subactions()
+616:            self._dedent()
+
+* anaconda3/pkgs/python-3.6.0-0/lib/python3.6/posixpath.py failed.
+505.71-505.74: syntax error with [from]
+504:        except ValueError:
+505:            raise ValueError("Can't mix absolute and relative paths") from None
+506:
+
+* anaconda3/pkgs/python-3.6.0-0/lib/python3.6/ssl.py failed.
+228.15-228.15: syntax error with [*]
+227:
+228:    leftmost, *remainder = dn.split(r'.')
+229:
+
+* anaconda3/pkgs/python-3.6.0-0/lib/python3.6/pprint.py failed.
+47.66-47.66: syntax error with [,]
+46:
+47:def pprint(object, stream=None, indent=1, width=80, depth=None, *,
+48:           compact=False):
+
+* anaconda3/pkgs/python-3.6.0-0/lib/python3.6/telnetlib.py failed.
+248.65-248.65: syntax error with [=]
+247:        if self.debuglevel > 0:
+248:            print('Telnet(%s,%s):' % (self.host, self.port), end=' ')
+249:            if args:
+
+* anaconda3/pkgs/python-3.6.0-0/lib/python3.6/ntpath.py failed.
+56.62-56.65: syntax error with [from]
+55:            raise TypeError("normcase() argument must be str or bytes, "
+56:                            "not %r" % s.__class__.__name__) from None
+57:        raise
+
+* anaconda3/pkgs/python-3.6.0-0/lib/python3.6/_pyio.py failed.
+284.23-284.23: syntax error with [=]
+283:
+284:class IOBase(metaclass=abc.ABCMeta):
+285:
+
+* anaconda3/pkgs/python-3.6.0-0/lib/python3.6/threading.py failed.
+758.41-758.41: syntax error with [,]
+757:    def __init__(self, group=None, target=None, name=None,
+758:                 args=(), kwargs=None, *, daemon=None):
+759:        """This constructor should always be called with keyword arguments. Arguments are:
+
+* anaconda3/pkgs/python-3.6.0-0/lib/python3.6/traceback.py failed.
+25.25-25.25: syntax error with [=]
+24:    for item in StackSummary.from_list(extracted_list).format():
+25:        print(item, file=file, end="")
+26:
+
+* anaconda3/pkgs/python-3.6.0-0/lib/python3.6/mailbox.py failed.
+624.15-624.18: syntax error with [from]
+623:        self._lookup()
+624:        yield from self._toc.keys()
+625:
+
+* anaconda3/pkgs/python-3.6.0-0/lib/python3.6/string.py failed.
+77.25-77.25: syntax error with [=]
+76:
+77:class Template(metaclass=_TemplateMetaclass):
+78:    """A string class for supporting $-substitutions."""
+
+* anaconda3/pkgs/python-3.6.0-0/lib/python3.6/ipaddress.py failed.
+474.38-474.41: syntax error with [from]
+473:        msg = '%r is not a valid netmask' % netmask_str
+474:        raise NetmaskValueError(msg) from None
+475:
+
+* anaconda3/pkgs/python-3.6.0-0/lib/python3.6/io.py failed.
+72.36-72.36: syntax error with [=]
+71:# version however.
+72:class IOBase(_io._IOBase, metaclass=abc.ABCMeta):
+73:    __doc__ = _io._IOBase.__doc__
+
+* anaconda3/pkgs/python-3.6.0-0/lib/python3.6/shutil.py failed.
+90.25-90.25: syntax error with [,]
+89:
+90:def copyfile(src, dst, *, follow_symlinks=True):
+91:    """Copy data from src to dst.
+
+* anaconda3/pkgs/python-3.6.0-0/lib/python3.6/difflib.py failed.
+907.19-907.22: syntax error with [from]
+906:
+907:            yield from g
+908:
+
+* anaconda3/pkgs/python-3.6.0-0/lib/python3.6/inspect.py failed.
+458.19-458.19: syntax error with [,]
+457:
+458:def unwrap(func, *, stop=None):
+459:    """Get the object wrapped by *func*.
+
+* anaconda3/pkgs/python-3.6.0-0/lib/python3.6/codecs.py failed.
+95.10-95.10: syntax error with [,]
+94:        incrementalencoder=None, incrementaldecoder=None, name=None,
+95:        *, _is_text_encoding=None):
+96:        self = tuple.__new__(cls, (encode, decode, streamreader, streamwriter))
+
+* anaconda3/pkgs/python-3.6.0-0/lib/python3.6/configparser.py failed.
+433.55-433.58: syntax error with [from]
+432:                    raise InterpolationMissingOptionError(
+433:                        option, section, rawval, var) from None
+434:                if "%" in v:
+
+* anaconda3/pkgs/python-3.6.0-0/lib/python3.6/random.py failed.
+146.33-146.36: syntax error with [from]
+145:            except ValueError as e:
+146:                raise TypeError from e
+147:            super().setstate(internalstate)
+
+* anaconda3/pkgs/python-3.6.0-0/lib/python3.6/sndhdr.py failed.
+240.39-240.39: syntax error with [=]
+239:        if os.path.isdir(filename):
+240:            print(filename + '/:', end=' ')
+241:            if recursive or toplevel:
+
+* anaconda3/pkgs/python-3.6.0-0/lib/python3.6/zipfile.py failed.
+1250.19-1250.19: syntax error with [=]
+1249:        print("%-46s %19s %12s" % ("File Name", "Modified    ", "Size"),
+1250:              file=file)
+1251:        for zinfo in self.filelist:
+
+* anaconda3/pkgs/python-3.6.0-0/lib/python3.6/tokenize.py failed.
+737.28-737.28: syntax error with [=]
+736:    def perror(message):
+737:        print(message, file=sys.stderr)
+738:
+
+* anaconda3/pkgs/python-3.6.0-0/lib/python3.6/subprocess.py failed.
+259.22-259.28: syntax error with [timeout]
+258:
+259:def call(*popenargs, timeout=None, **kwargs):
+260:    """Run command with arguments.  Wait for command to complete or
+
+* anaconda3/pkgs/python-3.6.0-0/lib/python3.6/lzma.py failed.
+49.50-49.50: syntax error with [,]
+48:
+49:    def __init__(self, filename=None, mode="r", *,
+50:                 format=None, check=-1, preset=None, filters=None):
+
+* anaconda3/pkgs/python-3.6.0-0/lib/python3.6/smtpd.py failed.
+113.36-113.36: syntax error with [=]
+112:def usage(code, msg=''):
+113:    print(__doc__ % globals(), file=sys.stderr)
+114:    if msg:
+
+* anaconda3/pkgs/python-3.6.0-0/lib/python3.6/cgi.py failed.
+979.51-979.51: syntax error with [=]
+978:    for key in keys:
+979:        print("<DT>" + html.escape(key) + ":", end=' ')
+980:        value = form[key]
+
+* anaconda3/pkgs/python-3.6.0-0/lib/python3.6/smtplib.py failed.
+296.51-296.51: syntax error with [*]
+295:        if self.debuglevel > 1:
+296:            print(datetime.datetime.now().time(), *args, file=sys.stderr)
+297:        else:
+
+* anaconda3/pkgs/python-3.6.0-0/lib/python3.6/functools.py failed.
+253.20-253.20: syntax error with [*]
+252:            raise TypeError("type 'partial' takes at least one argument")
+253:        cls, func, *args = args
+254:        if not callable(func):
+
+* anaconda3/pkgs/python-3.6.0-0/lib/python3.6/pkgutil.py failed.
+107.23-107.26: syntax error with [from]
+106:
+107:                yield from walk_packages(path, info.name+'.', onerror)
+108:
+
+* anaconda3/pkgs/python-3.6.0-0/lib/python3.6/pstats.py failed.
+62.31-62.36: syntax error with [stream]
+61:
+62:    def __init__(self, *args, stream=None):
+63:        self.stream = stream or sys.stdout
+
+* anaconda3/pkgs/python-3.6.0-0/lib/python3.6/compileall.py failed.
+51.19-51.22: syntax error with [from]
+50:              os.path.isdir(fullname) and not os.path.islink(fullname)):
+51:            yield from _walk_dir(fullname, ddir=dfile,
+52:                                 maxlevels=maxlevels - 1, quiet=quiet)
+
+* anaconda3/pkgs/python-3.6.0-0/lib/python3.6/optparse.py failed.
+1588.41-1588.41: syntax error with [=]
+1587:        if self.usage:
+1588:            print(self.get_usage(), file=file)
+1589:
+
+* anaconda3/pkgs/python-3.6.0-0/lib/python3.6/selectors.py failed.
+39.54-39.57: syntax error with [from]
+38:            raise ValueError("Invalid file object: "
+39:                             "{!r}".format(fileobj)) from None
+40:    if fd < 0:
+
+* anaconda3/pkgs/python-3.6.0-0/lib/python3.6/xdrlib.py failed.
+43.46-43.49: syntax error with [from]
+42:        except struct.error as e:
+43:            raise ConversionError(e.args[0]) from None
+44:    return result
+
+* anaconda3/pkgs/python-3.6.0-0/lib/python3.6/contextlib.py failed.
+84.58-84.61: syntax error with [from]
+83:        except StopIteration:
+84:            raise RuntimeError("generator didn't yield") from None
+85:
+
+* anaconda3/pkgs/python-3.6.0-0/lib/python3.6/pydoc.py failed.
+2536.21-2536.21: syntax error with [,]
+2535:
+2536:def browse(port=0, *, open_browser=True):
+2537:    """Start the enhanced pydoc Web server and open a Web browser.
+
+* anaconda3/pkgs/python-3.6.0-0/lib/python3.6/site.py failed.
+177.27-177.27: syntax error with [=]
+176:                print("Error processing line {:d} of {}:\n".format(n+1, fullname),
+177:                      file=sys.stderr)
+178:                import traceback
+
+* anaconda3/pkgs/python-3.6.0-0/lib/python3.6/textwrap.py failed.
+126.19-126.19: syntax error with [,]
+125:                 tabsize=8,
+126:                 *,
+127:                 max_lines=None,
+
+* anaconda3/pkgs/python-3.6.0-0/lib/python3.6/heapq.py failed.
+314.23-314.25: syntax error with [key]
+313:
+314:def merge(*iterables, key=None, reverse=False):
+315:    '''Merge multiple sorted inputs into a single sorted output.
+
+* anaconda3/pkgs/python-3.6.0-0/lib/python3.6/timeit.py failed.
+240.22-240.22: syntax error with [,]
+239:
+240:def main(args=None, *, _wrap_timer=None):
+241:    """Main program, used when run as a script.
+
+* anaconda3/pkgs/python-3.6.0-0/lib/python3.6/calendar.py failed.
+190.15-190.18: syntax error with [from]
+189:        days_before = (day1 - self.firstweekday) % 7
+190:        yield from repeat(0, days_before)
+191:        yield from range(1, ndays + 1)
+
+* anaconda3/pkgs/python-3.6.0-0/lib/python3.6/tarfile.py failed.
+267.17-267.17: syntax error with [=]
+266:        s = s.encode(encoding, 'backslashreplace').decode(encoding)
+267:    print(s, end=' ')
+268:
+
+* anaconda3/pkgs/python-3.6.0-0/lib/python3.6/modulefinder.py failed.
+88.33-88.33: syntax error with [=]
+87:            for i in range(self.indent):
+88:                print("   ", end=' ')
+89:            print(str, end=' ')
+
+* anaconda3/pkgs/python-3.6.0-0/lib/python3.6/nntplib.py failed.
+210.25-210.25: syntax error with [*]
+209:        fields = {}
+210:        article_number, *tokens = line.split('\t')
+211:        article_number = int(article_number)
+
+* anaconda3/pkgs/python-3.6.0-0/lib/python3.6/pdb.py failed.
+453.24-453.24: syntax error with [=]
+452:    def message(self, msg):
+453:        print(msg, file=self.stdout)
+454:
+
+* anaconda3/pkgs/python-3.6.0-0/lib/python3.6/_collections_abc.py failed.
+58.7-58.9: syntax error with [def]
+57:## coroutine ##
+58:async def _coro(): pass
+59:_coro = _coro()
+
+* anaconda3/pkgs/python-3.6.0-0/lib/python3.6/abc.py failed.
+171.72-171.72: syntax error with [=]
+170:        """Debug helper to print the ABC registry."""
+171:        print("Class: %s.%s" % (cls.__module__, cls.__qualname__), file=file)
+172:        print("Inv.counter: %s" % ABCMeta._abc_invalidation_counter, file=file)
+
+* anaconda3/pkgs/python-3.6.0-0/lib/python3.6/webbrowser.py failed.
+647.24-647.24: syntax error with [=]
+646:    except getopt.error as msg:
+647:        print(msg, file=sys.stderr)
+648:        print(usage, file=sys.stderr)
+
+* anaconda3/pkgs/python-3.6.0-0/lib/python3.6/fractions.py failed.
+84.54-84.54: syntax error with [,]
+83:    # We're immutable, so use __new__ not __init__
+84:    def __new__(cls, numerator=0, denominator=None, *, _normalize=True):
+85:        """Constructs a Rational.
+
+* anaconda3/pkgs/python-3.6.0-0/lib/python3.6/getpass.py failed.
+126.57-126.57: syntax error with [=]
+125:        stream = sys.stderr
+126:    print("Warning: Password input may be echoed.", file=stream)
+127:    return _raw_input(prompt, stream)
+
+* anaconda3/pkgs/python-3.6.0-0/lib/python3.6/dis.py failed.
+34.18-34.18: syntax error with [,]
+33:
+34:def dis(x=None, *, file=None):
+35:    """Disassemble classes, methods, functions, generators, or code.
+
+* anaconda3/pkgs/python-3.6.0-0/lib/python3.6/socket.py failed.
+218.51-218.51: syntax error with [,]
+217:
+218:    def makefile(self, mode="r", buffering=None, *,
+219:                 encoding=None, errors=None, newline=None):
+
+* anaconda3/pkgs/python-3.6.0-0/lib/python3.6/typing.py failed.
+117.47-117.47: syntax error with [,]
+116:
+117:    def __new__(cls, name, bases, namespace, *, _root=False):
+118:        if not _root:
+
+* anaconda3/pkgs/python-3.6.0-0/lib/python3.6/operator.py failed.
+110.14-110.14: syntax error with [@]
+109:    "Same as a @ b."
+110:    return a @ b
+111:
+
+* anaconda3/pkgs/python-3.6.0-0/lib/python3.6/bdb.py failed.
+538.36-538.36: syntax error with [=]
+537:            out = sys.stdout
+538:        print(self.bpformat(), file=out)
+539:
+
+* anaconda3/pkgs/python-3.6.0-0/lib/python3.6/enum.py failed.
+265.43-265.43: syntax error with [,]
+264:
+265:    def __call__(cls, value, names=None, *, module=None, qualname=None, type=None, start=1):
+266:        """Either returns an existing member, or creates a new enum class.
+
+* anaconda3/pkgs/python-3.6.0-0/lib/python3.6/http/client.py failed.
+161.60-161.63: syntax error with [from]
+160:            "if you want to send it encoded in UTF-8." %
+161:            (name.title(), data[err.start:err.end], name)) from None
+162:
+
+* anaconda3/pkgs/python-3.6.0-0/lib/python3.6/http/cookiejar.py failed.
+1215.19-1215.22: syntax error with [from]
+1214:            mapping = True
+1215:            yield from deepvalues(obj)
+1216:        if not mapping:
+
+* anaconda3/pkgs/python-3.6.0-0/lib/python3.6/html/parser.py failed.
+87.25-87.25: syntax error with [,]
+86:
+87:    def __init__(self, *, convert_charrefs=True):
+88:        """Initialize and reset this instance.
+
+* anaconda3/pkgs/python-3.6.0-0/lib/python3.6/concurrent/futures/process.py failed.
+135.29-135.37: syntax error with [chunksize]
+134:
+135:def _get_chunks(*iterables, chunksize):
+136:    """ Iterates over zip()ed iterables in chunks. """
+
+* anaconda3/pkgs/python-3.6.0-0/lib/python3.6/concurrent/futures/_base.py failed.
+203.15-203.18: syntax error with [from]
+202:    try:
+203:        yield from finished
+204:
+
+* anaconda3/pkgs/python-3.6.0-0/lib/python3.6/config-3.6m-x86_64-linux-gnu/python-config.py failed.
+16.69-16.69: syntax error with [=]
+15:    print("Usage: {0} [{1}]".format(
+16:        sys.argv[0], '|'.join('--'+opt for opt in valid_opts)), file=sys.stderr)
+17:    sys.exit(code)
+
+* anaconda3/pkgs/python-3.6.0-0/lib/python3.6/asyncio/queues.py failed.
+40.36-40.36: syntax error with [,]
+39:
+40:    def __init__(self, maxsize=0, *, loop=None):
+41:        if loop is None:
+
+* anaconda3/pkgs/python-3.6.0-0/lib/python3.6/asyncio/windows_events.py failed.
+45.29-45.29: syntax error with [,]
+44:
+45:    def __init__(self, ov, *, loop=None):
+46:        super().__init__(loop=loop)
+
+* anaconda3/pkgs/python-3.6.0-0/lib/python3.6/asyncio/base_events.py failed.
+162.32-162.32: syntax error with [,]
+161:
+162:def _ensure_resolved(address, *, family=0, type=socket.SOCK_STREAM, proto=0,
+163:                     flags=0, loop):
+
+* anaconda3/pkgs/python-3.6.0-0/lib/python3.6/asyncio/coroutines.py failed.
+68.15-68.18: syntax error with [from]
+67:    def yield_from_gen(gen):
+68:        yield from gen
+69:    value = (1, 2, 3)
+
+* anaconda3/pkgs/python-3.6.0-0/lib/python3.6/asyncio/base_tasks.py failed.
+66.45-66.45: syntax error with [=]
+65:    if not extracted_list:
+66:        print('No stack for %r' % task, file=file)
+67:    elif exc is not None:
+
+* anaconda3/pkgs/python-3.6.0-0/lib/python3.6/asyncio/tasks.py failed.
+68.31-68.31: syntax error with [,]
+67:
+68:    def __init__(self, coro, *, loop=None):
+69:        assert coroutines.iscoroutine(coro), repr(coro)
+
+* anaconda3/pkgs/python-3.6.0-0/lib/python3.6/asyncio/windows_utils.py failed.
+83.11-83.11: syntax error with [,]
+82:
+83:def pipe(*, duplex=False, overlapped=(True, True), bufsize=BUFSIZE):
+84:    """Like os.pipe() but with overlapped support and using handles not fds."""
+
+* anaconda3/pkgs/python-3.6.0-0/lib/python3.6/asyncio/subprocess.py failed.
+116.23-116.26: syntax error with [from]
+115:        This method is a coroutine."""
+116:        return (yield from self._transport._wait())
+117:
+
+* anaconda3/pkgs/python-3.6.0-0/lib/python3.6/asyncio/test_utils.py failed.
+138.23-138.23: syntax error with [,]
+137:
+138:def _run_test_server(*, address, use_ssl=False, server_cls, server_ssl_cls):
+139:
+
+* anaconda3/pkgs/python-3.6.0-0/lib/python3.6/asyncio/streams.py failed.
+51.44-51.44: syntax error with [,]
+50:@coroutine
+51:def open_connection(host=None, port=None, *,
+52:                    loop=None, limit=_DEFAULT_LIMIT, **kwds):
+
+* anaconda3/pkgs/python-3.6.0-0/lib/python3.6/asyncio/events.py failed.
+295.40-295.40: syntax error with [,]
+294:
+295:    def getaddrinfo(self, host, port, *, family=0, type=0, proto=0, flags=0):
+296:        raise NotImplementedError
+
+* anaconda3/pkgs/python-3.6.0-0/lib/python3.6/asyncio/base_subprocess.py failed.
+169.33-169.36: syntax error with [from]
+168:            if proc.stdin is not None:
+169:                _, pipe = yield from loop.connect_write_pipe(
+170:                    lambda: WriteSubprocessPipeProto(self, 0),
+
+* anaconda3/pkgs/python-3.6.0-0/lib/python3.6/asyncio/futures.py failed.
+147.25-147.25: syntax error with [,]
+146:
+147:    def __init__(self, *, loop=None):
+148:        """Initialize the future.
+
+* anaconda3/pkgs/python-3.6.0-0/lib/python3.6/asyncio/locks.py failed.
+67.15-67.18: syntax error with [from]
+66:        #         lock.release()
+67:        yield from self.acquire()
+68:        return _ContextManager(self)
+
+* anaconda3/pkgs/python-3.6.0-0/lib/python3.6/asyncio/unix_events.py failed.
+196.23-196.26: syntax error with [from]
+195:            try:
+196:                yield from waiter
+197:            except Exception as exc:
+
+* anaconda3/pkgs/python-3.6.0-0/lib/python3.6/asyncio/selector_events.py failed.
+70.68-70.68: syntax error with [,]
+69:
+70:    def _make_socket_transport(self, sock, protocol, waiter=None, *,
+71:                               extra=None, server=None):
+
+* anaconda3/pkgs/python-3.6.0-0/lib/python3.6/asyncio/proactor_events.py failed.
+397.30-397.30: syntax error with [,]
+396:    def _make_ssl_transport(self, rawsock, protocol, sslcontext, waiter=None,
+397:                            *, server_side=False, server_hostname=None,
+398:                            extra=None, server=None):
+
+* anaconda3/pkgs/python-3.6.0-0/lib/python3.6/logging/__init__.py failed.
+1332.37-1332.44: syntax error with [exc_info]
+1331:
+1332:    def exception(self, msg, *args, exc_info=True, **kwargs):
+1333:        """
+
+* anaconda3/pkgs/python-3.6.0-0/lib/python3.6/logging/handlers.py failed.
+1384.46-1384.66: syntax error with [respect_handler_level]
+1383:
+1384:        def __init__(self, queue, *handlers, respect_handler_level=False):
+1385:            """
+
+* anaconda3/pkgs/python-3.6.0-0/lib/python3.6/ctypes/_endian.py failed.
+46.50-46.50: syntax error with [=]
+45:
+46:    class BigEndianStructure(Structure, metaclass=_swapped_meta):
+47:        """Structure with big endian byte order"""
+
+* anaconda3/pkgs/python-3.6.0-0/lib/python3.6/distutils/_msvccompiler.py failed.
+243.29-243.29: syntax error with [*]
+242:
+243:        self.ldflags_exe = [*ldflags, '/MANIFEST:EMBED,ID=1']
+244:        self.ldflags_exe_debug = [*ldflags_debug, '/MANIFEST:EMBED,ID=1']
+
+* anaconda3/pkgs/python-3.6.0-0/lib/python3.6/distutils/command/install_egg_info.py failed.
+27.13-27.13: syntax error with [*]
+26:            to_filename(safe_version(self.distribution.get_version())),
+27:            *sys.version_info[:2]
+28:        )
+
+* anaconda3/pkgs/python-3.6.0-0/lib/python3.6/distutils/command/build.py failed.
+84.57-84.57: syntax error with [*]
+83:
+84:        plat_specifier = ".%s-%d.%d" % (self.plat_name, *sys.version_info[:2])
+85:
+
+* anaconda3/pkgs/python-3.6.0-0/lib/python3.6/distutils/tests/test_build.py failed.
+30.51-30.51: syntax error with [*]
+29:        #   build/lib.macosx-10.3-i386-2.7
+30:        plat_spec = '.%s-%d.%d' % (cmd.plat_name, *sys.version_info[:2])
+31:        if hasattr(sys, 'gettotalrefcount'):
+
+* anaconda3/pkgs/python-3.6.0-0/lib/python3.6/distutils/tests/test_dist.py failed.
+104.56-104.56: syntax error with [=]
+103:                   "user = {0}\n"
+104:                   "root = {0}").format(fakepath), file=f)
+105:
+
+* anaconda3/pkgs/python-3.6.0-0/lib/python3.6/tkinter/ttk.py failed.
+85.9-85.9: syntax error with [*]
+84:    opt_val = []
+85:    for *state, val in items:
+86:        # hacks for bakward compatibility
+
+* anaconda3/pkgs/python-3.6.0-0/lib/python3.6/tkinter/__init__.py failed.
+2088.52-2088.52: syntax error with [=]
+2087:        import traceback
+2088:        print("Exception in Tkinter callback", file=sys.stderr)
+2089:        sys.last_type = exc
+
+* anaconda3/pkgs/python-3.6.0-0/lib/python3.6/tkinter/tix.py failed.
+475.43-475.43: syntax error with [,]
+474:
+475:    def __init__(self, itemtype, cnf={}, *, master=None, **kw):
+476:        if not master:
+
+* anaconda3/pkgs/python-3.6.0-0/lib/python3.6/email/contentmanager.py failed.
+109.66-109.69: syntax error with [from]
+108:            raise ValueError("Invalid header: {}".format(
+109:                                header.fold(policy=msg.policy))) from exc
+110:
+
+* anaconda3/pkgs/python-3.6.0-0/lib/python3.6/email/utils.py failed.
+210.5-210.5: syntax error with [*]
+209:def parsedate_to_datetime(data):
+210:    *dtuple, tz = _parsedate_tz(data)
+211:    if tz is None:
+
+* anaconda3/pkgs/python-3.6.0-0/lib/python3.6/email/feedparser.py failed.
+139.40-139.40: syntax error with [,]
+138:
+139:    def __init__(self, _factory=None, *, policy=compat32):
+140:        """_factory is called with no arguments to create a new message obj
+
+* anaconda3/pkgs/python-3.6.0-0/lib/python3.6/email/message.py failed.
+989.23-989.26: syntax error with [from]
+988:            for subpart in part.iter_parts():
+989:                yield from self._find_body(subpart, preferencelist)
+990:            return
+
+* anaconda3/pkgs/python-3.6.0-0/lib/python3.6/email/iterators.py failed.
+29.19-29.22: syntax error with [from]
+28:        for subpart in self.get_payload():
+29:            yield from subpart.walk()
+30:
+
+* anaconda3/pkgs/python-3.6.0-0/lib/python3.6/email/parser.py failed.
+18.38-18.38: syntax error with [,]
+17:class Parser:
+18:    def __init__(self, _class=None, *, policy=compat32):
+19:        """Parser of RFC 2822 and MIME email messages.
+
+* anaconda3/pkgs/python-3.6.0-0/lib/python3.6/email/_policybase.py failed.
+112.36-112.36: syntax error with [=]
+111:
+112:class Policy(_PolicyBase, metaclass=abc.ABCMeta):
+113:
+
+* anaconda3/pkgs/python-3.6.0-0/lib/python3.6/email/headerregistry.py failed.
+205.27-205.27: syntax error with [,]
+204:
+205:    def init(self, name, *, parse_tree, defects):
+206:        self._name = name
+
+* anaconda3/pkgs/python-3.6.0-0/lib/python3.6/email/_header_value_parser.py failed.
+296.21-296.21: syntax error with [,]
+295:
+296:    def fold(self, *, policy):
+297:        # max_line_length 0/None means no limit, ie: infinitely long.
+
+* anaconda3/pkgs/python-3.6.0-0/lib/python3.6/email/generator.py failed.
+36.70-36.70: syntax error with [,]
+35:
+36:    def __init__(self, outfp, mangle_from_=None, maxheaderlen=None, *,
+37:                 policy=None):
+
+* anaconda3/pkgs/python-3.6.0-0/lib/python3.6/email/mime/base.py failed.
+18.46-18.46: syntax error with [,]
+17:
+18:    def __init__(self, _maintype, _subtype, *, policy=None, **_params):
+19:        """This constructor adds a Content-Type: and a MIME-Version: header.
+
+* anaconda3/pkgs/python-3.6.0-0/lib/python3.6/email/mime/message.py failed.
+17.50-17.50: syntax error with [,]
+16:
+17:    def __init__(self, _msg, _subtype='rfc822', *, policy=None):
+18:        """Create a message/* type MIME document.
+
+* anaconda3/pkgs/python-3.6.0-0/lib/python3.6/email/mime/image.py failed.
+20.52-20.52: syntax error with [,]
+19:    def __init__(self, _imagedata, _subtype=None,
+20:                 _encoder=encoders.encode_base64, *, policy=None, **_params):
+21:        """Create an image/* type MIME document.
+
+* anaconda3/pkgs/python-3.6.0-0/lib/python3.6/email/mime/application.py failed.
+17.52-17.52: syntax error with [,]
+16:    def __init__(self, _data, _subtype='octet-stream',
+17:                 _encoder=encoders.encode_base64, *, policy=None, **_params):
+18:        """Create an application/* type MIME document.
+
+* anaconda3/pkgs/python-3.6.0-0/lib/python3.6/email/mime/audio.py failed.
+46.52-46.52: syntax error with [,]
+45:    def __init__(self, _audiodata, _subtype=None,
+46:                 _encoder=encoders.encode_base64, *, policy=None, **_params):
+47:        """Create an audio/* type MIME document.
+
+* anaconda3/pkgs/python-3.6.0-0/lib/python3.6/email/mime/multipart.py failed.
+17.19-17.19: syntax error with [,]
+16:    def __init__(self, _subtype='mixed', boundary=None, _subparts=None,
+17:                 *, policy=None,
+18:                 **_params):
+
+* anaconda3/pkgs/python-3.6.0-0/lib/python3.6/email/mime/text.py failed.
+17.65-17.65: syntax error with [,]
+16:
+17:    def __init__(self, _text, _subtype='plain', _charset=None, *, policy=None):
+18:        """Create a text/* type MIME document.
+
+* anaconda3/pkgs/python-3.6.0-0/lib/python3.6/multiprocessing/queues.py failed.
+36.36-36.36: syntax error with [,]
+35:
+36:    def __init__(self, maxsize=0, *, ctx):
+37:        if maxsize <= 0:
+
+* anaconda3/pkgs/python-3.6.0-0/lib/python3.6/multiprocessing/reduction.py failed.
+244.32-244.32: syntax error with [=]
+243:
+244:class AbstractReducer(metaclass=ABCMeta):
+245:    '''Abstract base class for use in implementing a Reduction class
+
+* anaconda3/pkgs/python-3.6.0-0/lib/python3.6/multiprocessing/process.py failed.
+72.19-72.19: syntax error with [,]
+71:    def __init__(self, group=None, target=None, name=None, args=(), kwargs={},
+72:                 *, daemon=None):
+73:        assert group is None, 'group argument must be None for now'
+
+* anaconda3/pkgs/python-3.6.0-0/lib/python3.6/multiprocessing/synchronize.py failed.
+51.48-51.48: syntax error with [,]
+50:
+51:    def __init__(self, kind, value, maxvalue, *, ctx):
+52:        if ctx is None:
+
+* anaconda3/pkgs/python-3.6.0-0/lib/python3.6/multiprocessing/context.py failed.
+131.46-131.49: syntax error with [lock]
+130:
+131:    def Value(self, typecode_or_type, *args, lock=True):
+132:        '''Returns a synchronized shared object'''
+
+* anaconda3/pkgs/python-3.6.0-0/lib/python3.6/multiprocessing/forkserver.py failed.
+200.12-200.12: syntax error with [*]
+199:    (child_r, child_w, _forkserver._forkserver_alive_fd,
+200:     stfd, *_forkserver._inherited_fds) = fds
+201:    semaphore_tracker._semaphore_tracker._fd = stfd
+
+* anaconda3/pkgs/python-3.6.0-0/lib/python3.6/multiprocessing/sharedctypes.py failed.
+69.36-69.39: syntax error with [lock]
+68:
+69:def Value(typecode_or_type, *args, lock=True, ctx=None):
+70:    '''
+
+* anaconda3/pkgs/python-3.6.0-0/lib/python3.6/dbm/dumb.py failed.
+244.63-244.66: syntax error with [from]
+243:        except TypeError:
+244:            raise error('DBM object has already been closed') from None
+245:
+
+* anaconda3/pkgs/python-3.6.0-0/lib/python3.6/urllib/request.py failed.
+141.14-141.14: syntax error with [,]
+140:def urlopen(url, data=None, timeout=socket._GLOBAL_DEFAULT_TIMEOUT,
+141:            *, cafile=None, capath=None, cadefault=False, context=None):
+142:    '''Open the URL url, which can be either a string or a Request object.
+
+* anaconda3/pkgs/python-3.6.0-0/lib/python3.6/idlelib/run.py failed.
+118.19-118.19: syntax error with [=]
+117:        print("IDLE Subprocess: no IP port passed in sys.argv.",
+118:              file=sys.__stderr__)
+119:        return
+
+* anaconda3/pkgs/python-3.6.0-0/lib/python3.6/idlelib/config.py failed.
+202.37-202.37: syntax error with [=]
+201:                try:
+202:                    print(warn, file=sys.stderr)
+203:                except OSError:
+
+* anaconda3/pkgs/python-3.6.0-0/lib/python3.6/idlelib/rpc.py failed.
+108.38-108.38: syntax error with [=]
+107:            erf = sys.__stderr__
+108:            print('\n' + '-'*40, file=erf)
+109:            print('Unhandled server exception!', file=erf)
+
+* anaconda3/pkgs/python-3.6.0-0/lib/python3.6/idlelib/pyshell.py failed.
+7.63-7.63: syntax error with [=]
+6:    print("** IDLE can't import Tkinter.\n"
+7:          "Your Python may not be configured for Tk. **", file=sys.__stderr__)
+8:    sys.exit(1)
+
+* anaconda3/pkgs/python-3.6.0-0/lib/python3.6/idlelib/query.py failed.
+37.49-37.49: syntax error with [,]
+36:    """
+37:    def __init__(self, parent, title, message, *, text0='', used_names={},
+38:                 _htest=False, _utest=False):
+
+* anaconda3/pkgs/python-3.6.0-0/lib/python3.6/idlelib/iomenu.py failed.
+545.48-545.52: syntax error with [print]
+544:            self.text.bind("<Control-o>", self.open)
+545:            self.text.bind('<Control-p>', self.print)
+546:            self.text.bind("<Control-s>", self.save)
+
+* anaconda3/pkgs/python-3.6.0-0/lib/python3.6/idlelib/undo.py failed.
+43.44-43.44: syntax error with [=]
+42:        pprint(self.undolist[:self.pointer])
+43:        print("pointer:", self.pointer, end=' ')
+44:        print("saved:", self.saved, end=' ')
+
+* anaconda3/pkgs/python-3.6.0-0/lib/python3.6/idlelib/idle_test/htest.py failed.
+385.18-385.26: syntax error with [test_name]
+384:
+385:        nonlocal test_name, callable_object, test_kwds
+386:        if len(test_list) == 1:
+
+* anaconda3/pkgs/python-3.6.0-0/lib/python3.6/idlelib/idle_test/test_history.py failed.
+86.57-86.57: syntax error with [,]
+85:
+86:    def fetch_test(self, reverse, line, prefix, index, *, bell=False):
+87:        # Perform one fetch as invoked by Alt-N or Alt-P
+
+* anaconda3/pkgs/python-3.6.0-0/lib/python3.6/idlelib/idle_test/mock_tk.py failed.
+136.59-136.62: syntax error with [from]
+135:        except AttributeError:
+136:            raise TclError('bad text index "%s"' % index) from None
+137:
+
+* anaconda3/pkgs/python-3.6.0-0/lib/python3.6/collections/__init__.py failed.
+54.15-54.18: syntax error with [from]
+53:    def __reversed__(self):
+54:        yield from reversed(self._mapping)
+55:
+
+* anaconda3/pkgs/python-3.6.0-0/lib/python3.6/wsgiref/simple_server.py failed.
+140.31-140.31: syntax error with [=]
+139:    stdout = StringIO()
+140:    print("Hello world!", file=stdout)
+141:    print(file=stdout)
+
+* anaconda3/pkgs/python-3.6.0-0/lib/python3.6/importlib/_bootstrap_external.py failed.
+263.51-263.51: syntax error with [,]
+262:
+263:def cache_from_source(path, debug_override=None, *, optimization=None):
+264:    """Given the path to a .py file, return the path to its .pyc file.
+
+* anaconda3/pkgs/python-3.6.0-0/lib/python3.6/importlib/util.py failed.
+25.27-25.66: syntax error with ['no package specified for {repr(name)} ']
+24:    elif not package:
+25:        raise ValueError(f'no package specified for {repr(name)} '
+26:                         '(required for relative module names)')
+
+* anaconda3/pkgs/python-3.6.0-0/lib/python3.6/importlib/__init__.py failed.
+93.67-93.70: syntax error with [from]
+92:    except AttributeError:
+93:        raise ValueError('{}.__loader__ is not set'.format(name)) from None
+94:
+
+* anaconda3/pkgs/python-3.6.0-0/lib/python3.6/importlib/abc.py failed.
+29.23-29.23: syntax error with [=]
+28:
+29:class Finder(metaclass=abc.ABCMeta):
+30:
+
+* anaconda3/pkgs/python-3.6.0-0/lib/python3.6/importlib/_bootstrap.py failed.
+208.38-208.46: syntax error with [verbosity]
+207:
+208:def _verbose_message(message, *args, verbosity=1):
+209:    """Print the message to stderr if -v/PYTHONVERBOSE is turned on."""
+
+* anaconda3/pkgs/python-3.6.0-0/lib/python3.6/lib2to3/pytree.py failed.
+187.19-187.22: syntax error with [from]
+186:        for child in self.children:
+187:            yield from child.leaves()
+188:
+
+* anaconda3/pkgs/python-3.6.0-0/lib/python3.6/lib2to3/btm_utils.py failed.
+99.19-99.22: syntax error with [from]
+98:        for child in self.children:
+99:            yield from child.leaves()
+100:        if not self.children:
+
+* anaconda3/pkgs/python-3.6.0-0/lib/python3.6/lib2to3/tests/data/py3_test_grammar.py failed.
+130.13-130.13: syntax error with [.]
+129:    def testEllipsis(self):
+130:        x = ...
+131:        self.assert_(x is Ellipsis)
+
+* anaconda3/pkgs/python-3.6.0-0/lib/python3.6/lib2to3/tests/data/bom.py failed.
+Exception 'utf-8' codec can't decode byte 0xef in position 29: invalid continuation byte
+
+* anaconda3/pkgs/python-3.6.0-0/lib/python3.6/xml/etree/ElementPath.py failed.
+108.19-108.22: syntax error with [from]
+107:        for elem in result:
+108:            yield from elem
+109:    return select
+
+* anaconda3/pkgs/python-3.6.0-0/lib/python3.6/xml/etree/ElementTree.py failed.
+410.19-410.22: syntax error with [from]
+409:        for e in self._children:
+410:            yield from e.iter(tag)
+411:
+
+* anaconda3/pkgs/python-3.6.0-0/lib/python3.6/venv/__init__.py failed.
+417.36-417.36: syntax error with [=]
+416:    except Exception as e:
+417:        print('Error: %s' % e, file=sys.stderr)
+418:    sys.exit(rc)
+
+* anaconda3/pkgs/python-3.6.0-0/lib/python3.6/venv/__main__.py failed.
+9.32-9.32: syntax error with [=]
+8:except Exception as e:
+9:    print('Error: %s' % e, file=sys.stderr)
+10:sys.exit(rc)
+
+* anaconda3/pkgs/python-3.6.0-0/lib/python3.6/json/__init__.py failed.
+120.20-120.20: syntax error with [,]
+119:
+120:def dump(obj, fp, *, skipkeys=False, ensure_ascii=True, check_circular=True,
+121:        allow_nan=True, cls=None, indent=None, separators=None,
+
+* anaconda3/pkgs/python-3.6.0-0/lib/python3.6/json/encoder.py failed.
+104.25-104.25: syntax error with [,]
+103:    key_separator = ': '
+104:    def __init__(self, *, skipkeys=False, ensure_ascii=True,
+105:            check_circular=True, allow_nan=True, sort_keys=False,
+
+* anaconda3/pkgs/python-3.6.0-0/lib/python3.6/json/decoder.py failed.
+187.68-187.71: syntax error with [from]
+186:        except StopIteration as err:
+187:            raise JSONDecodeError("Expecting value", s, err.value) from None
+188:        pairs_append((key, value))
+
+* anaconda3/pkgs/python-3.6.0-0/lib/python3.6/xmlrpc/client.py failed.
+1350.70-1350.70: syntax error with [,]
+1349:
+1350:    def __init__(self, use_datetime=False, use_builtin_types=False, *,
+1351:                 context=None):
+
+* anaconda3/pkgs/python-3.6.0-0/lib/python3.6/unittest/runner.py failed.
+130.19-130.19: syntax error with [,]
+129:                 failfast=False, buffer=False, resultclass=None, warnings=None,
+130:                 *, tb_locals=False):
+131:        """Construct a TextTestRunner.
+
+* anaconda3/pkgs/python-3.6.0-0/lib/python3.6/unittest/mock.py failed.
+525.41-525.41: syntax error with [,]
+524:
+525:    def reset_mock(self,  visited=None,*, return_value=False, side_effect=False):
+526:        "Restore the mock object to its initial state."
+
+* anaconda3/pkgs/python-3.6.0-0/lib/python3.6/unittest/case.py failed.
+171.23-171.23: syntax error with [*]
+170:
+171:        callable_obj, *args = args
+172:        try:
+
+* anaconda3/pkgs/python-3.6.0-0/lib/python3.6/unittest/main.py failed.
+61.50-61.50: syntax error with [,]
+60:                    exit=True, verbosity=1, failfast=None, catchbreak=None,
+61:                    buffer=None, warnings=None, *, tb_locals=False):
+62:        if isinstance(module, str):
+
+* anaconda3/pkgs/python-3.6.0-0/lib/python3.6/unittest/loader.py failed.
+97.50-97.56: syntax error with [pattern]
+96:    # use_load_tests deprecation via *args and **kws.  See issue 16662.
+97:    def loadTestsFromModule(self, module, *args, pattern=None, **kws):
+98:        """Return a suite of all tests cases contained in the given module"""
+ done.
