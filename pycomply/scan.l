@@ -29,9 +29,9 @@
  * Most of the definitions and specifications were taken from:
  * https://docs.python.org/2.7/reference/index.html
  */
-
 #include "stdbool.h"
 #include "parse.tab.h"
+
 
 /* Code to handle locations */
 /* This is taken from Chapter 8 - flex & bison by John Levine */
@@ -81,36 +81,43 @@ static void handle_eof(void);
 static int keywords = 0;
 static int identifiers = 0;
 static int numbers = 0;
- 
 
 %}
 
 %option yylineno
 %option noyywrap
 
-number         {integer}|{floatnumber}|{imagnumber}
 
-imagnumber     ({floatnumber}|{digitpart})[jJ]
+number    {integer}|{longinteger}|{floatnumber}|{imagnumber}
 
+imagnumber     {imaghead}[jJ]
+imaghead       {floatnumber}|{intpart}
 
-floatnumber    {pointfloat}|{exponentfloat}
-pointfloat     {digitpart}?{fraction}|{digitpart}\.
-exponentfloat  ({digitpart}|{pointfloat}){exponent}
-digitpart      {digit}("_"?{digit})*
-fraction       \.{digitpart}
-exponent       [eE][+-]?{digitpart}
+floatnumber    {pointfloat}|{expfloat}
+expfloat       {expfloat_1}{exponent}
+expfloat_1     {expfloat_2}|{pointfloat}
+expfloat_2     {nonzero}{digit}*
+pointfloat     {pointfloat_1}|{pointfloat_2}
+pointfloat_1   {intpart}?{fraction}
+pointfloat_2   {intpart}\.
+intpart        {nzintpart}|0
+nzintpart      {nonzero}{digit}*
+fraction       \.{digit}+
+exponent       [eE][+-]?{digit}+
 
-integer        {decinteger}|{bininteger}|{octinteger}|{hexinteger}
-decinteger     {nonzerodigit}("_"?{digit})*|0+("_"?0)*
-bininteger     0[bB]("_"?{bindigit})+
-octinteger     0[oO]("_"?{octdigit})+
-hexinteger     0[xX]("_"?{hexdigit})+
+longinteger    {integer}[lL]
+integer        {decinteger}|{octinteger}|{hexinteger}|{bininteger}
+decinteger     {nzointeger}|0
+nzointeger     {nonzero}{digit}*
+hexinteger     0[xX]{hexdigit}+
+octinteger     0[oO]{octdigit}+|0{octdigit}+
+bininteger     0[bB]{bindigit}+
 
-nonzerodigit   [1-9]
 digit          [0-9]
-bindigit       [01]
+nonzero        [1-9]
 octdigit       [0-7]
-hexdigit       {digit}|[a-fA-F]
+bindigit       [01]
+hexdigit       [0-9a-fA-F]
 
 string        {stringprefix}?{stringbody}
 stringbody    {shortstring}
@@ -150,6 +157,10 @@ comment   #.*
 %x LONG_STRING2
 
 %%
+
+  
+"print_function"            { /* Hack to allow 2.7 use 3.x print-style function call */
+                              tok->print_name_hack = true; return NAME; }
 
 {comment}                   { ; }
 {spaces}                    { ; }
@@ -196,6 +207,7 @@ comment   #.*
 
 "."        { return DOT; }
 "%"        { return PERCENT; }
+"`"        { return BACKQUOTE; }
 
 "=="       { return EQEQUAL; }
 "!="       { return NOTEQUAL; }
@@ -225,8 +237,6 @@ comment   #.*
 "//="      { return DOUBLESLASHEQUAL; }
 
 "@"        { return AT; }
-"->"       { return ARROW; }  
-"..."      { return THREE_DOTS; } 
 
 "and"      { return AND; }
 "&"        { return AMPERSAND; }
@@ -242,7 +252,7 @@ comment   #.*
 "elif"     { return ELIF; }
 "else"     { return ELSE; }
 "except"   { return EXCEPT; }
-"False"    { return FALSE; } 
+"exec"     { return EXEC; }
 "finally"  { return FINALLY; }
 "for"      { return FOR; }
 "from"     { return FROM; }
@@ -252,24 +262,17 @@ comment   #.*
 "in"       { return IN; }
 "is"       { return IS; }
 "lambda"   { return LAMBDA; }
-"None"     { return NONE; } 
-"nonlocal" { return NONLOCAL; }
 "pass"     { return PASS; }
+"print"    { if (tok->print_name_hack) return NAME; else return PRINT; }
 "raise"    { return RAISE; }
 "return"   { return RETURN; }
-"True"     { return TRUE; } 
 "try"      { return TRY; }
 "while"    { return WHILE; }
 "with"     { return WITH; }
 "yield"    { return YIELD; }
 
-
-"@="       { return ATEQ; } 
-"await"    { return AWAIT; } 
-"async"    { return ASYNC; }
-{name}     { ++identifiers; return NAME; }
-
 {number}   { ++numbers; return NUMBER; }
+{name}     { ++identifiers; return NAME; }
 
 <<EOF>>    { handle_eof(); return ENDMARKER; }
 
@@ -277,8 +280,6 @@ comment   #.*
 
 
 %%
-
-
 
 
 

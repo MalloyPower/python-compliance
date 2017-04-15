@@ -30,6 +30,6 @@ lex.yy.o: lex.yy.c
 	$(CXX) $(CXXFLAGS) $(NOWARN) -c lex.yy.c
 	
 clean:
-	$(RM) run-* *.o parse.tab.c lex.yy.c
+	$(RM) pycomply-* *.o parse.tab.c lex.yy.c
 	$(RM) parse.tab.h
 	$(RM) parse.output
