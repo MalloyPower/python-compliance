@@ -1,0 +1,252 @@
+Running front-end for v2.7 on 1 apps: ipython,
+* /media/passport/bigApps/corpus-python/qualitas/ipython/scripts/ipython_win_post_install.py failed.
+62.48-62.48: syntax error with [=]
+61:        print("Setuptools is required to"
+62:              " create Start Menu items.", file=sys.stderr)
+63:        print("Re-run this installer after installing"
+
+* /media/passport/bigApps/corpus-python/qualitas/ipython/IPython/lib/demo.py failed.
+439.29-439.29: syntax error with [=]
+438:                              (title,index,nblocks-index-1)))
+439:            print(block, end=' ')
+440:        sys.stdout.flush()
+
+* /media/passport/bigApps/corpus-python/qualitas/ipython/IPython/core/interactiveshell.py failed.
+1673.74-1673.74: syntax error with [=]
+1672:                    self.set_custom_exc((), None)
+1673:                    print("Custom TB Handler failed, unregistering", file=sys.stderr)
+1674:                    # show the exception in handler first
+
+* /media/passport/bigApps/corpus-python/qualitas/ipython/IPython/core/displaypub.py failed.
+56.58-56.58: syntax error with [,]
+55:    # use * to indicate transient, update are keyword-only
+56:    def publish(self, data, metadata=None, source=None, *, transient=None, update=False, **kwargs):
+57:        """Publish data and metadata to all frontends.
+
+* /media/passport/bigApps/corpus-python/qualitas/ipython/IPython/core/page.py failed.
+374.22-374.22: syntax error with [=]
+373:
+374:    print(header, end=' ')
+375:    if len(str) < width:
+
+* /media/passport/bigApps/corpus-python/qualitas/ipython/IPython/core/oinspect.py failed.
+388.39-388.39: syntax error with [=]
+387:        """Generic message when no information is found."""
+388:        print('No %s found' % msg, end=' ')
+389:        if oname:
+
+* /media/passport/bigApps/corpus-python/qualitas/ipython/IPython/core/formatters.py failed.
+203.29-203.29: syntax error with [=]
+202:
+203:class FormatterABC(metaclass=abc.ABCMeta):
+204:    """ Abstract base class for Formatters.
+
+* /media/passport/bigApps/corpus-python/qualitas/ipython/IPython/core/inputtransformer.py failed.
+40.33-40.33: syntax error with [=]
+39:
+40:class InputTransformer(metaclass=abc.ABCMeta):
+41:    """Abstract base class for line-based input transformers."""
+
+* /media/passport/bigApps/corpus-python/qualitas/ipython/IPython/core/crashhandler.py failed.
+163.34-163.34: syntax error with [=]
+162:        if self.show_crash_traceback:
+163:            print(traceback, file=sys.stderr)
+164:
+
+* /media/passport/bigApps/corpus-python/qualitas/ipython/IPython/core/display.py failed.
+82.61-82.61: syntax error with [,]
+81:# use * to indicate transient is keyword-only
+82:def publish_display_data(data, metadata=None, source=None, *, transient=None, **kwargs):
+83:    """Publish data and metadata to all frontends.
+
+* /media/passport/bigApps/corpus-python/qualitas/ipython/IPython/core/completerlib.py failed.
+156.19-156.19: syntax error with [:]
+155:
+156:def try_import(mod: str, only_modules=False):
+157:    """
+
+* /media/passport/bigApps/corpus-python/qualitas/ipython/IPython/core/completer.py failed.
+369.29-369.29: syntax error with [:]
+368:
+369:    def __init__(self, start: int, end: int, text: str, *, type: str=None, _origin=''):
+370:        warnings.warn("``Completion`` is a provisional API (as of IPython 6.0). "
+
+* /media/passport/bigApps/corpus-python/qualitas/ipython/IPython/core/magics/namespace.py failed.
+338.30-338.30: syntax error with [=]
+337:        for i in varlist:
+338:            print(i+'\t', end=' ')
+339:            count += 1
+
+* /media/passport/bigApps/corpus-python/qualitas/ipython/IPython/core/magics/execution.py failed.
+342.28-342.28: syntax error with [=]
+341:            page.page(output)
+342:        print(sys_exit, end=' ')
+343:
+
+* /media/passport/bigApps/corpus-python/qualitas/ipython/IPython/core/magics/history.py failed.
+210.41-210.41: syntax error with [=]
+209:                print(u'%s:%s' % (_format_lineno(session, lineno).rjust(width),
+210:                        line_sep),  file=outfile, end=u'')
+211:            if pyprompts:
+
+* /media/passport/bigApps/corpus-python/qualitas/ipython/IPython/core/magics/code.py failed.
+703.32-703.32: syntax error with [=]
+702:        # do actual editing here
+703:        print('Editing...', end=' ')
+704:        sys.stdout.flush()
+
+* /media/passport/bigApps/corpus-python/qualitas/ipython/IPython/core/tests/test_oinspect.py failed.
+273.19-273.19: syntax error with [,]
+272:
+273:def f_kwarg(pos, *, kwonly):
+274:    pass
+
+* /media/passport/bigApps/corpus-python/qualitas/ipython/IPython/core/tests/tclass.py failed.
+14.18-14.22: syntax error with [print]
+13:        self.name = name
+14:        self.p = print
+15:        self.flush_stdout = sys.stdout.flush
+
+* /media/passport/bigApps/corpus-python/qualitas/ipython/IPython/terminal/interactiveshell.py failed.
+439.40-439.40: syntax error with [=]
+438:        while self.keep_running:
+439:            print(self.separate_in, end='')
+440:
+
+* /media/passport/bigApps/corpus-python/qualitas/ipython/IPython/terminal/ptutils.py failed.
+24.21-24.21: syntax error with [,]
+23:
+24:def _elide(string, *, min_elide=30):
+25:    """
+
+* /media/passport/bigApps/corpus-python/qualitas/ipython/IPython/terminal/shortcuts.py failed.
+200.45-200.45: syntax error with [-]
+199:
+200:def newline_autoindent_outer(inputsplitter) -> Callable[..., None]:
+201:    """
+
+* /media/passport/bigApps/corpus-python/qualitas/ipython/IPython/testing/iptestcontroller.py failed.
+408.26-408.26: syntax error with [=]
+407:    took = "Took %.3fs." % t_tests
+408:    print('Status: ', end='')
+409:    if not failed:
+
+* /media/passport/bigApps/corpus-python/qualitas/ipython/IPython/testing/globalipapp.py failed.
+62.66-62.66: syntax error with [=]
+61:    # the trailing newline differently from commands.getoutput
+62:    print(self.getoutput(cmd, split=False, depth=1).rstrip(), end='', file=sys.stdout)
+63:    sys.stdout.flush()
+
+* /media/passport/bigApps/corpus-python/qualitas/ipython/IPython/extensions/autoreload.py failed.
+251.69-251.69: syntax error with [=]
+250:                    print("[autoreload of %s failed: %s]" % (
+251:                            modname, traceback.format_exc(10)), file=sys.stderr)
+252:                    self.failed[py_filename] = pymtime
+
+* /media/passport/bigApps/corpus-python/qualitas/ipython/IPython/utils/io.py failed.
+62.32-62.32: syntax error with [=]
+61:                # argument.
+62:                print(data, end='', file=self.stream)
+63:            except:
+
+* /media/passport/bigApps/corpus-python/qualitas/ipython/IPython/utils/_process_posix.py failed.
+97.29-97.29: syntax error with [=]
+96:        except KeyboardInterrupt:
+97:            print('^C', file=sys.stderr, end='')
+98:
+
+* /media/passport/bigApps/corpus-python/qualitas/ipython/IPython/utils/_process_win32_controller.py failed.
+456.27-456.27: syntax error with [=]
+455:        elif result == WAIT_TIMEOUT:
+456:            print(".", end='')
+457:            return None
+
+* /media/passport/bigApps/corpus-python/qualitas/ipython/IPython/utils/_process_win32.py failed.
+98.25-98.25: syntax error with [=]
+97:        line = line.decode(enc, 'replace')
+98:        print(line, file=sys.stdout)
+99:    for line in read_no_interrupt(p.stderr).splitlines():
+
+* /media/passport/bigApps/corpus-python/qualitas/ipython/IPython/utils/tests/test_capture.py failed.
+121.32-121.32: syntax error with [=]
+120:    with capture.capture_output() as cap:
+121:        print(hello_stdout, end="")
+122:        print(hello_stderr, end="", file=sys.stderr)
+
+* /media/passport/bigApps/corpus-python/qualitas/ipython/IPython/utils/tests/test_io.py failed.
+30.21-30.21: syntax error with [=]
+29:    tee = Tee(chan, channel='stdout')
+30:    print(text, file=chan)
+31:    nt.assert_equal(chan.getvalue(), text+"\n")
+
+* /media/passport/bigApps/corpus-python/qualitas/ipython/tools/gh_api.py failed.
+19.77-19.77: syntax error with [=]
+18:except ImportError:
+19:    print("cache not available, install `requests_cache` for caching.", file=sys.stderr)
+20:else:
+
+* /media/passport/bigApps/corpus-python/qualitas/ipython/tools/update_whatsnew.py failed.
+47.61-47.64: syntax error with [from]
+46:        except Exception as e:
+47:            raise Exception('Error reading "{}"'.format(f)) from e
+48:
+
+* /media/passport/bigApps/corpus-python/qualitas/ipython/tools/backport_pr.py failed.
+165.48-165.48: syntax error with [=]
+164:    print("DEPRECATE: backport_pr.py is deprecated and is is now recommended"
+165:          "to install `ghpro` from PyPI.", file=sys.stderr)
+166:
+
+* /media/passport/bigApps/corpus-python/qualitas/ipython/tools/check_sources.py failed.
+41.46-41.46: syntax error with [=]
+40:            if '\t' in line:
+41:                print('TAB:',ln,':',line, end=' ')
+42:
+
+* /media/passport/bigApps/corpus-python/qualitas/ipython/tools/github_stats.py failed.
+114.48-114.48: syntax error with [=]
+113:    print("DEPRECATE: backport_pr.py is deprecated and is is now recommended"
+114:          "to install `ghpro` from PyPI.", file=sys.stderr)
+115:
+ done.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{tabular}{l*{1}{c}c}
+\textbf{Application} & \textbf{2.7} & \textbf{Files}\\
+\hline
+ipython & \shade{90} &   343\\
+\hline
+\end{tabular}

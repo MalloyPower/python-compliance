@@ -9,7 +9,7 @@ do supply information on how to replicate the corpus.
 
 We used the same applications as the original, but the most up-to-date
 versions in each case.  Since these all came from github, look in
-the files qualitas-*.csv for the URL and the SHA of the commit we were using.
+the file qualitas.csv for the URL and the SHA of the commit we were using.
 
 
 ## The programs studied by Chen et al.

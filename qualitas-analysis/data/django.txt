@@ -1,0 +1,594 @@
+Running front-end for v2.7 on 1 apps: django,
+* /media/passport/bigApps/corpus-python/qualitas/django/tests/forms_tests/tests/test_formsets.py failed.
+59.31-59.42: syntax error with [custom_kwarg]
+58:class CustomKwargForm(Form):
+59:    def __init__(self, *args, custom_kwarg, **kwargs):
+60:        self.custom_kwarg = custom_kwarg
+
+* /media/passport/bigApps/corpus-python/qualitas/django/tests/middleware/test_security.py failed.
+16.31-16.37: syntax error with [headers]
+15:
+16:    def response(self, *args, headers=None, **kwargs):
+17:        response = HttpResponse(*args, **kwargs)
+
+* /media/passport/bigApps/corpus-python/qualitas/django/tests/migrations/models.py failed.
+9.50-9.50: syntax error with [=]
+8:
+9:class ModelWithCustomBase(models.Model, metaclass=CustomModelBase):
+10:    pass
+
+* /media/passport/bigApps/corpus-python/qualitas/django/tests/deprecation/tests.py failed.
+29.36-29.36: syntax error with [=]
+28:
+29:            class Manager(metaclass=RenameManagerMethods):
+30:                def old(self):
+
+* /media/passport/bigApps/corpus-python/qualitas/django/tests/multiple_database/models.py failed.
+43.29-43.37: syntax error with [extra_arg]
+42:class BookManager(models.Manager):
+43:    def create(self, *args, extra_arg=None, **kwargs):
+44:        return super().create(*args, **kwargs)
+
+* /media/passport/bigApps/corpus-python/qualitas/django/tests/template_tests/annotated_tag_function.py failed.
+7.31-7.31: syntax error with [:]
+6:@register.simple_tag()
+7:def annotated_tag_function(val: int):
+8:    return val
+
+* /media/passport/bigApps/corpus-python/qualitas/django/tests/template_tests/filter_tests/test_floatformat.py failed.
+43.41-43.45: syntax error with [.3000]
+42:        self.assertEqual(floatformat(5555.555, 2), '5555.56')
+43:        self.assertEqual(floatformat(001.3000, 2), '1.30')
+44:        self.assertEqual(floatformat(0.12345, 2), '0.12')
+
+* /media/passport/bigApps/corpus-python/qualitas/django/tests/template_tests/filter_tests/test_unordered_list.py failed.
+106.19-106.22: syntax error with [from]
+105:        def item_generator():
+106:            yield from (a, b, c)
+107:
+
+* /media/passport/bigApps/corpus-python/qualitas/django/tests/staticfiles_tests/cases.py failed.
+79.34-79.34: syntax error with [,]
+78:
+79:    def run_collectstatic(self, *, verbosity=0, **kwargs):
+80:        call_command('collectstatic', interactive=False, verbosity=verbosity,
+
+* /media/passport/bigApps/corpus-python/qualitas/django/tests/view_tests/tests/test_debug.py failed.
+351.58-351.61: syntax error with [from]
+350:                try:
+351:                    raise ValueError('Second exception') from explicit
+352:                except ValueError:
+
+* /media/passport/bigApps/corpus-python/qualitas/django/tests/base/models.py failed.
+13.38-13.38: syntax error with [=]
+12:
+13:class MyModel(models.Model, metaclass=CustomBaseModel):
+14:    """Model subclass with a custom base using metaclass."""
+
+* /media/passport/bigApps/corpus-python/qualitas/django/tests/gis_tests/test_data.py failed.
+46.31-46.31: syntax error with [,]
+45:    """
+46:    def __init__(self, name, *, ext='shp', **kwargs):
+47:        # Shapefile is default extension, unless specified otherwise.
+
+* /media/passport/bigApps/corpus-python/qualitas/django/tests/gis_tests/geos_tests/test_geos.py failed.
+1261.39-1261.42: syntax error with [data]
+1260:        class ExtendedPolygon(Polygon):
+1261:            def __init__(self, *args, data=0, **kwargs):
+1262:                super().__init__(*args, **kwargs)
+
+* /media/passport/bigApps/corpus-python/qualitas/django/tests/schema/tests.py failed.
+1822.30-1822.40: syntax error with [field_class]
+1821:        """
+1822:        def get_field(*args, field_class=IntegerField, **kwargs):
+1823:            kwargs['db_column'] = "CamelCase"
+
+* /media/passport/bigApps/corpus-python/qualitas/django/tests/model_forms/models.py failed.
+343.15-343.18: syntax error with [from]
+342:    def __iter__(self):
+343:        yield from range(5)
+344:
+
+* /media/passport/bigApps/corpus-python/qualitas/django/tests/model_forms/tests.py failed.
+2990.53-2990.53: syntax error with [=]
+2989:
+2990:class CustomMetaclassForm(forms.ModelForm, metaclass=CustomMetaclass):
+2991:    pass
+
+* /media/passport/bigApps/corpus-python/qualitas/django/tests/extra_regress/models.py failed.
+16.27-16.38: syntax error with [force_insert]
+15:
+16:    def save(self, *args, force_insert=None, force_update=None, **kwargs):
+17:        super().save(*args, force_insert=force_insert, force_update=force_update, **kwargs)
+
+* /media/passport/bigApps/corpus-python/qualitas/django/django/shortcuts.py failed.
+41.25-41.33: syntax error with [permanent]
+40:
+41:def redirect(to, *args, permanent=False, **kwargs):
+42:    """
+
+* /media/passport/bigApps/corpus-python/qualitas/django/django/http/multipartparser.py failed.
+250.97-250.100: syntax error with [from]
+249:                                    # Since this is only a chunk, any error is an unfixable error.
+250:                                    raise MultiPartParserError("Could not decode base64 data.") from exc
+251:
+
+* /media/passport/bigApps/corpus-python/qualitas/django/django/http/request.py failed.
+263.52-263.55: syntax error with [from]
+262:            except IOError as e:
+263:                raise UnreadablePostError(*e.args) from e
+264:            self._stream = BytesIO(self._body)
+
+* /media/passport/bigApps/corpus-python/qualitas/django/django/db/utils.py failed.
+126.15-126.18: syntax error with [from]
+125:                "    %s" % (backend_name, ", ".join(backend_reprs))
+126:            ) from e_user
+127:        else:
+
+* /media/passport/bigApps/corpus-python/qualitas/django/django/db/migrations/graph.py failed.
+182.15-182.18: syntax error with [from]
+181:                replacement
+182:            ) from err
+183:        for replaced_key in replaced:
+
+* /media/passport/bigApps/corpus-python/qualitas/django/django/db/migrations/loader.py failed.
+266.23-266.26: syntax error with [from]
+265:                        exc.node
+266:                    ) from exc
+267:            raise exc
+
+* /media/passport/bigApps/corpus-python/qualitas/django/django/db/models/base.py failed.
+380.22-380.22: syntax error with [=]
+379:
+380:class Model(metaclass=ModelBase):
+381:
+
+* /media/passport/bigApps/corpus-python/qualitas/django/django/db/models/expressions.py failed.
+332.23-332.26: syntax error with [from]
+331:            if expr:
+332:                yield from expr.flatten()
+333:
+
+* /media/passport/bigApps/corpus-python/qualitas/django/django/db/models/query.py failed.
+679.36-679.39: syntax error with [flat]
+678:
+679:    def values_list(self, *fields, flat=False):
+680:        if flat and len(fields) > 1:
+
+* /media/passport/bigApps/corpus-python/qualitas/django/django/db/models/query_utils.py failed.
+29.15-29.18: syntax error with [from]
+28:    for subclass in cls.__subclasses__():
+29:        yield from subclasses(subclass)
+30:
+
+* /media/passport/bigApps/corpus-python/qualitas/django/django/db/models/functions/base.py failed.
+163.37-163.37: syntax error with [,]
+162:
+163:    def __init__(self, expression, *, output_field=None, **extra):
+164:        super().__init__(expression, output_field=output_field or fields.IntegerField(), **extra)
+
+* /media/passport/bigApps/corpus-python/qualitas/django/django/db/models/fields/related.py failed.
+914.26-914.26: syntax error with [,]
+913:
+914:    def formfield(self, *, using=None, **kwargs):
+915:        if isinstance(self.remote_field.model, str):
+
+* /media/passport/bigApps/corpus-python/qualitas/django/django/db/models/fields/related_descriptors.py failed.
+513.29-513.29: syntax error with [,]
+512:
+513:        def __call__(self, *, manager):
+514:            manager = getattr(self.model, manager)
+
+* /media/passport/bigApps/corpus-python/qualitas/django/django/db/models/fields/__init__.py failed.
+2048.31-2048.40: syntax error with [max_length]
+2047:
+2048:    def __init__(self, *args, max_length=50, db_index=True, allow_unicode=False, **kwargs):
+2049:        self.allow_unicode = allow_unicode
+
+* /media/passport/bigApps/corpus-python/qualitas/django/django/db/backends/utils.py failed.
+31.19-31.22: syntax error with [from]
+30:        with self.db.wrap_database_errors:
+31:            yield from self.cursor
+32:
+
+* /media/passport/bigApps/corpus-python/qualitas/django/django/db/backends/oracle/functions.py failed.
+13.37-13.37: syntax error with [,]
+12:
+13:    def __init__(self, expression, *, output_field=None, **extra):
+14:        super().__init__(expression, output_field=output_field or DecimalField(), **extra)
+
+* /media/passport/bigApps/corpus-python/qualitas/django/django/db/backends/postgresql/client.py failed.
+48.29-48.29: syntax error with [=]
+47:                        _escape_pgpass(passwd),
+48:                        file=temp_pgpass,
+49:                        sep=':',
+
+* /media/passport/bigApps/corpus-python/qualitas/django/django/db/backends/mysql/base.py failed.
+20.7-20.10: syntax error with [from]
+19:        'Did you install mysqlclient?'
+20:    ) from err
+21:
+
+* /media/passport/bigApps/corpus-python/qualitas/django/django/db/backends/base/creation.py failed.
+116.27-116.30: syntax error with [from]
+115:                    queryset = model._default_manager.using(self.connection.alias).order_by(model._meta.pk.name)
+116:                    yield from queryset.iterator()
+117:        # Serialize to a string
+
+* /media/passport/bigApps/corpus-python/qualitas/django/django/forms/utils.py failed.
+164.15-164.18: syntax error with [from]
+163:                params={'datetime': value, 'current_timezone': current_timezone}
+164:            ) from exc
+165:    return value
+
+* /media/passport/bigApps/corpus-python/qualitas/django/django/forms/models.py failed.
+457.41-457.41: syntax error with [=]
+456:
+457:class ModelForm(BaseModelForm, metaclass=ModelFormMetaclass):
+458:    pass
+
+* /media/passport/bigApps/corpus-python/qualitas/django/django/forms/fields.py failed.
+538.31-538.40: syntax error with [max_length]
+537:
+538:    def __init__(self, *args, max_length=None, allow_empty_file=False, **kwargs):
+539:        self.max_length = max_length
+
+* /media/passport/bigApps/corpus-python/qualitas/django/django/forms/widgets.py failed.
+153.23-153.23: syntax error with [=]
+152:
+153:class Widget(metaclass=MediaDefiningClass):
+154:    needs_multipart_form = False  # Determines does this widget need multipart form
+
+* /media/passport/bigApps/corpus-python/qualitas/django/django/forms/forms.py failed.
+499.31-499.31: syntax error with [=]
+498:
+499:class Form(BaseForm, metaclass=DeclarativeFieldsMetaclass):
+500:    "A collection of Fields, plus their associated data."
+
+* /media/passport/bigApps/corpus-python/qualitas/django/django/core/management/utils.py failed.
+20.63-20.66: syntax error with [from]
+19:    except OSError as err:
+20:        raise os_err_exc_type('Error executing %s' % args[0]) from err
+21:    output, errors = p.communicate()
+
+* /media/passport/bigApps/corpus-python/qualitas/django/django/core/management/commands/flush.py failed.
+78.19-78.22: syntax error with [from]
+77:                    )
+78:                ) from exc
+79:
+
+* /media/passport/bigApps/corpus-python/qualitas/django/django/core/management/commands/dumpdata.py failed.
+169.31-169.34: syntax error with [from]
+168:                    else:
+169:                        yield from queryset.iterator()
+170:
+
+* /media/passport/bigApps/corpus-python/qualitas/django/django/core/servers/basehttp.py failed.
+49.11-49.14: syntax error with [from]
+48:            "Error importing module." % app_path
+49:        ) from err
+50:
+
+* /media/passport/bigApps/corpus-python/qualitas/django/django/core/mail/backends/filebased.py failed.
+13.31-13.39: syntax error with [file_path]
+12:class EmailBackend(ConsoleEmailBackend):
+13:    def __init__(self, *args, file_path=None, **kwargs):
+14:        self._fname = None
+
+* /media/passport/bigApps/corpus-python/qualitas/django/django/core/serializers/pyyaml.py failed.
+73.15-73.18: syntax error with [from]
+72:    try:
+73:        yield from PythonDeserializer(yaml.load(stream, Loader=SafeLoader), **options)
+74:    except (GeneratorExit, DeserializationError):
+
+* /media/passport/bigApps/corpus-python/qualitas/django/django/core/serializers/base.py failed.
+65.36-65.36: syntax error with [,]
+64:
+65:    def serialize(self, queryset, *, stream=None, fields=None, use_natural_foreign_keys=False,
+66:                  use_natural_primary_keys=False, progress_output=None, object_count=0, **options):
+
+* /media/passport/bigApps/corpus-python/qualitas/django/django/core/serializers/xml_serializer.py failed.
+154.43-154.43: syntax error with [,]
+153:
+154:    def __init__(self, stream_or_string, *, using=DEFAULT_DB_ALIAS, ignorenonexistent=False, **options):
+155:        super().__init__(stream_or_string, **options)
+
+* /media/passport/bigApps/corpus-python/qualitas/django/django/core/serializers/json.py failed.
+72.15-72.18: syntax error with [from]
+71:        objects = json.loads(stream_or_string)
+72:        yield from PythonDeserializer(objects, **options)
+73:    except (GeneratorExit, DeserializationError):
+
+* /media/passport/bigApps/corpus-python/qualitas/django/django/core/serializers/python.py failed.
+82.32-82.32: syntax error with [,]
+81:
+82:def Deserializer(object_list, *, using=DEFAULT_DB_ALIAS, ignorenonexistent=False, **options):
+83:    """
+
+* /media/passport/bigApps/corpus-python/qualitas/django/django/views/decorators/cache.py failed.
+8.26-8.26: syntax error with [,]
+7:
+8:def cache_page(timeout, *, cache=None, key_prefix=None):
+9:    """
+
+* /media/passport/bigApps/corpus-python/qualitas/django/django/views/generic/list.py failed.
+113.33-113.33: syntax error with [,]
+112:
+113:    def get_context_data(self, *, object_list=None, **kwargs):
+114:        """Get the context for this view."""
+
+* /media/passport/bigApps/corpus-python/qualitas/django/django/conf/urls/i18n.py failed.
+9.26-9.48: syntax error with [prefix_default_language]
+8:
+9:def i18n_patterns(*urls, prefix_default_language=True):
+10:    """
+
+* /media/passport/bigApps/corpus-python/qualitas/django/django/contrib/staticfiles/utils.py failed.
+40.15-40.18: syntax error with [from]
+39:            dir = os.path.join(location, dir)
+40:        yield from get_files(storage, ignore_patterns, dir)
+41:
+
+* /media/passport/bigApps/corpus-python/qualitas/django/django/contrib/staticfiles/storage.py failed.
+405.15-405.18: syntax error with [from]
+404:        self.hashed_files = OrderedDict()
+405:        yield from super().post_process(*args, **kwargs)
+406:        self.save_manifest()
+
+* /media/passport/bigApps/corpus-python/qualitas/django/django/contrib/postgres/search.py failed.
+130.51-130.51: syntax error with [,]
+129:
+130:    def __init__(self, value, output_field=None, *, config=None, invert=False):
+131:        self.config = config
+
+* /media/passport/bigApps/corpus-python/qualitas/django/django/contrib/admin/options.py failed.
+95.31-95.31: syntax error with [=]
+94:
+95:class BaseModelAdmin(metaclass=forms.MediaDefiningClass):
+96:    """Functionality common to both ModelAdmin and InlineAdmin."""
+
+* /media/passport/bigApps/corpus-python/qualitas/django/django/contrib/admin/decorators.py failed.
+1.23-1.26: syntax error with [site]
+0:1:def register(*models, site=None):
+2:    """
+
+* /media/passport/bigApps/corpus-python/qualitas/django/django/contrib/admin/views/main.py failed.
+151.48-151.51: syntax error with [from]
+150:        except FieldDoesNotExist as e:
+151:            raise IncorrectLookupParameters(e) from e
+152:
+
+* /media/passport/bigApps/corpus-python/qualitas/django/django/contrib/contenttypes/models.py failed.
+63.39-63.57: syntax error with [for_concrete_models]
+62:
+63:    def get_for_models(self, *models, for_concrete_models=True):
+64:        """
+
+* /media/passport/bigApps/corpus-python/qualitas/django/django/contrib/contenttypes/fields.py failed.
+501.29-501.29: syntax error with [,]
+500:
+501:        def __call__(self, *, manager):
+502:            manager = getattr(self.model, manager)
+
+* /media/passport/bigApps/corpus-python/qualitas/django/django/contrib/gis/db/models/fields.py failed.
+265.68-265.68: syntax error with [,]
+264:
+265:    def __init__(self, verbose_name=None, dim=2, geography=False, *, extent=(-180.0, -90.0, 180.0, 90.0),
+266:                 tolerance=0.05, **kwargs):
+
+* /media/passport/bigApps/corpus-python/qualitas/django/django/contrib/gis/db/backends/oracle/introspection.py failed.
+28.19-28.22: syntax error with [from]
+27:                    'corresponding to "%s"."%s"' % (table_name, geo_col)
+28:                ) from exc
+29:
+
+* /media/passport/bigApps/corpus-python/qualitas/django/django/contrib/gis/db/backends/spatialite/base.py failed.
+57.15-57.18: syntax error with [from]
+56:                'Unable to load the SpatiaLite library extension "%s"' % self.spatialite_lib
+57:            ) from exc
+58:        cur.close()
+
+* /media/passport/bigApps/corpus-python/qualitas/django/django/contrib/gis/db/backends/spatialite/operations.py failed.
+130.15-130.18: syntax error with [from]
+129:                )
+130:            ) from exc
+131:        if version < (4, 0, 0):
+
+* /media/passport/bigApps/corpus-python/qualitas/django/django/contrib/gis/forms/fields.py failed.
+25.25-25.25: syntax error with [,]
+24:
+25:    def __init__(self, *, srid=None, geom_type=None, **kwargs):
+26:        self.srid = srid
+
+* /media/passport/bigApps/corpus-python/qualitas/django/django/contrib/gis/geos/libgeos.py failed.
+150.42-150.48: syntax error with [restype]
+149:
+150:    def __init__(self, func_name, *args, restype=None, errcheck=None, argtypes=None, **kwargs):
+151:        self.func_name = func_name
+
+* /media/passport/bigApps/corpus-python/qualitas/django/django/contrib/gis/geos/mutable_list.py failed.
+315.27-315.30: syntax error with [from]
+314:                if i == start:
+315:                    yield from valueList
+316:
+
+* /media/passport/bigApps/corpus-python/qualitas/django/django/contrib/gis/utils/layermapping.py failed.
+459.15-459.18: syntax error with [from]
+458:                'Could not translate between the data source and model geometry.'
+459:            ) from exc
+460:
+
+* /media/passport/bigApps/corpus-python/qualitas/django/django/template/base.py failed.
+165.19-165.22: syntax error with [from]
+164:        for node in self.nodelist:
+165:            yield from node
+166:
+
+* /media/passport/bigApps/corpus-python/qualitas/django/django/template/loader_tags.py failed.
+160.41-160.53: syntax error with [extra_context]
+159:
+160:    def __init__(self, template, *args, extra_context=None, isolated_context=False, **kwargs):
+161:        self.template = template
+
+* /media/passport/bigApps/corpus-python/qualitas/django/django/template/defaulttags.py failed.
+151.15-151.18: syntax error with [from]
+150:    def __iter__(self):
+151:        yield from self.nodelist_loop
+152:        yield from self.nodelist_empty
+
+* /media/passport/bigApps/corpus-python/qualitas/django/django/template/context.py failed.
+46.15-46.18: syntax error with [from]
+45:    def __iter__(self):
+46:        yield from reversed(self.dicts)
+47:
+
+* /media/passport/bigApps/corpus-python/qualitas/django/django/template/loaders/cached.py failed.
+66.19-66.22: syntax error with [from]
+65:        for loader in self.loaders:
+66:            yield from loader.get_template_sources(template_name)
+67:
+
+* /media/passport/bigApps/corpus-python/qualitas/django/django/template/backends/jinja2.py failed.
+41.64-41.67: syntax error with [from]
+40:        except jinja2.TemplateNotFound as exc:
+41:            raise TemplateDoesNotExist(exc.name, backend=self) from exc
+42:        except jinja2.TemplateSyntaxError as exc:
+
+* /media/passport/bigApps/corpus-python/qualitas/django/django/template/backends/django.py failed.
+84.15-84.18: syntax error with [from]
+83:    new = copy_exception(exc, backend)
+84:    raise new from exc
+85:
+
+* /media/passport/bigApps/corpus-python/qualitas/django/django/utils/datastructures.py failed.
+233.29-233.35: syntax error with [warning]
+232:
+233:    def __new__(cls, *args, warning='ImmutableList object is immutable.', **kwargs):
+234:        self = tuple.__new__(cls, *args, **kwargs)
+
+* /media/passport/bigApps/corpus-python/qualitas/django/django/utils/http.py failed.
+160.59-160.62: syntax error with [from]
+159:    except Exception as exc:
+160:        raise ValueError("%r is not a valid date" % date) from exc
+161:
+
+* /media/passport/bigApps/corpus-python/qualitas/django/django/utils/module_loading.py failed.
+15.79-15.82: syntax error with [from]
+14:    except ValueError as err:
+15:        raise ImportError("%s doesn't look like a module path" % dotted_path) from err
+16:
+
+* /media/passport/bigApps/corpus-python/qualitas/django/django/utils/deconstruct.py failed.
+6.28-6.31: syntax error with [path]
+5:
+6:def deconstructible(*args, path=None):
+7:    """
+
+* /media/passport/bigApps/corpus-python/qualitas/django/django/test/client.py failed.
+84.15-84.18: syntax error with [from]
+83:    try:
+84:        yield from iterable
+85:    finally:
+
+* /media/passport/bigApps/corpus-python/qualitas/django/django/test/selenium.py failed.
+56.53-56.53: syntax error with [=]
+55:@tag('selenium')
+56:class SeleniumTestCase(LiveServerTestCase, metaclass=SeleniumTestCaseBase):
+57:    implicit_wait = 10
+
+* /media/passport/bigApps/corpus-python/qualitas/django/django/test/testcases.py failed.
+937.55-937.59: syntax error with [using]
+936:
+937:    def assertNumQueries(self, num, func=None, *args, using=DEFAULT_DB_ALIAS, **kwargs):
+938:        conn = connections[using]
+ done.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{tabular}{l*{1}{c}c}
+\textbf{Application} & \textbf{2.7} & \textbf{Files}\\
+\hline
+django & \shade{96} &  2376\\
+\hline
+\end{tabular}
