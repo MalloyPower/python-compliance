@@ -50,11 +50,11 @@ first one, but some apps are a bit more awkward.
 Assuming you want to build and run the front-end (and have flex, bison
 and gcc installed) you want to run qualitas-test.py.  For example:
 
-  python3 qualitas_test.py 2.7 astropy
+		python3 qualitas_test.py 2.7 astropy
 
-will run the v2.7 front-end over astropy.  You'll set it building the
-2.7 front-end the first time around;l after this it just uses it.
-The output is a latex table with the pass rate.
+will run the v2.7 front-end over astropy.  You'll see it building the
+2.7 front-end the first time around;  after this it just uses it.
+The output is a latex table with the pass rate(s).
 
 You can try multiple versions and apps, e.g.
 
@@ -72,7 +72,7 @@ For example, 'qualitas-2010-12-31-3.2.dat' has the pass rates using
 the 2010 version of the apps and the Python 3.2 front-end.
 
 
-## Data for Fig 3: activity for (dates of) Python 3 versions
+## Data for figure 3: activity for (dates of) Python 3 versions
 
 The script count-commit-dates.sh gets the commit information from the
 git logs for the latest version of each app.  It then runs a loop to
@@ -81,12 +81,14 @@ Python releases, which it gets by running python_versions.py.
 
 This data is written to data/commit-data.csv, which shows the
 number of commits for each Python 3.x version from 3.6 down to 3.0,
-and then the total no. of commits at the end).
+(NB: most recent first)
+and then the total no. of commits at the end.
 
 For example, in the paper we give the percentages for astropy; the
 actual numbers behind this is:
->grep astropy data/commit-data.csv 
-     astropy     11   4264  11459  17912  19759  19759  19759 19759
+
+		>grep astropy data/commit-data.csv 
+    astropy     11   4264  11459  17912  19759  19759  19759 19759
 
 The violin plot is created by the script plot_commits.py which reads
 this file.
