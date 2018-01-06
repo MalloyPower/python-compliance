@@ -9,7 +9,7 @@ This clones the repos and does some renaming to tidy things up.
 You should end up with 51 directories and about 4.8G of files.
 
 Edit qualitas.py, and change the variable _CORPUS_ROOT to be your
-QDIR.  If you now run qualitas.py it should print this out:
+QDIR.  If you now run qualitas.py it should print out your directory:
 
        python3 qualitas.py
 
@@ -20,7 +20,8 @@ This is how the remaining shell scripts figure out where things are.
 For our longitudinal study we get version of the corpus at 31 Dec from
 2005 to 2016. Run the file rollback.py and save the output somewhere,
 e.g.:
-  python3 rollback.py > roller.sh
+
+			python3 rollback.py > roller.sh
 This takes a while as it has to go through the repos and find the
 relevant versions for each year and each app.
 
