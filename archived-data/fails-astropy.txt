@@ -1,0 +1,277 @@
+Running front-end for v2.7 on 1 apps: astropy,
+* /media/passport/bigApps/corpus-python/older-qualitas/qualitas-2017-12-31/astropy/astropy/logger.py failed.
+533: syntax error with [=]
+532:        if record.levelno < logging.DEBUG or not _conf.use_color:
+533:            print(record.levelname, end='', file=stream)
+534:        else:
+
+* /media/passport/bigApps/corpus-python/older-qualitas/qualitas-2017-12-31/astropy/astropy/units/quantity.py failed.
+200: syntax error with [=]
+199:
+200:class Quantity(np.ndarray, metaclass=InheritDocstrings):
+201:    """A `~astropy.units.Quantity` represents a number with some associated unit.
+
+* /media/passport/bigApps/corpus-python/older-qualitas/qualitas-2017-12-31/astropy/astropy/units/core.py failed.
+486: syntax error with [=]
+485:
+486:class UnitBase(metaclass=InheritDocstrings):
+487:    """
+
+* /media/passport/bigApps/corpus-python/older-qualitas/qualitas-2017-12-31/astropy/astropy/units/format/base.py failed.
+21: syntax error with [=]
+20:
+21:class Base(metaclass=_FormatterMeta):
+22:    """
+
+* /media/passport/bigApps/corpus-python/older-qualitas/qualitas-2017-12-31/astropy/astropy/units/function/core.py failed.
+30: syntax error with [=]
+29:# a large number of overrides. Hence, define new class.
+30:class FunctionUnitBase(metaclass=ABCMeta):
+31:    """Abstract base class for function units.
+
+* /media/passport/bigApps/corpus-python/older-qualitas/qualitas-2017-12-31/astropy/astropy/modeling/optimizers.py failed.
+26: syntax error with [=]
+25:
+26:class Optimization(metaclass=abc.ABCMeta):
+27:    """
+
+* /media/passport/bigApps/corpus-python/older-qualitas/qualitas-2017-12-31/astropy/astropy/modeling/fitting.py failed.
+183: syntax error with [=]
+182:
+183:class Fitter(metaclass=_FitterMeta):
+184:    """
+
+* /media/passport/bigApps/corpus-python/older-qualitas/qualitas-2017-12-31/astropy/astropy/modeling/core.py failed.
+480: syntax error with [=]
+479:
+480:class Model(metaclass=_ModelMeta):
+481:    """
+
+* /media/passport/bigApps/corpus-python/older-qualitas/qualitas-2017-12-31/astropy/astropy/cosmology/core.py failed.
+91: syntax error with [=]
+90:
+91:class FLRW(Cosmology, metaclass=ABCMeta):
+92:    """ A class describing an isotropic and homogeneous
+
+* /media/passport/bigApps/corpus-python/older-qualitas/qualitas-2017-12-31/astropy/astropy/visualization/interval.py failed.
+21: syntax error with [=]
+20:
+21:class BaseInterval(BaseTransform, metaclass=InheritDocstrings):
+22:    """
+
+* /media/passport/bigApps/corpus-python/older-qualitas/qualitas-2017-12-31/astropy/astropy/visualization/stretch.py failed.
+47: syntax error with [=]
+46:
+47:class BaseStretch(BaseTransform, metaclass=InheritDocstrings):
+48:    """
+
+* /media/passport/bigApps/corpus-python/older-qualitas/qualitas-2017-12-31/astropy/astropy/visualization/wcsaxes/transforms.py failed.
+25: syntax error with [=]
+24:
+25:class CurvedTransform(Transform, metaclass=abc.ABCMeta):
+26:    """
+
+* /media/passport/bigApps/corpus-python/older-qualitas/qualitas-2017-12-31/astropy/astropy/visualization/wcsaxes/frame.py failed.
+88: syntax error with [=]
+87:
+88:class BaseFrame(OrderedDict, metaclass=abc.ABCMeta):
+89:    """
+
+* /media/passport/bigApps/corpus-python/older-qualitas/qualitas-2017-12-31/astropy/astropy/visualization/wcsaxes/core.py failed.
+492: syntax error with [,]
+491:
+492:    def grid(self, b=None, axis='both', *, which='major', **kwargs):
+493:        """
+
+* /media/passport/bigApps/corpus-python/older-qualitas/qualitas-2017-12-31/astropy/astropy/_erfa/erfa_generator.py failed.
+426: syntax error with [print]
+425:    if verbose:
+426:        print_ = lambda *args, **kwargs: print(*args, **kwargs)
+427:    else:
+
+* /media/passport/bigApps/corpus-python/older-qualitas/qualitas-2017-12-31/astropy/astropy/table/pprint.py failed.
+672: syntax error with [=]
+671:            print()
+672:            print("-- f, <space>, b, r, p, n, <, >, q h (help) --", end=' ')
+673:            # Get a valid key
+
+* /media/passport/bigApps/corpus-python/older-qualitas/qualitas-2017-12-31/astropy/astropy/nddata/compat.py failed.
+82: syntax error with [flags]
+81:
+82:    def __init__(self, data, *args, flags=None, **kwargs):
+83:
+
+* /media/passport/bigApps/corpus-python/older-qualitas/qualitas-2017-12-31/astropy/astropy/nddata/nduncertainty.py failed.
+30: syntax error with [=]
+29:
+30:class NDUncertainty(metaclass=ABCMeta):
+31:    """This is the metaclass for uncertainty classes used with `NDData`.
+
+* /media/passport/bigApps/corpus-python/older-qualitas/qualitas-2017-12-31/astropy/astropy/nddata/nddata_base.py failed.
+11: syntax error with [=]
+10:
+11:class NDDataBase(metaclass=ABCMeta):
+12:    """Base metaclass that defines the interface for N-dimensional datasets
+
+* /media/passport/bigApps/corpus-python/older-qualitas/qualitas-2017-12-31/astropy/astropy/wcs/wcs.py failed.
+190: syntax error with [best_solution]
+189:
+190:    def __init__(self, *args, best_solution=None, accuracy=None, niter=None,
+191:                 divergent=None, slow_conv=None, **kwargs):
+
+* /media/passport/bigApps/corpus-python/older-qualitas/qualitas-2017-12-31/astropy/astropy/constants/codata2014.py failed.
+93: syntax error with [.0000017e-3]
+92:b_wien = CODATA2014('b_wien', 'Wien wavelength displacement law constant',
+93:                    2.8977729e-3, 'm K', 00.0000017e-3, system='si')
+94:
+
+* /media/passport/bigApps/corpus-python/older-qualitas/qualitas-2017-12-31/astropy/astropy/constants/constant.py failed.
+76: syntax error with [=]
+75:
+76:class Constant(Quantity, metaclass=ConstantMeta):
+77:    """A physical or astronomical constant.
+
+* /media/passport/bigApps/corpus-python/older-qualitas/qualitas-2017-12-31/astropy/astropy/config/configuration.py failed.
+77: syntax error with [=]
+76:
+77:class ConfigNamespace(metaclass=_ConfigNamespaceMeta):
+78:    """
+
+* /media/passport/bigApps/corpus-python/older-qualitas/qualitas-2017-12-31/astropy/astropy/tests/command.py failed.
+44: syntax error with [=]
+43:
+44:class AstropyTest(Command, metaclass=FixRemoteDataOption):
+45:    description = 'Run the tests for this package'
+
+* /media/passport/bigApps/corpus-python/older-qualitas/qualitas-2017-12-31/astropy/astropy/utils/metadata.py failed.
+113: syntax error with [=]
+112:
+113:class MergeStrategy(metaclass=MergeStrategyMeta):
+114:    """
+
+* /media/passport/bigApps/corpus-python/older-qualitas/qualitas-2017-12-31/astropy/astropy/utils/misc.py failed.
+543: syntax error with [=]
+542:
+543:class OrderedDescriptor(metaclass=abc.ABCMeta):
+544:    """
+
+* /media/passport/bigApps/corpus-python/older-qualitas/qualitas-2017-12-31/astropy/astropy/utils/console.py failed.
+324: syntax error with [end]
+323:
+324:def color_print(*args, end='\n', **kwargs):
+325:    """
+
+* /media/passport/bigApps/corpus-python/older-qualitas/qualitas-2017-12-31/astropy/astropy/utils/tests/test_misc.py failed.
+78: syntax error with [=]
+77:def test_inherit_docstrings():
+78:    class Base(metaclass=misc.InheritDocstrings):
+79:        def __call__(self, *args):
+
+* /media/passport/bigApps/corpus-python/older-qualitas/qualitas-2017-12-31/astropy/astropy/utils/tests/test_decorators.py failed.
+143: syntax error with [=]
+142:@deprecated('100.0')
+143:class TB(metaclass=TMeta):
+144:    pass
+
+* /media/passport/bigApps/corpus-python/older-qualitas/qualitas-2017-12-31/astropy/astropy/coordinates/sky_coordinate.py failed.
+219: syntax error with [copy]
+218:
+219:    def __init__(self, *args, copy=True, **kwargs):
+220:
+
+* /media/passport/bigApps/corpus-python/older-qualitas/qualitas-2017-12-31/astropy/astropy/coordinates/baseframe.py failed.
+342: syntax error with [=]
+341:@format_doc(base_doc, components=_components, footer="")
+342:class BaseCoordinateFrame(ShapedLikeNDArray, metaclass=FrameMeta):
+343:    """
+
+* /media/passport/bigApps/corpus-python/older-qualitas/qualitas-2017-12-31/astropy/astropy/coordinates/transformations.py failed.
+665: syntax error with [=]
+664:
+665:class CoordinateTransform(metaclass=ABCMeta):
+666:    """
+
+* /media/passport/bigApps/corpus-python/older-qualitas/qualitas-2017-12-31/astropy/astropy/coordinates/representation.py failed.
+464: syntax error with [=]
+463:class BaseRepresentation(BaseRepresentationOrDifferential,
+464:                         metaclass=MetaBaseRepresentation):
+465:    """Base for representing a point in a 3D coordinate system.
+
+* /media/passport/bigApps/corpus-python/older-qualitas/qualitas-2017-12-31/astropy/astropy/coordinates/tests/test_frames.py failed.
+32: syntax error with [=]
+31:
+32:    class TestAttributes(metaclass=OrderedDescriptorContainer):
+33:        attr_none = Attribute()
+
+* /media/passport/bigApps/corpus-python/older-qualitas/qualitas-2017-12-31/astropy/astropy/convolution/tests/test_convolve_speeds.py failed.
+29: syntax error with [=]
+28:
+29:                print("%16i:" % (int(2 ** ii - 1)), end=' ')
+30:
+
+* /media/passport/bigApps/corpus-python/older-qualitas/qualitas-2017-12-31/astropy/astropy/time/formats.py failed.
+94: syntax error with [=]
+93:
+94:class TimeFormat(metaclass=TimeFormatMeta):
+95:    """
+
+* /media/passport/bigApps/corpus-python/older-qualitas/qualitas-2017-12-31/astropy/astropy/time/core.py failed.
+831: syntax error with [format]
+830:
+831:    def _apply(self, method, *args, format=None, **kwargs):
+832:        """Create a new time object, possibly applying a method to the arrays.
+
+* /media/passport/bigApps/corpus-python/older-qualitas/qualitas-2017-12-31/astropy/astropy/io/registry.py failed.
+480: syntax error with [format]
+479:
+480:def read(cls, *args, format=None, **kwargs):
+481:    """
+
+* /media/passport/bigApps/corpus-python/older-qualitas/qualitas-2017-12-31/astropy/astropy/io/fits/convenience.py failed.
+118: syntax error with [header]
+117:
+118:def getdata(filename, *args, header=None, lower=None, upper=None, view=None,
+119:            **kwargs):
+
+* /media/passport/bigApps/corpus-python/older-qualitas/qualitas-2017-12-31/astropy/astropy/io/fits/scripts/fitsheader.py failed.
+241: syntax error with [=]
+240:                                  args.keywords,
+241:                                  args.compressed), end='')
+242:        except OSError as e:
+
+* /media/passport/bigApps/corpus-python/older-qualitas/qualitas-2017-12-31/astropy/astropy/io/fits/hdu/base.py failed.
+123: syntax error with [=]
+122:# matter)
+123:class _BaseHDU(metaclass=_BaseHDUMeta):
+124:    """Base class for all HDU (header data unit) classes."""
+
+* /media/passport/bigApps/corpus-python/older-qualitas/qualitas-2017-12-31/astropy/astropy/io/ascii/fastbasic.py failed.
+13: syntax error with [=]
+12:
+13:class FastBasic(metaclass=core.MetaBaseReader):
+14:    """
+
+* /media/passport/bigApps/corpus-python/older-qualitas/qualitas-2017-12-31/astropy/astropy/io/ascii/ui.py failed.
+804: syntax error with [,]
+803:
+804:def write(table, output=None, format=None, Writer=None, fast_writer=True, *,
+805:          overwrite=None, **kwargs):
+
+* /media/passport/bigApps/corpus-python/older-qualitas/qualitas-2017-12-31/astropy/astropy/io/ascii/core.py failed.
+1070: syntax error with [=]
+1069:
+1070:class BaseReader(metaclass=MetaBaseReader):
+1071:    """Class providing methods to read and write an ASCII table using the specified
+
+* /media/passport/bigApps/corpus-python/older-qualitas/qualitas-2017-12-31/astropy/astropy/io/votable/tree.py failed.
+406: syntax error with [=]
+405:# ELEMENT CLASSES
+406:class Element(metaclass=InheritDocstrings):
+407:    """
+ done (45 cases failed).
+\begin{tabular}{l*{1}{c}c}
+\textbf{Application} & \textbf{2.7} & \textbf{Files}\\
+\hline
+     astropy &   \shade{94} &          703\\
+\hline
+\end{tabular}

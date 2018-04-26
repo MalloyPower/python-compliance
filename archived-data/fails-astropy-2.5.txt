@@ -1,0 +1,971 @@
+Making front-end for version 2.5...
+rm -f lex.yy.c
+rm -f parse.tab.c parse.tab.h parse.output
+rm -f *.o *.log
+bison -vtd  --file-prefix=parse parsers/2.5.y
+flex --outfile=lex.yy.c   scanners/2.5.l
+gcc  -c main.c
+gcc  -c parse.tab.c
+gcc  -Wno-unused -Wno-sign-compare -c lex.yy.c
+gcc  -o run-2.5 main.o parse.tab.o lex.yy.o
+Running front-end for v2.5 on 1 apps: astropy,
+* /media/passport/bigApps/corpus-python/older-qualitas/qualitas-2017-12-31/astropy/ah_bootstrap.py failed.
+241: syntax error with [as]
+240:            cfg.read('setup.cfg')
+241:        except Exception as e:
+242:            if DEBUG:
+
+* /media/passport/bigApps/corpus-python/older-qualitas/qualitas-2017-12-31/astropy/ez_setup.py failed.
+113: syntax error with [as]
+112:                archive.extractall()
+113:        except zipfile.BadZipfile as err:
+114:            if not err.args:
+
+* /media/passport/bigApps/corpus-python/older-qualitas/qualitas-2017-12-31/astropy/astropy/__init__.py failed.
+189: syntax error with [as]
+188:                _rebuild_extensions()
+189:            except BaseException as exc:
+190:                _rollback_import(
+
+* /media/passport/bigApps/corpus-python/older-qualitas/qualitas-2017-12-31/astropy/astropy/logger.py failed.
+499: syntax error with [as]
+498:                fh = logging.FileHandler(log_file_path)
+499:            except OSError as e:
+500:                warnings.warn(
+
+* /media/passport/bigApps/corpus-python/older-qualitas/qualitas-2017-12-31/astropy/astropy/units/quantity_helper.py failed.
+335: syntax error with [,]
+334:UNSUPPORTED_UFUNCS = {
+335:    np.bitwise_and, np.bitwise_or, np.bitwise_xor, np.invert, np.left_shift,
+336:    np.right_shift, np.logical_and, np.logical_or, np.logical_xor,
+
+* /media/passport/bigApps/corpus-python/older-qualitas/qualitas-2017-12-31/astropy/astropy/units/equivalencies.py failed.
+533: syntax error with [as]
+532:        value.to(si.Hz, spectral())
+533:    except (AttributeError, UnitsError) as ex:
+534:        raise UnitsError("The 'rest' value must be a spectral equivalent "
+
+* /media/passport/bigApps/corpus-python/older-qualitas/qualitas-2017-12-31/astropy/astropy/units/quantity.py failed.
+40: syntax error with [,]
+39:_UNIT_NOT_INITIALISED = "(Unit not initialised)"
+40:_UFUNCS_FILTER_WARNINGS = {np.arcsin, np.arccos, np.arccosh, np.arctanh}
+41:
+
+* /media/passport/bigApps/corpus-python/older-qualitas/qualitas-2017-12-31/astropy/astropy/units/core.py failed.
+122: syntax error with [for]
+121:            # registry.
+122:            self._by_physical_type = {k: v.copy() for k, v in
+123:                                      init._by_physical_type.items()}
+
+* /media/passport/bigApps/corpus-python/older-qualitas/qualitas-2017-12-31/astropy/astropy/units/format/cds.py failed.
+266: syntax error with [as]
+265:            return cls._parse_unit(t.value)
+266:        except ValueError as e:
+267:            raise ValueError(
+
+* /media/passport/bigApps/corpus-python/older-qualitas/qualitas-2017-12-31/astropy/astropy/units/format/base.py failed.
+21: syntax error with [=]
+20:
+21:class Base(metaclass=_FormatterMeta):
+22:    """
+
+* /media/passport/bigApps/corpus-python/older-qualitas/qualitas-2017-12-31/astropy/astropy/units/format/ogip.py failed.
+363: syntax error with [as]
+362:            return cls._parse_unit(t.value)
+363:        except ValueError as e:
+364:            raise ValueError(
+
+* /media/passport/bigApps/corpus-python/older-qualitas/qualitas-2017-12-31/astropy/astropy/units/format/generic.py failed.
+428: syntax error with [as]
+427:            return cls._parse_unit(t.value)
+428:        except ValueError as e:
+429:            raise ValueError(
+
+* /media/passport/bigApps/corpus-python/older-qualitas/qualitas-2017-12-31/astropy/astropy/units/tests/test_quantity_ufuncs.py failed.
+852: syntax error with [class]
+851:@pytest.mark.xfail("NUMPY_LT_1_13")
+852:class TestUfuncAt:
+853:    """Test that 'at' method for ufuncs (calculates in-place at given indices)
+
+* /media/passport/bigApps/corpus-python/older-qualitas/qualitas-2017-12-31/astropy/astropy/units/tests/test_format.py failed.
+287: syntax error with [,]
+286:    myunit = u.def_unit("FOOBAR_Two")
+287:    with u.add_enabled_units(myunit), pytest.raises(ValueError):
+288:        myunit.to_string('fits')
+
+* /media/passport/bigApps/corpus-python/older-qualitas/qualitas-2017-12-31/astropy/astropy/units/tests/test_quantity.py failed.
+1415: syntax error with [class]
+1414:@pytest.mark.xfail('MATPLOTLIB_LT_15')
+1415:class TestQuantityMatplotlib:
+1416:    """Test if passing matplotlib quantities works.
+
+* /media/passport/bigApps/corpus-python/older-qualitas/qualitas-2017-12-31/astropy/astropy/units/tests/test_logarithmic.py failed.
+405: syntax error with [,]
+404:    assert hash(lu1) == hash(lu3)
+405:    luset = {lu1, lu2, lu3}
+406:    assert len(luset) == 2
+
+* /media/passport/bigApps/corpus-python/older-qualitas/qualitas-2017-12-31/astropy/astropy/units/tests/test_units.py failed.
+245: syntax error with [as]
+244:        u.AA.to(u.h * u.s ** 2)
+245:    except u.UnitsError as e:
+246:        assert "length" in str(e)
+
+* /media/passport/bigApps/corpus-python/older-qualitas/qualitas-2017-12-31/astropy/astropy/units/function/core.py failed.
+30: syntax error with [=]
+29:# a large number of overrides. Hence, define new class.
+30:class FunctionUnitBase(metaclass=ABCMeta):
+31:    """Abstract base class for function units.
+
+* /media/passport/bigApps/corpus-python/older-qualitas/qualitas-2017-12-31/astropy/astropy/modeling/optimizers.py failed.
+26: syntax error with [=]
+25:
+26:class Optimization(metaclass=abc.ABCMeta):
+27:    """
+
+* /media/passport/bigApps/corpus-python/older-qualitas/qualitas-2017-12-31/astropy/astropy/modeling/fitting.py failed.
+183: syntax error with [=]
+182:
+183:class Fitter(metaclass=_FitterMeta):
+184:    """
+
+* /media/passport/bigApps/corpus-python/older-qualitas/qualitas-2017-12-31/astropy/astropy/modeling/core.py failed.
+274: syntax error with [as]
+273:                bounding_box = _BoundingBox.validate(cls, bounding_box)
+274:            except ValueError as exc:
+275:                raise ModelDefinitionError(exc.args[0])
+
+* /media/passport/bigApps/corpus-python/older-qualitas/qualitas-2017-12-31/astropy/astropy/modeling/tests/test_fitters.py failed.
+130: syntax error with [class]
+129:@pytest.mark.skipif('not HAS_SCIPY')
+130:class TestJointFitter:
+131:
+
+* /media/passport/bigApps/corpus-python/older-qualitas/qualitas-2017-12-31/astropy/astropy/modeling/tests/test_constraints.py failed.
+109: syntax error with [class]
+108:@pytest.mark.skipif('not HAS_SCIPY')
+109:class TestBounds:
+110:
+
+* /media/passport/bigApps/corpus-python/older-qualitas/qualitas-2017-12-31/astropy/astropy/modeling/tests/test_polynomial.py failed.
+94: syntax error with [class]
+93:@pytest.mark.skipif('not HAS_SCIPY')
+94:class TestFitting:
+95:    """Test linear fitter with polynomial models."""
+
+* /media/passport/bigApps/corpus-python/older-qualitas/qualitas-2017-12-31/astropy/astropy/modeling/tests/test_models.py failed.
+480: syntax error with [class]
+479:                         sorted(models_1D.items(), key=lambda x: str(x[0])))
+480:class TestFittable1DModels(Fittable1DModelTester):
+481:    pass
+
+* /media/passport/bigApps/corpus-python/older-qualitas/qualitas-2017-12-31/astropy/astropy/cosmology/core.py failed.
+91: syntax error with [=]
+90:
+91:class FLRW(Cosmology, metaclass=ABCMeta):
+92:    """ A class describing an isotropic and homogeneous
+
+* /media/passport/bigApps/corpus-python/older-qualitas/qualitas-2017-12-31/astropy/astropy/visualization/interval.py failed.
+21: syntax error with [=]
+20:
+21:class BaseInterval(BaseTransform, metaclass=InheritDocstrings):
+22:    """
+
+* /media/passport/bigApps/corpus-python/older-qualitas/qualitas-2017-12-31/astropy/astropy/visualization/lupton_rgb.py failed.
+318: syntax error with [image]
+317:        zscale_limits = ZScaleInterval().get_limits(image)
+318:        zscale = LinearMapping(*zscale_limits, image=image)
+319:        stretch = zscale.maximum - zscale.minimum[0]  # zscale.minimum is always a triple
+
+* /media/passport/bigApps/corpus-python/older-qualitas/qualitas-2017-12-31/astropy/astropy/visualization/stretch.py failed.
+47: syntax error with [=]
+46:
+47:class BaseStretch(BaseTransform, metaclass=InheritDocstrings):
+48:    """
+
+* /media/passport/bigApps/corpus-python/older-qualitas/qualitas-2017-12-31/astropy/astropy/visualization/scripts/fits2bitmap.py failed.
+82: syntax error with [as]
+81:        image = getdata(filename, ext)
+82:    except Exception as e:
+83:        log.critical(e)
+
+* /media/passport/bigApps/corpus-python/older-qualitas/qualitas-2017-12-31/astropy/astropy/visualization/scripts/tests/test_fits2bitmap.py failed.
+18: syntax error with [class]
+17:@pytest.mark.skipif('not HAS_MATPLOTLIB')
+18:class TestFits2Bitmap:
+19:    def setup_class(self):
+
+* /media/passport/bigApps/corpus-python/older-qualitas/qualitas-2017-12-31/astropy/astropy/visualization/wcsaxes/transforms.py failed.
+25: syntax error with [=]
+24:
+25:class CurvedTransform(Transform, metaclass=abc.ABCMeta):
+26:    """
+
+* /media/passport/bigApps/corpus-python/older-qualitas/qualitas-2017-12-31/astropy/astropy/visualization/wcsaxes/frame.py failed.
+88: syntax error with [=]
+87:
+88:class BaseFrame(OrderedDict, metaclass=abc.ABCMeta):
+89:    """
+
+* /media/passport/bigApps/corpus-python/older-qualitas/qualitas-2017-12-31/astropy/astropy/visualization/wcsaxes/core.py failed.
+492: syntax error with [,]
+491:
+492:    def grid(self, b=None, axis='both', *, which='major', **kwargs):
+493:        """
+
+* /media/passport/bigApps/corpus-python/older-qualitas/qualitas-2017-12-31/astropy/astropy/visualization/tests/test_norm.py failed.
+33: syntax error with [class]
+32:@pytest.mark.skipif('not HAS_MATPLOTLIB')
+33:class TestNormalize:
+34:    def test_invalid_interval(self):
+
+* /media/passport/bigApps/corpus-python/older-qualitas/qualitas-2017-12-31/astropy/astropy/_erfa/erfa_generator.py failed.
+426: syntax error with [print]
+425:    if verbose:
+426:        print_ = lambda *args, **kwargs: print(*args, **kwargs)
+427:    else:
+
+* /media/passport/bigApps/corpus-python/older-qualitas/qualitas-2017-12-31/astropy/astropy/_erfa/tests/test_erfa.py failed.
+121: syntax error with [as]
+120:        erfa.dat(1990, [1, 34, 2], [1, 1, 43], 0.5)
+121:    except erfa.ErfaError as e:
+122:        if '1 of "bad day (Note 3)", 1 of "bad month"' not in e.args[0]:
+
+* /media/passport/bigApps/corpus-python/older-qualitas/qualitas-2017-12-31/astropy/astropy/table/np_utils.py failed.
+100: syntax error with [as]
+99:            dtype = common_dtype(in_cols)
+100:        except TableMergeError as tme:
+101:            # Beautify the error message when we are trying to merge columns with incompatible
+
+* /media/passport/bigApps/corpus-python/older-qualitas/qualitas-2017-12-31/astropy/astropy/table/pprint.py failed.
+91: syntax error with [as]
+90:                                     .format(val, type(val)))
+91:            except Exception as err:
+92:                # For a masked element, the format function call likely failed
+
+* /media/passport/bigApps/corpus-python/older-qualitas/qualitas-2017-12-31/astropy/astropy/table/meta.py failed.
+340: syntax error with [as]
+339:        header = yaml.load(header_yaml, Loader=TableLoader)
+340:    except Exception as err:
+341:        raise YamlParseError(str(err))
+
+* /media/passport/bigApps/corpus-python/older-qualitas/qualitas-2017-12-31/astropy/astropy/table/groups.py failed.
+355: syntax error with [as]
+354:                    new_col = col.groups.aggregate(func)
+355:                except TypeError as err:
+356:                    warnings.warn(str(err), AstropyUserWarning)
+
+* /media/passport/bigApps/corpus-python/older-qualitas/qualitas-2017-12-31/astropy/astropy/table/operations.py failed.
+567: syntax error with [as]
+566:            dtype = common_dtype(in_cols)
+567:        except TableMergeError as tme:
+568:            # Beautify the error message when we are trying to merge columns with incompatible
+
+* /media/passport/bigApps/corpus-python/older-qualitas/qualitas-2017-12-31/astropy/astropy/table/table.py failed.
+2348: syntax error with [as]
+2347:
+2348:        except Exception as err:
+2349:            raise ValueError("Unable to insert row because of exception in column '{0}':\n{1}"
+
+* /media/passport/bigApps/corpus-python/older-qualitas/qualitas-2017-12-31/astropy/astropy/table/column.py failed.
+312: syntax error with [for]
+311:        names = ('_name', '_unit', '_format', 'description', 'meta', 'indices')
+312:        attrs = {name: val for name, val in zip(names, state[-1])}
+313:
+
+* /media/passport/bigApps/corpus-python/older-qualitas/qualitas-2017-12-31/astropy/astropy/table/scripts/showtable.py failed.
+74: syntax error with [for]
+73:    read_kwargs = ('hdu', 'format', 'table_id', 'delimiter')
+74:    kwargs = {k: v for k, v in vars(args).items()
+75:              if k in read_kwargs and v is not None}
+
+* /media/passport/bigApps/corpus-python/older-qualitas/qualitas-2017-12-31/astropy/astropy/table/tests/test_pprint.py failed.
+19: syntax error with [class]
+18:@pytest.mark.usefixtures('table_type')
+19:class TestMultiD():
+20:
+
+* /media/passport/bigApps/corpus-python/older-qualitas/qualitas-2017-12-31/astropy/astropy/table/tests/test_item_access.py failed.
+13: syntax error with [class]
+12:@pytest.mark.usefixtures('table_data')
+13:class BaseTestItems():
+14:    pass
+
+* /media/passport/bigApps/corpus-python/older-qualitas/qualitas-2017-12-31/astropy/astropy/table/tests/test_init_table.py failed.
+83: syntax error with [class]
+82:@pytest.mark.usefixtures('table_type')
+83:class BaseInitFromListLike(BaseInitFrom):
+84:
+
+* /media/passport/bigApps/corpus-python/older-qualitas/qualitas-2017-12-31/astropy/astropy/table/tests/test_row.py failed.
+27: syntax error with [class]
+26:@pytest.mark.usefixtures('table_types')
+27:class TestRow():
+28:    def _setup(self, table_types):
+
+* /media/passport/bigApps/corpus-python/older-qualitas/qualitas-2017-12-31/astropy/astropy/table/tests/test_table.py failed.
+86: syntax error with [class]
+85:@pytest.mark.usefixtures('table_types')
+86:class TestSetTableColumn(SetupData):
+87:
+
+* /media/passport/bigApps/corpus-python/older-qualitas/qualitas-2017-12-31/astropy/astropy/table/tests/test_index.py failed.
+53: syntax error with [class]
+52:@pytest.mark.usefixtures('table_types')
+53:class TestIndex(SetupData):
+54:    def _setup(self, main_col, table_types):
+
+* /media/passport/bigApps/corpus-python/older-qualitas/qualitas-2017-12-31/astropy/astropy/nddata/decorators.py failed.
+161: syntax error with [as]
+160:            # appended to the "func_kwargs".
+161:            except ValueError as exc:
+162:                if ('The truth value of an array with more than one element '
+
+* /media/passport/bigApps/corpus-python/older-qualitas/qualitas-2017-12-31/astropy/astropy/nddata/ccddata.py failed.
+405: syntax error with [as]
+404:        wcs = WCS(hdr)
+405:    except Exception as exc:
+406:        # Normally WCS only raises Warnings and doesn't fail but in rare
+
+* /media/passport/bigApps/corpus-python/older-qualitas/qualitas-2017-12-31/astropy/astropy/nddata/compat.py failed.
+82: syntax error with [flags]
+81:
+82:    def __init__(self, data, *args, flags=None, **kwargs):
+83:
+
+* /media/passport/bigApps/corpus-python/older-qualitas/qualitas-2017-12-31/astropy/astropy/nddata/nduncertainty.py failed.
+30: syntax error with [=]
+29:
+30:class NDUncertainty(metaclass=ABCMeta):
+31:    """This is the metaclass for uncertainty classes used with `NDData`.
+
+* /media/passport/bigApps/corpus-python/older-qualitas/qualitas-2017-12-31/astropy/astropy/nddata/nddata_base.py failed.
+11: syntax error with [=]
+10:
+11:class NDDataBase(metaclass=ABCMeta):
+12:    """Base metaclass that defines the interface for N-dimensional datasets
+
+* /media/passport/bigApps/corpus-python/older-qualitas/qualitas-2017-12-31/astropy/astropy/nddata/tests/test_utils.py failed.
+222: syntax error with [class]
+221:@pytest.mark.skipif('not HAS_SKIMAGE')
+222:class TestBlockReduce:
+223:    def test_1d(self):
+
+* /media/passport/bigApps/corpus-python/older-qualitas/qualitas-2017-12-31/astropy/astropy/wcs/wcs.py failed.
+190: syntax error with [best_solution]
+189:
+190:    def __init__(self, *args, best_solution=None, accuracy=None, niter=None,
+191:                 divergent=None, slow_conv=None, **kwargs):
+
+* /media/passport/bigApps/corpus-python/older-qualitas/qualitas-2017-12-31/astropy/astropy/wcs/tests/test_wcs.py failed.
+466: syntax error with [as]
+465:        runtime_end = datetime.now()
+466:    except wcs.wcs.NoConvergence as e:
+467:        runtime_end = datetime.now()
+
+* /media/passport/bigApps/corpus-python/older-qualitas/qualitas-2017-12-31/astropy/astropy/constants/codata2014.py failed.
+93: syntax error with [.0000017e-3]
+92:b_wien = CODATA2014('b_wien', 'Wien wavelength displacement law constant',
+93:                    2.8977729e-3, 'm K', 00.0000017e-3, system='si')
+94:
+
+* /media/passport/bigApps/corpus-python/older-qualitas/qualitas-2017-12-31/astropy/astropy/constants/constant.py failed.
+76: syntax error with [=]
+75:
+76:class Constant(Quantity, metaclass=ConstantMeta):
+77:    """A physical or astronomical constant.
+
+* /media/passport/bigApps/corpus-python/older-qualitas/qualitas-2017-12-31/astropy/astropy/stats/lombscargle/core.py failed.
+334: syntax error with [frequency]
+333:        power = lombscargle(*strip_units(self.t, self.y, self.dy),
+334:                            frequency=strip_units(frequency),
+335:                            center_data=self.center_data,
+
+* /media/passport/bigApps/corpus-python/older-qualitas/qualitas-2017-12-31/astropy/astropy/stats/lombscargle/tests/test_statistics.py failed.
+105: syntax error with [}]
+104:
+105:@pytest.mark.parametrize('method', sorted(set(METHODS) - {'bootstrap'}))
+106:@pytest.mark.parametrize('normalization', NORMALIZATIONS)
+
+* /media/passport/bigApps/corpus-python/older-qualitas/qualitas-2017-12-31/astropy/astropy/extern/configobj/validate.py failed.
+770: syntax error with [as]
+769:                out_params.append(fun(val))
+770:            except ValueError as e:
+771:                raise VdtParamError(name, val)
+
+* /media/passport/bigApps/corpus-python/older-qualitas/qualitas-2017-12-31/astropy/astropy/extern/configobj/configobj.py failed.
+1647: syntax error with [as]
+1646:                                value = unrepr(value)
+1647:                            except Exception as e:
+1648:                                if type(e) == UnknownType:
+
+* /media/passport/bigApps/corpus-python/older-qualitas/qualitas-2017-12-31/astropy/astropy/extern/ply/lex.py failed.
+765: syntax error with [as]
+764:                        self.error = True
+765:                except re.error as e:
+766:                    self.log.error("%s:%d: Invalid regular expression for rule '%s'. %s", file, line, f.__name__, e)
+
+* /media/passport/bigApps/corpus-python/older-qualitas/qualitas-2017-12-31/astropy/astropy/extern/ply/yacc.py failed.
+2828: syntax error with [as]
+2827:
+2828:        except IOError as e:
+2829:            raise
+
+* /media/passport/bigApps/corpus-python/older-qualitas/qualitas-2017-12-31/astropy/astropy/config/configuration.py failed.
+77: syntax error with [=]
+76:
+77:class ConfigNamespace(metaclass=_ConfigNamespaceMeta):
+78:    """
+
+* /media/passport/bigApps/corpus-python/older-qualitas/qualitas-2017-12-31/astropy/astropy/tests/command.py failed.
+44: syntax error with [=]
+43:
+44:class AstropyTest(Command, metaclass=FixRemoteDataOption):
+45:    description = 'Run the tests for this package'
+
+* /media/passport/bigApps/corpus-python/older-qualitas/qualitas-2017-12-31/astropy/astropy/tests/test_logger.py failed.
+206: syntax error with [as]
+205:            raise Exception("This is an Exception")
+206:    except Exception as exc:
+207:        sys.excepthook(*sys.exc_info())
+
+* /media/passport/bigApps/corpus-python/older-qualitas/qualitas-2017-12-31/astropy/astropy/utils/metadata.py failed.
+97: syntax error with [as]
+96:                    return orig_merge(cls, left, right)
+97:                except Exception as err:
+98:                    raise MergeConflictError(err)
+
+* /media/passport/bigApps/corpus-python/older-qualitas/qualitas-2017-12-31/astropy/astropy/utils/misc.py failed.
+110: syntax error with [filename]
+109:
+110:    return msg.format(*args, filename=filename, lineno=lineno, func=func,
+111:                      text=text, **kwargs)
+
+* /media/passport/bigApps/corpus-python/older-qualitas/qualitas-2017-12-31/astropy/astropy/utils/console.py failed.
+324: syntax error with [end]
+323:
+324:def color_print(*args, end='\n', **kwargs):
+325:    """
+
+* /media/passport/bigApps/corpus-python/older-qualitas/qualitas-2017-12-31/astropy/astropy/utils/data_info.py failed.
+585: syntax error with [for]
+584:        def getattrs(col):
+585:            return {attr: getattr(col.info, attr) for attr in attrs
+586:                    if getattr(col.info, attr, None) is not None}
+
+* /media/passport/bigApps/corpus-python/older-qualitas/qualitas-2017-12-31/astropy/astropy/utils/data.py failed.
+260: syntax error with [as]
+259:                "interpreter does not include the lzma module.")
+260:        except (OSError, EOFError) as e:  # invalid xz file
+261:            fileobj.seek(0)
+
+* /media/passport/bigApps/corpus-python/older-qualitas/qualitas-2017-12-31/astropy/astropy/utils/timer.py failed.
+180: syntax error with [as]
+179:                result = self._timed_pfunc(arg)
+180:            except Exception as e:
+181:                warnings.warn(str(e), AstropyUserWarning)
+
+* /media/passport/bigApps/corpus-python/older-qualitas/qualitas-2017-12-31/astropy/astropy/utils/iers/iers.py failed.
+633: syntax error with [as]
+632:            filename = download_file(conf.iers_auto_url, cache=True)
+633:        except Exception as err:
+634:            # Issue a warning here, perhaps user is offline.  An exception
+
+* /media/passport/bigApps/corpus-python/older-qualitas/qualitas-2017-12-31/astropy/astropy/utils/iers/tests/test_iers.py failed.
+157: syntax error with [class]
+156:@pytest.mark.skipif(str('not HAS_IERS_A'))
+157:class TestIERS_A():
+158:
+
+* /media/passport/bigApps/corpus-python/older-qualitas/qualitas-2017-12-31/astropy/astropy/utils/tests/test_misc.py failed.
+78: syntax error with [=]
+77:def test_inherit_docstrings():
+78:    class Base(metaclass=misc.InheritDocstrings):
+79:        def __call__(self, *args):
+
+* /media/passport/bigApps/corpus-python/older-qualitas/qualitas-2017-12-31/astropy/astropy/utils/tests/test_decorators.py failed.
+126: syntax error with [class]
+125:@deprecated('100.0')
+126:class TA:
+127:    """
+
+* /media/passport/bigApps/corpus-python/older-qualitas/qualitas-2017-12-31/astropy/astropy/utils/tests/test_metadata.py failed.
+31: syntax error with [meta]
+30:    def test_mapping_init(self, meta):
+31:        d = self.test_class(*self.args, meta=meta)
+32:        assert type(d.meta) == type(meta)
+
+* /media/passport/bigApps/corpus-python/older-qualitas/qualitas-2017-12-31/astropy/astropy/samp/hub_proxy.py failed.
+79: syntax error with [as]
+78:
+79:        except xmlrpc.ProtocolError as p:
+80:            # 401 Unauthorized
+
+* /media/passport/bigApps/corpus-python/older-qualitas/qualitas-2017-12-31/astropy/astropy/samp/utils.py failed.
+63: syntax error with [as]
+62:            response = function(*args, **kwrds)
+63:        except xmlrpc.Fault as exc:
+64:            raise SAMPProxyError(exc.faultCode, exc.faultString)
+
+* /media/passport/bigApps/corpus-python/older-qualitas/qualitas-2017-12-31/astropy/astropy/samp/client.py failed.
+181: syntax error with [as]
+180:                read_ready = select.select([self.client.socket], [], [], 0.1)[0]
+181:            except OSError as exc:
+182:                warnings.warn("Call to select in SAMPClient failed: {0}".format(exc),
+
+* /media/passport/bigApps/corpus-python/older-qualitas/qualitas-2017-12-31/astropy/astropy/samp/hub_script.py failed.
+138: syntax error with [as]
+137:            pass
+138:    except OSError as e:
+139:        print("[SAMP] Error: I/O error({0}): {1}".format(e.errno, e.strerror))
+
+* /media/passport/bigApps/corpus-python/older-qualitas/qualitas-2017-12-31/astropy/astropy/samp/standard_profile.py failed.
+97: syntax error with [as]
+96:            )
+97:        except Exception as e:
+98:            # This should only happen if the module is buggy
+
+* /media/passport/bigApps/corpus-python/older-qualitas/qualitas-2017-12-31/astropy/astropy/samp/hub.py failed.
+536: syntax error with [as]
+535:                read_ready = select.select([self._server.socket], [], [], 0.01)[0]
+536:            except OSError as exc:
+537:                warnings.warn("Call to select() in SAMPHubServer failed: {0}".format(exc),
+
+* /media/passport/bigApps/corpus-python/older-qualitas/qualitas-2017-12-31/astropy/astropy/samp/tests/web_profile_test_helpers.py failed.
+59: syntax error with [as]
+58:            self._connected = True
+59:        except xmlrpc.ProtocolError as p:
+60:            raise SAMPHubError("Protocol Error {}: {}".format(p.errcode, p.errmsg))
+
+* /media/passport/bigApps/corpus-python/older-qualitas/qualitas-2017-12-31/astropy/astropy/coordinates/angle_utilities.py failed.
+262: syntax error with [as]
+261:                angle, lexer=self._lexer, debug=debug)
+262:        except ValueError as e:
+263:            if str(e):
+
+* /media/passport/bigApps/corpus-python/older-qualitas/qualitas-2017-12-31/astropy/astropy/coordinates/sky_coordinate.py failed.
+219: syntax error with [copy]
+218:
+219:    def __init__(self, *args, copy=True, **kwargs):
+220:
+
+* /media/passport/bigApps/corpus-python/older-qualitas/qualitas-2017-12-31/astropy/astropy/coordinates/attributes.py failed.
+183: syntax error with [as]
+182:                out = Time(value)
+183:            except Exception as err:
+184:                raise ValueError(
+
+* /media/passport/bigApps/corpus-python/older-qualitas/qualitas-2017-12-31/astropy/astropy/coordinates/baseframe.py failed.
+218: syntax error with [for]
+217:        sph_component_map = {m.reprname: m.framename
+218:                             for m in repr_info[r.SphericalRepresentation]}
+219:
+
+* /media/passport/bigApps/corpus-python/older-qualitas/qualitas-2017-12-31/astropy/astropy/coordinates/transformations.py failed.
+665: syntax error with [=]
+664:
+665:class CoordinateTransform(metaclass=ABCMeta):
+666:    """
+
+* /media/passport/bigApps/corpus-python/older-qualitas/qualitas-2017-12-31/astropy/astropy/coordinates/representation.py failed.
+171: syntax error with [subok]
+170:        try:
+171:            attrs = np.broadcast_arrays(*attrs, subok=True)
+172:        except ValueError:
+
+* /media/passport/bigApps/corpus-python/older-qualitas/qualitas-2017-12-31/astropy/astropy/coordinates/earth.py failed.
+62: syntax error with [as]
+61:
+62:    except urllib.error.URLError as e:
+63:        # This catches a timeout error, see:
+
+* /media/passport/bigApps/corpus-python/older-qualitas/qualitas-2017-12-31/astropy/astropy/coordinates/name_resolve.py failed.
+142: syntax error with [as]
+141:            break
+142:        except urllib.error.URLError as e:
+143:            exceptions.append(e)
+
+* /media/passport/bigApps/corpus-python/older-qualitas/qualitas-2017-12-31/astropy/astropy/coordinates/builtin_frames/gcrs.py failed.
+36: syntax error with [class]
+35:@format_doc(base_doc, components=doc_components, footer=doc_footer_gcrs)
+36:class GCRS(BaseRADecFrame):
+37:    """
+
+* /media/passport/bigApps/corpus-python/older-qualitas/qualitas-2017-12-31/astropy/astropy/coordinates/builtin_frames/supergalactic.py failed.
+34: syntax error with [class]
+33:@format_doc(base_doc, components=doc_components, footer="")
+34:class Supergalactic(BaseCoordinateFrame):
+35:    """
+
+* /media/passport/bigApps/corpus-python/older-qualitas/qualitas-2017-12-31/astropy/astropy/coordinates/builtin_frames/fk5.py failed.
+24: syntax error with [class]
+23:@format_doc(base_doc, components=doc_components, footer=doc_footer)
+24:class FK5(BaseRADecFrame):
+25:    """
+
+* /media/passport/bigApps/corpus-python/older-qualitas/qualitas-2017-12-31/astropy/astropy/coordinates/builtin_frames/utils.py failed.
+85: syntax error with [as]
+84:        return time.delta_ut1_utc
+85:    except iers.IERSRangeError as e:
+86:        _warn_iers(e)
+
+* /media/passport/bigApps/corpus-python/older-qualitas/qualitas-2017-12-31/astropy/astropy/coordinates/builtin_frames/fk4.py failed.
+32: syntax error with [class]
+31:@format_doc(base_doc, components=doc_components, footer=doc_footer_fk4)
+32:class FK4(BaseRADecFrame):
+33:    """
+
+* /media/passport/bigApps/corpus-python/older-qualitas/qualitas-2017-12-31/astropy/astropy/coordinates/builtin_frames/galactocentric.py failed.
+118: syntax error with [class]
+117:@format_doc(base_doc, components=doc_components, footer=doc_footer)
+118:class Galactocentric(BaseCoordinateFrame):
+119:    r"""
+
+* /media/passport/bigApps/corpus-python/older-qualitas/qualitas-2017-12-31/astropy/astropy/coordinates/builtin_frames/altaz.py failed.
+75: syntax error with [class]
+74:@format_doc(base_doc, components=doc_components, footer=doc_footer)
+75:class AltAz(BaseCoordinateFrame):
+76:    """
+
+* /media/passport/bigApps/corpus-python/older-qualitas/qualitas-2017-12-31/astropy/astropy/coordinates/builtin_frames/baseradec.py failed.
+33: syntax error with [class]
+32:@format_doc(base_doc, components=doc_components, footer="")
+33:class BaseRADecFrame(BaseCoordinateFrame):
+34:    """
+
+* /media/passport/bigApps/corpus-python/older-qualitas/qualitas-2017-12-31/astropy/astropy/coordinates/builtin_frames/galactic.py failed.
+46: syntax error with [class]
+45:@format_doc(base_doc, components=doc_components, footer=doc_footer)
+46:class Galactic(BaseCoordinateFrame):
+47:    """
+
+* /media/passport/bigApps/corpus-python/older-qualitas/qualitas-2017-12-31/astropy/astropy/coordinates/builtin_frames/ecliptic.py failed.
+40: syntax error with [class]
+39:            footer="")
+40:class BaseEclipticFrame(BaseCoordinateFrame):
+41:    """
+
+* /media/passport/bigApps/corpus-python/older-qualitas/qualitas-2017-12-31/astropy/astropy/coordinates/builtin_frames/itrs.py failed.
+14: syntax error with [class]
+13:@format_doc(base_doc, components="", footer="")
+14:class ITRS(BaseCoordinateFrame):
+15:    """
+
+* /media/passport/bigApps/corpus-python/older-qualitas/qualitas-2017-12-31/astropy/astropy/coordinates/builtin_frames/cirs.py failed.
+22: syntax error with [class]
+21:@format_doc(base_doc, components=doc_components, footer=doc_footer)
+22:class CIRS(BaseRADecFrame):
+23:    """
+
+* /media/passport/bigApps/corpus-python/older-qualitas/qualitas-2017-12-31/astropy/astropy/coordinates/builtin_frames/icrs.py failed.
+12: syntax error with [class]
+11:@format_doc(base_doc, components=doc_components, footer="")
+12:class ICRS(BaseRADecFrame):
+13:    """
+
+* /media/passport/bigApps/corpus-python/older-qualitas/qualitas-2017-12-31/astropy/astropy/coordinates/builtin_frames/hcrs.py failed.
+22: syntax error with [class]
+21:@format_doc(base_doc, components=doc_components, footer=doc_footer)
+22:class HCRS(BaseRADecFrame):
+23:    """
+
+* /media/passport/bigApps/corpus-python/older-qualitas/qualitas-2017-12-31/astropy/astropy/coordinates/builtin_frames/lsr.py failed.
+34: syntax error with [class]
+33:@format_doc(base_doc, components=doc_components_radec, footer=doc_footer_lsr)
+34:class LSR(BaseRADecFrame):
+35:    r"""A coordinate or frame in the Local Standard of Rest (LSR).
+
+* /media/passport/bigApps/corpus-python/older-qualitas/qualitas-2017-12-31/astropy/astropy/coordinates/tests/test_matching.py failed.
+91: syntax error with [storekdtree]
+90:    cmatch, ccatalog = make_scs()
+91:    functocheck(cmatch, ccatalog, *args, storekdtree=False)
+92:    assert 'kdtree' not in ccatalog.cache
+
+* /media/passport/bigApps/corpus-python/older-qualitas/qualitas-2017-12-31/astropy/astropy/coordinates/tests/test_representation.py failed.
+1336: syntax error with [unit]
+1335:        # make sure we don't update the original representation's dict
+1336:        d1 = CartesianDifferential(*np.random.random((3, 5)), unit=u.km/u.s)
+1337:        d2 = CartesianDifferential(*np.random.random((3, 5)), unit=u.km/u.s**2)
+
+* /media/passport/bigApps/corpus-python/older-qualitas/qualitas-2017-12-31/astropy/astropy/coordinates/tests/test_skyoffset_transformations.py failed.
+25: syntax error with [frame]
+24:
+25:    skycoord = SkyCoord(*inradec, frame=ICRS)
+26:    skycoord_inaf = skycoord.transform_to(skyoffset_frame)
+
+* /media/passport/bigApps/corpus-python/older-qualitas/qualitas-2017-12-31/astropy/astropy/coordinates/tests/test_regression.py failed.
+589: syntax error with [unit]
+588:    """
+589:    pint_vels = CartesianRepresentation(*(348.63632871, -212.31704928, -0.60154936), unit=u.m/u.s)
+590:    location = EarthLocation(*(5327448.9957829, -1718665.73869569,  3051566.90295403), unit=u.m)
+
+* /media/passport/bigApps/corpus-python/older-qualitas/qualitas-2017-12-31/astropy/astropy/coordinates/tests/test_representation_arithmetic.py failed.
+550: syntax error with [class]
+549:@pytest.mark.parametrize('omit_coslat', [False, True], scope='class')
+550:class TestSphericalDifferential():
+551:    # these test cases are subclassed for SphericalCosLatDifferential,
+
+* /media/passport/bigApps/corpus-python/older-qualitas/qualitas-2017-12-31/astropy/astropy/coordinates/tests/test_frames.py failed.
+32: syntax error with [=]
+31:
+32:    class TestAttributes(metaclass=OrderedDescriptorContainer):
+33:        attr_none = Attribute()
+
+* /media/passport/bigApps/corpus-python/older-qualitas/qualitas-2017-12-31/astropy/astropy/coordinates/tests/test_sky_coord_velocities.py failed.
+103: syntax error with [as]
+102:        sc_nod.l
+103:    except AttributeError as e:
+104:        # this is double-checking the *normal* behavior
+
+* /media/passport/bigApps/corpus-python/older-qualitas/qualitas-2017-12-31/astropy/astropy/convolution/tests/test_convolve_nddata.py failed.
+29: syntax error with [nan_treatment]
+28:@pytest.mark.parametrize('convfunc',
+29:   [lambda *args: convolve(*args, nan_treatment='interpolate', normalize_kernel=True),
+30:    lambda *args: convolve_fft(*args, nan_treatment='interpolate', normalize_kernel=True)])
+
+* /media/passport/bigApps/corpus-python/older-qualitas/qualitas-2017-12-31/astropy/astropy/convolution/tests/test_convolve_speeds.py failed.
+29: syntax error with [=]
+28:
+29:                print("%16i:" % (int(2 ** ii - 1)), end=' ')
+30:
+
+* /media/passport/bigApps/corpus-python/older-qualitas/qualitas-2017-12-31/astropy/astropy/time/formats.py failed.
+94: syntax error with [=]
+93:
+94:class TimeFormat(metaclass=TimeFormatMeta):
+95:    """
+
+* /media/passport/bigApps/corpus-python/older-qualitas/qualitas-2017-12-31/astropy/astropy/time/core.py failed.
+99: syntax error with [}]
+98:    attrs_from_parent = set(['unit'])  # unit is read-only and None
+99:    attr_names = MixinInfo.attr_names | {'serialize_method'}
+100:    _supports_indexing = True
+
+* /media/passport/bigApps/corpus-python/older-qualitas/qualitas-2017-12-31/astropy/astropy/time/tests/test_ut1.py failed.
+73: syntax error with [class]
+72:@pytest.mark.skipif('not HAS_IERS_A')
+73:class TestTimeUT1_IERSA():
+74:    def test_ut1_iers_A(self):
+
+* /media/passport/bigApps/corpus-python/older-qualitas/qualitas-2017-12-31/astropy/astropy/io/registry.py failed.
+480: syntax error with [format]
+479:
+480:def read(cls, *args, format=None, **kwargs):
+481:    """
+
+* /media/passport/bigApps/corpus-python/older-qualitas/qualitas-2017-12-31/astropy/astropy/io/fits/convenience.py failed.
+118: syntax error with [header]
+117:
+118:def getdata(filename, *args, header=None, lower=None, upper=None, view=None,
+119:            **kwargs):
+
+* /media/passport/bigApps/corpus-python/older-qualitas/qualitas-2017-12-31/astropy/astropy/io/fits/util.py failed.
+828: syntax error with [as]
+827:        yield
+828:    except OSError as exc:
+829:        error_message = ''
+
+* /media/passport/bigApps/corpus-python/older-qualitas/qualitas-2017-12-31/astropy/astropy/io/fits/diff.py failed.
+279: syntax error with [as]
+278:                a = fitsopen(a)
+279:            except Exception as exc:
+280:                raise OSError("error opening file a ({}): {}: {}".format(
+
+* /media/passport/bigApps/corpus-python/older-qualitas/qualitas-2017-12-31/astropy/astropy/io/fits/file.py failed.
+554: syntax error with [as]
+553:                mm = mmap.mmap(tmpfd, 1, access=mmap.ACCESS_WRITE)
+554:            except OSError as exc:
+555:                warnings.warn('Failed to create mmap: {}; mmap use will be '
+
+* /media/passport/bigApps/corpus-python/older-qualitas/qualitas-2017-12-31/astropy/astropy/io/fits/card.py failed.
+148: syntax error with [,]
+147:
+148:    _commentary_keywords = {'', 'COMMENT', 'HISTORY', 'END'}
+149:
+
+* /media/passport/bigApps/corpus-python/older-qualitas/qualitas-2017-12-31/astropy/astropy/io/fits/fitsrec.py failed.
+609: syntax error with [as]
+608:            del self.__dict__['_coldefs']
+609:        except KeyError as exc:
+610:            raise AttributeError(exc.args[0])
+
+* /media/passport/bigApps/corpus-python/older-qualitas/qualitas-2017-12-31/astropy/astropy/io/fits/fitstime.py failed.
+128: syntax error with [unit]
+127:    if len(obs_geo) == 3:
+128:        global_info['location'] = EarthLocation.from_geocentric(*obs_geo, unit=u.m)
+129:    else:
+
+* /media/passport/bigApps/corpus-python/older-qualitas/qualitas-2017-12-31/astropy/astropy/io/fits/column.py failed.
+44: syntax error with [for]
+43:# the inverse dictionary of the above
+44:NUMPY2FITS = {val: key for key, val in FITS2NUMPY.items()}
+45:# Normally booleans are represented as ints in Astropy, but if passed in a numpy
+
+* /media/passport/bigApps/corpus-python/older-qualitas/qualitas-2017-12-31/astropy/astropy/io/fits/scripts/fitsdiff.py failed.
+82: syntax error with [as]
+81:                setattr(parser.values, option.dest, values)
+82:            except OSError as exc:
+83:                log.warning('reading {} for {} failed: {}; ignoring this '
+
+* /media/passport/bigApps/corpus-python/older-qualitas/qualitas-2017-12-31/astropy/astropy/io/fits/scripts/fitscheck.py failed.
+159: syntax error with [as]
+158:            hdulist.verify('exception')
+159:        except fits.VerifyError as exc:
+160:            log.warning('NONCOMPLIANT %r .. %s',
+
+* /media/passport/bigApps/corpus-python/older-qualitas/qualitas-2017-12-31/astropy/astropy/io/fits/scripts/fitsheader.py failed.
+191: syntax error with [as]
+190:                        cards.extend(crd)
+191:                except KeyError as e:  # Keyword does not exist
+192:                    log.warning('{filename} (HDU {hdukey}): '
+
+* /media/passport/bigApps/corpus-python/older-qualitas/qualitas-2017-12-31/astropy/astropy/io/fits/scripts/fitsinfo.py failed.
+43: syntax error with [as]
+42:        fits.info(filename)
+43:    except OSError as e:
+44:        log.error(str(e))
+
+* /media/passport/bigApps/corpus-python/older-qualitas/qualitas-2017-12-31/astropy/astropy/io/fits/hdu/base.py failed.
+76: syntax error with [as]
+75:                continue
+76:            except Exception as exc:
+77:                warnings.warn(
+
+* /media/passport/bigApps/corpus-python/older-qualitas/qualitas-2017-12-31/astropy/astropy/io/fits/hdu/hdulist.py failed.
+299: syntax error with [as]
+298:                hdus = super().__getitem__(key)
+299:            except IndexError as e:
+300:                # Raise a more helpful IndexError if the file was not fully read.
+
+* /media/passport/bigApps/corpus-python/older-qualitas/qualitas-2017-12-31/astropy/astropy/io/fits/hdu/compressed.py failed.
+76: syntax error with [,]
+75:
+76:COMPRESSION_KEYWORDS = {'ZIMAGE', 'ZCMPTYPE', 'ZBITPIX', 'ZNAXIS', 'ZMASKCMP',
+77:                        'ZSIMPLE', 'ZTENSION', 'ZEXTEND'}
+
+* /media/passport/bigApps/corpus-python/older-qualitas/qualitas-2017-12-31/astropy/astropy/io/fits/tests/test_diff.py failed.
+413: syntax error with [}]
+412:        assert len(diff.common_columns) == 1
+413:        assert diff.common_column_names == {'a'}
+414:        assert diff.diff_ratio == 0
+
+* /media/passport/bigApps/corpus-python/older-qualitas/qualitas-2017-12-31/astropy/astropy/io/fits/tests/test_table.py failed.
+2164: syntax error with [as]
+2163:                h[1].data['F1']
+2164:        except ValueError as e:
+2165:            assert str(e).endswith(
+
+* /media/passport/bigApps/corpus-python/older-qualitas/qualitas-2017-12-31/astropy/astropy/io/fits/tests/test_header.py failed.
+213: syntax error with [,]
+212:        header.update(FakeHeader([('A', 1), ('B', 2, 'comment')]))
+213:        assert set(header.keys()) == {'FOO', 'A', 'B'}
+214:        assert header.comments['B'] == 'comment'
+
+* /media/passport/bigApps/corpus-python/older-qualitas/qualitas-2017-12-31/astropy/astropy/io/fits/tests/test_core.py failed.
+222: syntax error with [as]
+221:                hdu.verify('ignore')
+222:            except Exception as exc:
+223:                self.fail('An exception occurred when the verification error '
+
+* /media/passport/bigApps/corpus-python/older-qualitas/qualitas-2017-12-31/astropy/astropy/io/ascii/fastbasic.py failed.
+13: syntax error with [=]
+12:
+13:class FastBasic(metaclass=core.MetaBaseReader):
+14:    """
+
+* /media/passport/bigApps/corpus-python/older-qualitas/qualitas-2017-12-31/astropy/astropy/io/ascii/misc.py failed.
+123: syntax error with [key]
+122:        func = lambda x: x
+123:    its = sortmore(*its, key=func)
+124:    nfunc = lambda x: func(x[0])
+
+* /media/passport/bigApps/corpus-python/older-qualitas/qualitas-2017-12-31/astropy/astropy/io/ascii/ui.py failed.
+372: syntax error with [as]
+371:                                    'status': 'Success with fast reader (no guessing)'})
+372:            except (core.ParameterError, cparser.CParserError) as err:
+373:                # special testing value to avoid falling back on the slow reader
+
+* /media/passport/bigApps/corpus-python/older-qualitas/qualitas-2017-12-31/astropy/astropy/io/ascii/core.py failed.
+950: syntax error with [as]
+949:                    col.type = converter_type
+950:                except (TypeError, ValueError) as err:
+951:                    col.converters.pop(0)
+
+* /media/passport/bigApps/corpus-python/older-qualitas/qualitas-2017-12-31/astropy/astropy/io/ascii/tests/test_read.py failed.
+1192: syntax error with [as]
+1191:            assert t['a'].dtype.kind == 'f'
+1192:    except locale.Error as e:
+1193:        pytest.skip('Locale error: {}'.format(e))
+
+* /media/passport/bigApps/corpus-python/older-qualitas/qualitas-2017-12-31/astropy/astropy/io/ascii/tests/test_ecsv.py failed.
+311: syntax error with [for]
+310:    # Make a table with every mixin type except Quantities
+311:    t = QTable({name: col for name, col in mixin_cols.items()
+312:                if not isinstance(col.info, QuantityInfo)})
+
+* /media/passport/bigApps/corpus-python/older-qualitas/qualitas-2017-12-31/astropy/astropy/io/ascii/tests/test_write.py failed.
+401: syntax error with [as]
+400:        ascii.write(table, out, fast_writer=fast_writer, **test_def['kwargs'])
+401:    except ValueError as e:  # if format doesn't have a fast writer, ignore
+402:        if 'not in the list of formats with fast writers' not in str(e):
+
+* /media/passport/bigApps/corpus-python/older-qualitas/qualitas-2017-12-31/astropy/astropy/io/votable/tree.py failed.
+269: syntax error with [as]
+268:                has_colon=config.get('version_1_2_or_later', False))
+269:        except ValueError as e:
+270:            # This weird construction is for Python 3 compatibility
+
+* /media/passport/bigApps/corpus-python/older-qualitas/qualitas-2017-12-31/astropy/astropy/io/votable/table.py failed.
+256: syntax error with [as]
+255:            votable = parse(content_buffer, pedantic=False, filename=filename)
+256:        except ValueError as e:
+257:            lines.append(str(e))
+
+* /media/passport/bigApps/corpus-python/older-qualitas/qualitas-2017-12-31/astropy/astropy/io/votable/validator/result.py failed.
+109: syntax error with [as]
+108:                self.url.decode('ascii'), timeout=self.timeout)
+109:        except urllib.error.URLError as e:
+110:            if hasattr(e, 'reason'):
+
+* /media/passport/bigApps/corpus-python/older-qualitas/qualitas-2017-12-31/astropy/astropy/io/votable/validator/html.py failed.
+300: syntax error with [total]
+299:                for subset in subsets:
+300:                    add_subset(w, *subset, total=len(results))
+301:
+
+* /media/passport/bigApps/corpus-python/older-qualitas/qualitas-2017-12-31/astropy/astropy/io/votable/validator/main.py failed.
+73: syntax error with [total]
+72:    subset, destdir, total = args
+73:    html.write_index_table(destdir, *subset, total=total)
+74:
+
+* /media/passport/bigApps/corpus-python/older-qualitas/qualitas-2017-12-31/astropy/astropy/io/votable/tests/vo_test.py failed.
+847: syntax error with [as]
+846:            _run_test_from_scratch_example()
+847:        except ValueError as e:
+848:            warning_lines.append(str(e))
+
+* /media/passport/bigApps/corpus-python/older-qualitas/qualitas-2017-12-31/astropy/astropy/io/votable/tests/exception_test.py failed.
+18: syntax error with [as]
+17:            fail()
+18:        except RuntimeError as e:
+19:            exceptions.vo_reraise(e, additional="From here")
+
+* /media/passport/bigApps/corpus-python/older-qualitas/qualitas-2017-12-31/astropy/astropy/io/misc/hdf5.py failed.
+342: syntax error with [as]
+341:                dset.attrs[META_KEY] = header_encoded
+342:            except Exception as e:
+343:                warnings.warn(
+
+* /media/passport/bigApps/corpus-python/older-qualitas/qualitas-2017-12-31/astropy/astropy/io/misc/asdf/types.py failed.
+34: syntax error with [class]
+33:@six.add_metaclass(AstropyTypeMeta)
+34:class AstropyType(CustomType):
+35:    """
+ done (159 cases failed).
+\begin{tabular}{l*{1}{c}c}
+\textbf{Application} & \textbf{2.5} & \textbf{Files}\\
+\hline
+     astropy &   \shade{77} &          703\\
+\hline
+\end{tabular}

@@ -1,0 +1,151 @@
+Running front-end for v2.7 on 1 apps: gramps,
+* /media/passport/bigApps/corpus-python/older-qualitas/qualitas-2017-12-31/gramps/gramps/plugins/lib/libhtml.py failed.
+394: syntax error with [print]
+393:#
+394:    def write(self, method=print, indent='\t', tabs=''):
+395:        """
+
+* /media/passport/bigApps/corpus-python/older-qualitas/qualitas-2017-12-31/gramps/gramps/plugins/webreport/basepage.py failed.
+2793: syntax error with [print]
+2792:        """
+2793:        htmlinstance.write(partial(print, file=output_file))
+2794:
+
+* /media/passport/bigApps/corpus-python/older-qualitas/qualitas-2017-12-31/gramps/gramps/gen/user.py failed.
+29: syntax error with [=]
+28:
+29:class UserBase(metaclass=ABCMeta):
+30:    """
+
+* /media/passport/bigApps/corpus-python/older-qualitas/qualitas-2017-12-31/gramps/gramps/gen/db/undoredo.py failed.
+29: syntax error with [=]
+28:
+29:class DbUndo(metaclass=ABCMeta):
+30:    """
+
+* /media/passport/bigApps/corpus-python/older-qualitas/qualitas-2017-12-31/gramps/gramps/gen/lib/grampstype.py failed.
+77: syntax error with [=]
+76:#-------------------------------------------------------------------------
+77:class GrampsType(object, metaclass=GrampsTypeMeta):
+78:    """Base class for all Gramps object types.
+
+* /media/passport/bigApps/corpus-python/older-qualitas/qualitas-2017-12-31/gramps/gramps/gen/lib/baseobj.py failed.
+38: syntax error with [=]
+37:#-------------------------------------------------------------------------
+38:class BaseObject(metaclass=ABCMeta):
+39:    """
+
+* /media/passport/bigApps/corpus-python/older-qualitas/qualitas-2017-12-31/gramps/gramps/gen/lib/refbase.py failed.
+37: syntax error with [=]
+36:#-------------------------------------------------------------------------
+37:class RefBase(metaclass=ABCMeta):
+38:    """
+
+* /media/passport/bigApps/corpus-python/older-qualitas/qualitas-2017-12-31/gramps/gramps/gen/merge/test/merge_ref_test.py failed.
+2229: syntax error with [=]
+2228:        print('This program needs the third party "CliMerge" plugin.',
+2229:              file=sys.stderr)
+2230:        sys.exit(1)
+
+* /media/passport/bigApps/corpus-python/older-qualitas/qualitas-2017-12-31/gramps/gramps/gen/datehandler/_datestrings.py failed.
+280: syntax error with [=]
+279:                    lang=lang, list=available_langs, lang_short=lang_short),
+280:                file=sys.stderr)
+281:        sys.exit(1)
+
+* /media/passport/bigApps/corpus-python/older-qualitas/qualitas-2017-12-31/gramps/gramps/gen/plug/_options.py failed.
+390: syntax error with [=]
+389:                            'file'     : self.option_list_collection.filename},
+390:                      file=sys.stderr)
+391:            options.pop(option_name)
+
+* /media/passport/bigApps/corpus-python/older-qualitas/qualitas-2017-12-31/gramps/gramps/gen/plug/docgen/basedoc.py failed.
+58: syntax error with [=]
+57:#------------------------------------------------------------------------
+58:class BaseDoc(metaclass=ABCMeta):
+59:    """
+
+* /media/passport/bigApps/corpus-python/older-qualitas/qualitas-2017-12-31/gramps/gramps/gen/plug/docgen/textdoc.py failed.
+91: syntax error with [=]
+90:
+91:class TextDoc(metaclass=ABCMeta):
+92:    """
+
+* /media/passport/bigApps/corpus-python/older-qualitas/qualitas-2017-12-31/gramps/gramps/gen/plug/docgen/graphdoc.py failed.
+291: syntax error with [=]
+290:#------------------------------------------------------------------------------
+291:class GVDoc(metaclass=ABCMeta):
+292:    """
+
+* /media/passport/bigApps/corpus-python/older-qualitas/qualitas-2017-12-31/gramps/gramps/gen/plug/docgen/drawdoc.py failed.
+54: syntax error with [=]
+53:#------------------------------------------------------------------------
+54:class DrawDoc(metaclass=ABCMeta):
+55:    """
+
+* /media/passport/bigApps/corpus-python/older-qualitas/qualitas-2017-12-31/gramps/gramps/gui/views/pageview.py failed.
+61: syntax error with [=]
+60:#------------------------------------------------------------------------------
+61:class PageView(DbGUIElement, metaclass=ABCMeta):
+62:    """
+
+* /media/passport/bigApps/corpus-python/older-qualitas/qualitas-2017-12-31/gramps/gramps/gui/views/bookmarks.py failed.
+79: syntax error with [=]
+78:
+79:class Bookmarks(metaclass=ABCMeta):
+80:    "Handle the bookmarks interface for Gramps."
+
+* /media/passport/bigApps/corpus-python/older-qualitas/qualitas-2017-12-31/gramps/gramps/gui/editors/editprimary.py failed.
+53: syntax error with [=]
+52:
+53:class EditPrimary(ManagedWindow, DbGUIElement, metaclass=abc.ABCMeta):
+54:
+
+* /media/passport/bigApps/corpus-python/older-qualitas/qualitas-2017-12-31/gramps/gramps/cli/user.py failed.
+149: syntax error with [=]
+148:                n = reject_text)
+149:        print (text, file = self._fileout) # TODO: python 3.3 add flush=True
+150:        try:
+
+* /media/passport/bigApps/corpus-python/older-qualitas/qualitas-2017-12-31/gramps/gramps/cli/arghandler.py failed.
+196: syntax error with [=]
+195:        else:
+196:            print(msg1, file=sys.stderr)
+197:            if msg2 is not None:
+
+* /media/passport/bigApps/corpus-python/older-qualitas/qualitas-2017-12-31/gramps/gramps/cli/grampscli.py failed.
+85: syntax error with [=]
+84:        """
+85:        print(_('WARNING: %s') % warnmessage, file=sys.stderr)
+86:
+
+* /media/passport/bigApps/corpus-python/older-qualitas/qualitas-2017-12-31/gramps/gramps/cli/argparser.py failed.
+270: syntax error with [=]
+269:                   ) % leftargs[0],
+270:                  file=sys.stderr)
+271:            #see if force open is on
+
+* /media/passport/bigApps/corpus-python/older-qualitas/qualitas-2017-12-31/gramps/gramps/cli/test/cli_test.py failed.
+171: syntax error with [stdin]
+170:
+171:    def call(self, *args, stdin=None):
+172:        self.gramps.run(*args, stdin=stdin)
+
+* /media/passport/bigApps/corpus-python/older-qualitas/qualitas-2017-12-31/gramps/gramps/cli/plug/__init__.py failed.
+171: syntax error with [=]
+170:                        print(_("ERROR: Please specify a person"),
+171:                              file=sys.stderr)
+172:            if person:
+
+* /media/passport/bigApps/corpus-python/older-qualitas/qualitas-2017-12-31/gramps/gramps/test/test_util.py failed.
+216: syntax error with [stdin]
+215:
+216:    def run(self, *args, stdin=None, bytesio=False):
+217:        with capture(stdin, bytesio=bytesio) as output:
+ done (24 cases failed).
+\begin{tabular}{l*{1}{c}c}
+\textbf{Application} & \textbf{2.7} & \textbf{Files}\\
+\hline
+      gramps &   \shade{98} &         1143\\
+\hline
+\end{tabular}
