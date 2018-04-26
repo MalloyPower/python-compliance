@@ -13,10 +13,10 @@ YFLAGS = -vtd
 
 OBJS = main.o parse.tab.o lex.yy.o
 
-front-end: clean run-${PYVER}
+front-end: clean pycomply-${PYVER}
 
-run-${PYVER}: $(OBJS)
-	$(CC) $(CCFLAGS) -o run-${PYVER} $(OBJS)
+pycomply-${PYVER}: $(OBJS)
+	$(CC) $(CCFLAGS) -o pycomply-${PYVER} $(OBJS)
 
 main.o: main.c parsers/${PYVER}.y scanners/${PYVER}.l parse.tab.c lex.yy.c
 	$(CC) $(CCFLAGS) -c main.c
@@ -43,4 +43,4 @@ clean:
 	$(RM) *.o *.log
 
 dist: clean
-	$(RM) run-* 
+	$(RM) pycomply-* 

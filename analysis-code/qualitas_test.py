@@ -55,8 +55,8 @@ class TestHarness:
     
     # This is the directory where the Makefile lives:
     FRONTEND_DIR = os.path.join(os.path.dirname(__file__), 'multi-front-end')
-    # This is the exe that the Makefile builds (I'll rename this):
-    FRONTEND_EXE = os.path.join(FRONTEND_DIR, 'run')
+    # This is the exe that the Makefile builds:
+    FRONTEND_EXE = os.path.join(FRONTEND_DIR, 'pycomply')
     # I need to (record errors for each processed file:
     ERROR_LOG = os.path.join(os.getcwd(), 'error.log')
 
