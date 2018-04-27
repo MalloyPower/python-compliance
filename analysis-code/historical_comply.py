@@ -18,7 +18,7 @@ from qualitas_test import test_all, print_latex_table
 _BARCHART_PDF = 'versions-barchart-s{}.pdf'
 
 # Read/write pass rates to this directory to speed things up:
-_DATA_DIR = os.path.join(os.getcwd(), 'data', 'pass_rates')
+_DATA_DIR = os.path.join(DATA_DIR, 'pass_rates')
 
 _THRESHOLD=98  # Percentage pass rate that counts as compliant  (>=)
 _YEAR_LIST = list(range(2005, 2018))

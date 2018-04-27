@@ -9,9 +9,10 @@
 
 # The Qualitas root dir :
 QDIR=`python3 qualitas.py 2017`
+DATADIR=`python3 data_dir.py`
 
 # This is the file that the numbers are written to:
-OUTFILE=`pwd`/data/commit-data.csv
+OUTFILE=${DATADIR}/commit-data.csv
 rm -f $OUTFILE
 
 TAG_TEMP=`mktemp`

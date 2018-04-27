@@ -11,9 +11,10 @@ MAX_TAGS=20
 
 # Get the Qualitas root dir:
 QDIR=`python3 qualitas.py`
+DATADIR=`python3 data_dir.py`
 
 # This is the file that the numbers are written to:
-OUTFILE=`pwd`/data/tag-details.txt
+OUTFILE=${DATADIR}/tag-details.txt
 rm -f $OUTFILE
 
 pushd $QDIR

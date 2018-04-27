@@ -13,9 +13,10 @@
 
 # Get the Qualitas root dir :
 QDIR=`python3 qualitas.py 2017`
+DATADIR=`python3 data_dir.py`
 
 # This is the file that the numbers are written to:
-OUTFILE=`pwd`/data/authors.txt
+OUTFILE=${DATADIR}/authors.txt
 rm -f $OUTFILE
 
 TEMP_OUT=`mktemp`
